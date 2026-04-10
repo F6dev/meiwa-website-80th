@@ -1,0 +1,48 @@
+.top-hero {
+    background-color: #0f0f0f;
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 40px;
+    /* ヘッダーの高さ分上げ、下の.hero-bgで背景画像と背景色をヘッダーの高さ分下げる */
+    margin-top: -50px;
+}
+
+.hero-bg {
+    margin-top: 50px;
+}
+
+.hero-bg img {
+    display: block;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.hero-title {
+    /* この4行で要素の大きさが変化しても要素が中心にあるようにする。 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 80%;
+    word-break: keep-all;
+    padding: 1em;
+    color: #f0f0f0;
+}
+
+.hero-title-content {
+    margin: 1em 0;
+}
+
+.hero-title-ja {
+    font-size: 3vw;
+}
+
+.hero-title-en {
+    font-size: 1.5vw;
+}
