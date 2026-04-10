@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>体育祭 | 明和祭2025</title>
+    <link rel="icon" href="/School_Festival2025/favicon.ico" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/School_Festival2025/src/common.css" />
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script> -->
+    <script src="script.js" defer></script>
+    <script src="/School_Festival2025/src/common.js" defer></script>
+    <script src="common_script.js" defer></script>
+    <script src="update.js" defer></script>
+    <!-- <script src="carousel.js" defer></script> -->
+
+    <style>
+      /* ===== ローディング画面 ===== */
+      #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: 99999;
+      }
+
+      /* 背景画像共通 */
+      .loading-bg {
+        position: absolute;
+        opacity: 0;
+        filter: brightness(0.5); /* 黒をかけて暗めに */
+        transition: opacity 1s ease;
+      }
+      /* 左上 */
+      .bg-left {
+        top: 5%;
+        left: 5%;
+        width: 30%;
+        z-index: 1;
+      }
+      /* 真ん中（大きく＆手前） */
+      .bg-center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 55%;
+        z-index: 3;
+      }
+      /* 右下 */
+      .bg-right {
+        bottom: 5%;
+        right: 5%;
+        width: 30%;
+        z-index: 1;
+      }
+      /* 左下 */
+      .bg-bottom-left {
+        bottom: 10%;
+        left: 10%;
+        width: 22%;
+        z-index: 1;
+      }
+      /* 右上 */
+      .bg-top-right {
+        top: 10%;
+        right: 10%;
+        width: 22%;
+        z-index: 1;
+      }
+
+      /* 表示開始時にフェードイン */
+      .show {
+        opacity: 0.6; /* ぼんやり感 */
+      }
+
+      .loading-text {
+        font-size: 6rem;
+        font-weight: bold;
+        display: flex;
+        gap: 1.5rem;
+        position: relative;
+        z-index: 5; /* 文字は一番手前 */
+      }
+      .char {
+        opacity: 0;
+      }
+      .char1 {
+        color: #e66800;
+      }
+      .char2 {
+        color: #e66800;
+      }
+      .char3 {
+        color: #e66800;
+      }
+
+      .char1 {
+        animation: fly-in-left 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+      }
+      .char2 {
+        animation: fly-in-top 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        animation-delay: 0.2s;
+      }
+      .char3 {
+        animation: fly-in-right 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        animation-delay: 0.4s;
+      }
+
+      /* 左上から */
+      @keyframes fly-in-left {
+        0% {
+          transform: translate(-200px, -200px);
+          opacity: 0;
+        }
+        100% {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+      }
+      /* 真上から */
+      @keyframes fly-in-top {
+        0% {
+          transform: translate(0, -250px);
+          opacity: 0;
+        }
+        100% {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+      }
+      /* 右上から */
+      @keyframes fly-in-right {
+        0% {
+          transform: translate(200px, -200px);
+          opacity: 0;
+        }
+        100% {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+      }
+
+      /* フェードアウト */
+      .fade-out {
+        animation: fadeOut 1s ease forwards;
+        animation-delay: 1.5s;
+      }
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      #common-modal-wrapper {
+        padding: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== ローディング画面 ===== -->
+    <div id="loading-screen">
+      <!-- 背景画像3枚（WebP + JPG フォールバック対応） -->
+      <!-- <picture>
+        <source srcset="/images/animation1.webp" type="image/webp" />
+        <img src="./images/animation1.jpg" alt="" class="loading-bg bg-left" />
+      </picture>
+
+      <picture>
+        <source srcset="/images/animation5.webp" type="image/webp" />
+        <img
+          src="./images/animation5.jpg"
+          alt=""
+          class="loading-bg bg-center"
+        />
+      </picture>
+
+      <picture>
+        <source srcset="/images/animation2.webp" type="image/webp" />
+        <img src="./images/animation2.jpg" alt="" class="loading-bg bg-right" />
+      </picture>
+
+      <picture>
+        <source srcset="/images/animation3.webp" type="image/webp" />
+        <img
+          src="./images/animation3.jpg"
+          alt=""
+          class="loading-bg bg-bottom-left"
+        />
+      </picture>
+
+      <picture>
+        <source srcset="/images/animation4.webp" type="image/webp" />
+        <img
+          src="./images/animation4.jpg"
+          alt=""
+          class="loading-bg bg-top-right"
+        />
+      </picture> -->
+
+      <!-- ロード文字 -->
+      <div class="loading-text">
+        <span class="char char1">体</span>
+        <span class="char char2">育</span>
+        <span class="char char3">祭</span>
+      </div>
+    </div>
+
+    <site-header></site-header>
+    <common-modal></common-modal>
+
+    <section>
+      <div style="margin: 60px 0"></div>
+      <h3>体育祭</h3>
+    </section>
+    <!-- トップ画像 -->
+    <section class="carousel" aria-label="Gallery">
+      <ol class="carousel__viewport" id="carousel__viewport">
+        <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+          <div class="carousel__snapper">
+            <picture>
+              <source srcset="./images/top1.webp" type="image/webp" />
+              <img src="./images/top1.jpg" alt="去年の写真1" />
+            </picture>
+          </div>
+        </li>
+        <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+          <div class="carousel__snapper">
+            <picture>
+              <source srcset="./images/top2.webp" type="image/webp" />
+              <img src="./images/top2.jpg" alt="去年の写真2" />
+            </picture>
+          </div>
+        </li>
+        <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+          <div class="carousel__snapper">
+            <picture>
+              <source srcset="./images/top3.webp" type="image/webp" />
+              <img src="./images/top3.jpg" alt="去年の写真3" />
+            </picture>
+          </div>
+        </li>
+      </ol>
+      <!-- 矢印ボタン -->
+      <button
+        class="carousel__prev"
+        id="carousel-button-prev"
+        aria-label="前へ"
+      >
+        &#10094;
+      </button>
+      <button
+        class="carousel__next"
+        id="carousel-button-next"
+        aria-label="次へ"
+      >
+        &#10095;
+      </button>
+      <aside class="carousel__navigation">
+        <ol class="carousel__navigation-list">
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide1" class="carousel__navigation-button"
+              >Go to slide 1</a
+            >
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide2" class="carousel__navigation-button"
+              >Go to slide 2</a
+            >
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide3" class="carousel__navigation-button"
+              >Go to slide 3</a
+            >
+          </li>
+        </ol>
+      </aside>
+    </section>
+
+    <section id="note" style="margin: 40px 0">
+      <p class="common-text-basic">体育祭は、保護者のみ限定公開しています。</p>
+    </section>
+
+    <!-- プログラム -->
+    <section id="program">
+      <p>　</p>
+      <h2>体育祭プログラム</h2>
+      <div class="program-image">
+        <img
+          src="images/program.png"
+          alt="体育祭プログラム表"
+          class="clickable-img"
+        />
+        <img src="images/map.webp" alt="会場内地図" class="clickable-img" />
+      </div>
+    </section>
+
+    <!-- モーダル -->
+    <div id="image-modal" class="modal">
+      <img class="modal-content" id="modal-img" />
+      <div id="caption"></div>
+    </div>
+
+    <!-- 会場案内 -->
+    <section id="venue">
+      <h2>保護者の方へ</h2>
+      <p class="map-description-detail">
+        開場時間は08時20分です。それ以前に入場することはできないので注意してください。<br />室内履きは不要です。土足のままご覧いただけます。
+      </p>
+    </section>
+
+    <svg
+      style="background-color: #fffbfe"
+      class="wave-svg"
+      viewBox="0 0 1200 100"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+        fill="#f5f4f0"
+      />
+    </svg>
+
+    <!-- ブロック紹介 -->
+    <section id="blocks" class="blocks">
+      <h2>ブロック紹介</h2>
+      <p class="detail">クリックで詳細を見ることが出来ます。</p>
+      <details class="common-accordion">
+        <summary style="background-color: #ffe5e5">
+          赤ブロック
+          <span class="common-accordion-icon"></span>
+        </summary>
+        <div class="common-accordion-content">
+          <p class="common-text-basic common-text-nomargin">
+            <strong>102HR 201HR 303HR</strong><br /><br />
+            <strong>ブロックテーマ</strong
+            >：あかいいだけじゃだめですか？（かわいいだけじゃだめですか？）<br /><br />
+            <strong>マステーマ</strong>：WARRIORS<br /><br />
+            <strong>マス紹介</strong><br />こんにちは赤マス長です!「赤」といえば
+            「強さ」「情熱」を連想しますよね！私たち赤マスはそんな強さや情熱をもった「戦士」
+            をイメージして踊ります！力強さの中にも優しさがあるような私たちの演技をご覧ください！
+          </p>
+        </div>
+      </details>
+      <details class="common-accordion">
+        <summary style="background-color: #fff2e5">
+          橙ブロック
+          <span class="common-accordion-icon"></span>
+        </summary>
+        <div class="common-accordion-content">
+          <p class="common-text-basic common-text-nomargin">
+            <strong>108HR 206HR 305HR</strong><br /><br />
+            <strong>ブロックテーマ</strong
+            >：一橙両断（いっとうりょうだん）<br /><br />
+            <strong>マステーマ</strong>：Welcome to the Heartbeat Show<br /><br />
+            <strong>マス紹介</strong><br />
+            それは、ひとりでは生まれないリズム。全員でひとつの“鼓動”を生み出し、最高のパフォーマンスをお届けします。さあ、観客までもオレンジ色に染め上げる、私たちの
+            Heartbeat Show へようこそ！
+          </p>
+        </div>
+      </details>
+      <details class="common-accordion">
+        <summary style="background-color: #ffffe5">
+          黄ブロック
+          <span class="common-accordion-icon"></span>
+        </summary>
+        <div class="common-accordion-content">
+          <p class="common-text-basic common-text-nomargin">
+            <strong>107HR 209HR 302HR</strong><br /><br />
+            <strong>ブロックテーマ</strong
+            >：黄色戦士（セーラームーン）<br /><br />
+            <strong>マステーマ</strong>：LUZ PIRATA<br /><br />
+            <strong>マス紹介</strong><br />
+            Yo Ho！！おれらの船へようこそ！ここでは「LUZ
+            PIRATAｰ海賊の光」をモットーに40人で明るく力強く冒険しているぜ。眩しいからといっておれらから目を背けるなよ？瞬き厳禁！一緒に楽しもうぜ！！
+          </p>
+        </div>
+      </details>
+      <details class="common-accordion">
+        <summary style="background-color: #e5ffe5">
+          緑ブロック
+          <span class="common-accordion-icon"></span>
+        </summary>
+        <div class="common-accordion-content">
+          <p class="common-text-basic common-text-nomargin">
+            <strong>106HR 203HR 301HR</strong><br /><br />
+            <strong>ブロックテーマ</strong
+            >：全緑疾走（ぜんりょくしっそう）<br /><br />
+            <strong>マステーマ</strong>：Fairy Tale<br /><br />
+            <strong>マス紹介</strong><br />
+            大切なのは、信じること一華やかで恐ろしい妖精達が、あなたを物語の世界へいざないます。夜が明け、眠りから覚めれば、心のままに飛んでいく….時間を忘れるほどの圧倒的な演技をご覧あれ！You
+            can fly！
+          </p>
+        </div>
+      </details>
+      <details class="common-accordion">
+        <summary style="background-color: #e5f2ff">
+          青ブロック
+          <span class="common-accordion-icon"></span>
+        </summary>
+        <div class="common-accordion-content">
+          <p class="common-text-basic common-text-nomargin">
+            <strong>101HR 205HR 308HR</strong><br /><br />
+            <strong>ブロックテーマ</strong
+            >：奇蒼天外（きそうてんがい）<br /><br />
+            <strong>マステーマ</strong>：ÉCLAT:LIBERTY<br /><br />
+            <strong>マス紹介</strong><br />
+            閉ざされた青い世界から抜け出す。自由の光に導かい、シンデレラのような一歩を踏み出し、新たな自分が解き放たれる。輝かしい未来に向けて自分の翼を今、大きく広げ、羽ばたいてゆく。ECLAT:LIBERTY
+          </p>
+        </div>
+      </details>
+      <details class="common-accordion">
+        <summary style="background-color: #e5e5ff">
+          紫ブロック
+          <span class="common-accordion-icon"></span>
+        </summary>
+        <div class="common-accordion-content">
+          <p class="common-text-basic common-text-nomargin">
+            <strong>103HR 207HR 309HR</strong><br /><br />
+            <strong>ブロックテーマ</strong
+            >：紫電一閃（しでんいっせい）<br /><br />
+            <strong>マステーマ</strong>：Stained by the devil<br /><br />
+            <strong>マス紹介</strong><br />
+            悪魔達の宴へようこそ。どうやらヴィランズの世界へ迷い込んでしまったようですね。怯える必要はありません。私たちがあなたを悪魔に染め上げてみせましょう。そろそろパーティーの始まりです。どうぞお楽しみください。
+          </p>
+        </div>
+      </details>
+      <details class="common-accordion">
+        <summary style="background-color: #ffe5ff">
+          桃ブロック
+          <span class="common-accordion-icon"></span>
+        </summary>
+        <div class="common-accordion-content">
+          <p class="common-text-basic common-text-nomargin">
+            <strong>109HR 208HR 306HR</strong><br /><br />
+            <strong>ブロックテーマ</strong
+            >：桜梅桃李（おうばいとうり）<br /><br />
+            <strong>マステーマ</strong>：気韻生動<br /><br />
+            <strong>マス紹介</strong><br />
+            人生は舞踊のようだ。どこか激しくも繊細で、またそれに絶対的な正しさなんてない。我々は、躍動感と生命感に溢れたパフォーマンスで会場を沸かせます。さあ、感じてください。ピンクマスの“気韻生動(きいんせいどう)“を…
+          </p>
+        </div>
+      </details>
+      <details class="common-accordion">
+        <summary style="background-color: rgb(197, 197, 197)">
+          黒ブロック
+          <span class="common-accordion-icon"></span>
+        </summary>
+        <div class="common-accordion-content">
+          <p class="common-text-basic common-text-nomargin">
+            <strong>105HR 202HR 307HR</strong><br /><br />
+            <strong>ブロックテーマ</strong
+            >：黒士無双（こくしむそう）<br /><br />
+            <strong>マステーマ</strong>：Black Kingdom<br /><br />
+            <strong>マス紹介</strong><br />
+            黒マスのテーマである「Black
+            Kingdom」は、光と闇が交錯する幻想的な世界。踊り手一人ひとりが自分の世界を築くパフォーマンスで表現する、暗闇の中に輝く“黒の王国”の物語をぜひのぞいていってください！
+          </p>
+        </div>
+      </details>
+      <details class="common-accordion">
+        <summary style="background-color: rgb(255, 255, 255)">
+          白ブロック
+          <span class="common-accordion-icon"></span>
+        </summary>
+        <div class="common-accordion-content">
+          <p class="common-text-basic common-text-nomargin">
+            <strong>104HR 204HR 304HR</strong><br /><br />
+            <strong>ブロックテーマ</strong>：白鳳乱舞<br /><br />
+            <strong>マステーマ</strong>：Contrast<br /><br />
+            <strong>マス紹介</strong><br />
+            白は、全てを映し出す。そこに影が落ちれば、輪郭が際立つ。光が差せば、世界が動き出す。まっさらな舞台に立ち、感情を色に変えて、リズムに乗せて、表現する。白が白でなくなる瞬間――あなたも一緒に。
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <!-- 競技カード -->
+    <section
+      id="modal"
+      data-title="モーダル"
+      class="full-bleed"
+      style="--bgcolor: #f5f4f0"
+    >
+      <h2>競技ルール</h2>
+      <p class="rules-caption">
+        各競技アイコンをクリックすると、詳細ルールを見ることができます。
+      </p>
+      <div
+        class="common-flex-card common-flex-container"
+        style="
+          --minWidth: 150px;
+          --maxWidth: 200px;
+          --itemNum: 4;
+          --itemPCNum: 3;
+          --gap: 10px;
+          --minPCWidth: 400px;
+          --maxPCWidth: 500px;
+        "
+      >
+        <!-- 競技カード -->
+        <div class="common-flex-element common-modal-trigger">
+          <div class="common-flex-icon common-flex-icon-square">
+            <img
+              src="images/rule-jump.webp"
+              height="150"
+              width="150"
+              src="1アイコン"
+            />
+          </div>
+          <div class="common-flex-main">
+            <strong>1年大縄跳び</strong>
+          </div>
+        </div>
+        <div class="common-modal-content">
+          <p>
+            <strong>１年学年種目（大繩）</strong><br /><br />
+            <strong>概要</strong><br />
+            クラス全員で八の字形式で行う（前後半それぞれ20人＋2人）。<br />
+            前後半それぞれ4分内に連続して飛べた最高回数を競う。<br />
+            前後半行い、各最高記録を足した合計を点数とする。<br /><br />
+            <strong>流れ</strong><br />
+            各HRに分かれブザーの合図で競技をはじめ、2度目のブザーで競技を止める。<br /><br />
+            <strong>注意点</strong><br />
+            縄を回す人もどちらかで飛ぶ人として出場する。<br />
+            連続記録が継続しているときに時間終了となった場合は、記録が途切れるまで続けられる。
+          </p>
+
+          <p></p>
+        </div>
+        <div class="common-flex-element common-modal-trigger">
+          <div class="common-flex-icon common-flex-icon-square">
+            <img
+              src="images/rule-typhoon.webp"
+              height="150"
+              width="150"
+              src="1アイコン"
+            />
+          </div>
+          <div class="common-flex-main">
+            <strong>2年台風の目</strong>
+          </div>
+        </div>
+        <div class="common-modal-content">
+          <p>
+            <strong>２年学年種目（台風の目）</strong><br /><br />
+            <strong>概要</strong><br />
+            4人1組で棒を持って走るリレー形式（4×11）。<br />
+            前半5HR（青、黄、紫、緑、橙）、後半4HR（白、赤、桃、黒）。<br />
+            スタートからゴールまでのタイムで順位を決める。<br /><br />
+            <strong>流れ</strong><br />
+            4人で棒を持ち、コーンを順に回って戻ってくる。<br />
+            （1つ目：時計回り、2つ目：反時計回り）<br />
+            帰ってきたら棒を足元→頭上と通してバトンタッチ。<br />
+            アンカーがゴール後、全員が座った瞬間がゴール。<br /><br />
+            <strong>注意点</strong><br />
+            コーンを倒してしまったらすぐ立て直す。<br />
+            棒は目印の部分を必ず持つ。
+          </p>
+
+          <p></p>
+        </div>
+        <div class="common-flex-element common-modal-trigger">
+          <div class="common-flex-icon common-flex-icon-square">
+            <img
+              src="images/rule-shougai.webp"
+              height="150"
+              width="150"
+              src="1アイコン"
+            />
+          </div>
+          <div class="common-flex-main">
+            <strong>3年障害物リレー</strong>
+          </div>
+        </div>
+        <div class="common-modal-content">
+          <p>
+            <strong>3年学年種目（障害物リレー）</strong><br /><br />
+            <strong>概要</strong><br />
+            Aブロック（黒、桃、赤、白）、Bブロック（橙、緑、紫、黄、青）に分かれ2レース行う。<br />
+            計45人で行い、障害物は「袋競争」、「空飛ぶ絨毯」、「ボール運び」、「手押し車」の4種。<br />
+            スタートからゴールまでのタイムで順位を決める。<br /><br />
+            <strong>流れ</strong><br />
+            袋競争：麻袋に両足を入れた状態で半分まで進み、そこからは袋を脱いで走る。<br />
+            空飛ぶ絨毯：ブルーシートの上に1人を座らせ、4隅を持ちゴールまで運ぶ。<br />
+            ボール運び：二人で背中の間にボールを挟み運ぶ。<br />
+            手押し車：一人が手をつき、もう一人がその人の足首を持ち進む。半分で別のペアと交代。<br /><br />
+            <strong>注意点</strong><br />
+            第一走者からオープンコースで行うが、バトンパスするレーンは固定。<br />
+            ブルーシートを腰より上に持ち上げるのは危ないため禁止。<br />
+            同じ種目の人が全員そろってからバトンタッチ可能。
+          </p>
+
+          <p></p>
+        </div>
+        <div class="common-flex-element common-modal-trigger">
+          <div class="common-flex-icon common-flex-icon-square">
+            <img
+              src="images/rule-relay.webp"
+              height="150"
+              width="150"
+              src="1アイコン"
+            />
+          </div>
+          <div class="common-flex-main">
+            <strong>ブロック対抗<br />リレー</strong>
+          </div>
+        </div>
+        <div class="common-modal-content">
+          <p>
+            <strong>ブロック対抗リレー</strong><br /><br />
+            <strong>概要</strong><br />
+            オーソドックスなリレー形式（1ブロック18名）。<br />
+            1回戦目（白、緑、黄）、2回戦目（黒、桃、橙）、3回戦目（青、赤、紫）。<br />
+            スタートからゴールまでのタイムで順位を決める。<br /><br />
+            <strong>流れ</strong><br />
+            奇数走者と偶数走者に分かれ走順に並んで待機しておく。<br />
+            一人トラック半周を走る。<br /><br />
+            <strong>注意点</strong><br />
+            第一走者はスタンディングスタートで最初からオープンコースで行う。<br />
+            テイクオーバーゾーンは8mで、超えてしまったらペナルティ。<br />
+            トラックのカーブがきついため、走る際は注意する。
+          </p>
+
+          <p></p>
+        </div>
+        <div class="common-flex-element common-modal-trigger">
+          <div class="common-flex-icon common-flex-icon-square">
+            <img
+              src="images/rule-ball.webp"
+              height="150"
+              width="150"
+              src="1アイコン"
+            />
+          </div>
+          <div class="common-flex-main">
+            <strong>ブロック対抗<br />大玉転がし</strong>
+          </div>
+        </div>
+        <div class="common-modal-content">
+          <p>
+            <strong>ブロック対抗大玉転がし</strong><br /><br />
+            <strong>概要</strong><br />
+            二人一組で玉を転がしていくリレー形式（2×7）。<br />
+            1回戦目（赤、緑、紫）、2回戦目（黒、橙、白）、3回戦目（青、黄、桃）。<br />
+            スタートからゴールまでのタイムで順位を決める。<br /><br />
+            <strong>流れ</strong><br />
+            2人一組で大玉を転がし、コーンを時計回りに回ってUターンし戻ってくる。<br />
+            戻ってきたら先頭の待機者の間に球を流し、最後尾へ急ぐ。<br />
+            待機している人はボールを後ろに送り、最後尾の人は大玉を頭上に持ち上げ前へ送る。<br /><br />
+            <strong>注意点</strong><br />
+            玉を降ろす前に線を越えてしまった場合は線までもどしてやり直し＆2秒ペナルティ。<br />
+            アンカーが玉を運び終わって、頭上に挙げて前にもどしてから全員座ったらゴール。<br />
+            もし10分を超えてしまった場合はその時点で終了とする。
+          </p>
+        </div>
+        <div class="common-flex-element common-modal-trigger">
+          <div class="common-flex-icon common-flex-icon-square">
+            <img
+              src="images/rule-smallball.webp"
+              height="150"
+              width="150"
+              src="1アイコン"
+            />
+          </div>
+          <div class="common-flex-main">
+            <strong>ブロック対抗<br />玉入れ</strong>
+          </div>
+        </div>
+        <div class="common-modal-content">
+          <p>
+            <strong>ブロック対抗玉入れ</strong><br /><br />
+            <strong>概要</strong><br />
+            9HR同時に行い、各学年男女で全6試合行う。<br />
+            1チームあたり入れる人11名と逃げる人1名で各試合2分行う。<br />
+            緑←青、青←白、白←緑、橙←黒、黒←赤、赤←橙、黄←紫、紫←桃、桃←黄の籠にそれぞれ投げ入れる。<br /><br />
+            <strong>流れ</strong><br />
+            投げ入れる人は枠の外で待機し、枠には入らず外から籠に投げ入れる。<br />
+            枠の中に落ちたボールを拾うときは枠に入ってもいいが、すぐに外に出ること。<br />
+            籠を持つ人は玉を入れられないように枠の中を逃げる。<br />
+            玉をこぼしてしまった場合は体常の指示に従い自分で拾う。<br /><br />
+            <strong>注意点</strong><br />
+            玉をこぼした場合は自分で拾うが、その時も外の人は投げ続けてよい。
+          </p>
+
+          <p></p>
+        </div>
+        <div class="common-flex-element common-modal-trigger">
+          <div class="common-flex-icon common-flex-icon-square">
+            <img
+              src="images/rule-tug.webp"
+              height="150"
+              width="150"
+              src="1アイコン"
+            />
+          </div>
+          <div class="common-flex-main">
+            <strong>ブロック対抗<br />綱引き</strong>
+          </div>
+        </div>
+        <div class="common-modal-content">
+          <p>
+            <strong>ブロック対抗綱引き</strong><br /><br />
+            <strong>概要</strong><br />
+            男女それぞれトーナメントで行い、3決まで行うが5位以下の順位は決定しない。<br />
+            人数は各学年8人ずつの1チーム計24人で行う。<br />
+            試合時間は1試合30秒で行い、試合終了時点で自陣側に引き込んだチームが勝利。<br /><br />
+            <strong>流れ</strong><br />
+            全ブロック待機場所で競技を行う順番に並んでおく。<br />
+            「用意はいいですか？」の後の電子ホイッスルの音で開始する。<br />
+            試合が終了した後は待機場所にもどる（連戦の場合はその場に残る）。<br /><br />
+            <strong>注意点</strong><br />
+            30秒以内に1m以上引き込んだ場合はその時点で勝敗を決定する。
+          </p>
+
+          <p></p>
+        </div>
+        <div class="common-flex-element common-modal-trigger">
+          <div class="common-flex-icon common-flex-icon-square">
+            <img
+              src="images/rule-club.webp"
+              height="150"
+              width="150"
+              src="1アイコン"
+            />
+          </div>
+          <div class="common-flex-main">
+            <strong>部活動パフォー<br />マンス走</strong>
+          </div>
+        </div>
+        <div class="common-modal-content">
+          <p>
+            <strong>部活動パフォーマンス走</strong> <br /><br />
+            <strong>概要</strong><br />
+            24部活が出場し9レース行う（３×８＋２×１）<br />
+            1週を4区間に分け、各区間最大５名まで 1周を1分半のあいだに走る
+            <br /><br />
+            <strong>流れ</strong><br />
+            「更衣、準備」の時間に必要な人は更衣をし、道具があるなら準備する<br />
+            自分のレースが終わり次第速やかに退場する <br /><br />
+            <strong>注意点</strong><br />
+            順位は付けず各ブロックにも加点しない<br />
+            更衣をする際は男子：ミーティングルーム２とロッカールーム２<br />
+            　　　　　　　女子：ミーティングルーム１とロッカールーム１をそれぞれ使用する
+          </p>
+          <p></p>
+        </div>
+        <div class="common-flex-element common-modal-trigger">
+          <div class="common-flex-icon common-flex-icon-square">
+            <img
+              src="images/rule-mass.webp"
+              height="150"
+              width="150"
+              src="1アイコン"
+            />
+          </div>
+          <div class="common-flex-main">
+            <strong>マスゲーム</strong>
+          </div>
+        </div>
+        <div class="common-modal-content">
+          <p>
+            <strong>マスゲーム</strong><br /><br />
+            <strong>概要</strong><br />
+            演技場の西を正面にして各マスが順番に演技を披露する。<br />
+            入退場含め時間は4分以内とし、最後の一人が競技場を出るまでの時間で計測する。<br />
+            演技可能な範囲は30m×30mとする。<br /><br />
+            <strong>流れ</strong><br />
+            更衣を男子はミーティングルーム２とロッカールーム２で行い、女子はミーティングルーム１とロッカールーム１で行う。<br />
+            演技を行った後は退場口左手のホールで写真撮影を行う。<br />
+            演技終了後は先ほどと同じ場所でそれぞれ更衣を行い、速やかに部屋を開ける。<br /><br />
+            <strong>注意点</strong><br />
+            写真撮影後はほかのマスの邪魔にならない程度に同じブロック内のみで写真撮影は可能。<br />
+            全員臨機応変に体育の指示に従うこと。
+          </p>
+
+          <p></p>
+        </div>
+      </div>
+    </section>
+
+    <svg
+      style="background-color: #f5f4f0"
+      class="wave-svg"
+      viewBox="0 0 1200 100"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+        fill="#fffbfe"
+      />
+    </svg>
+
+    <!-- ギャラリー -->
+    <section id="gallery">
+      <p>　</p>
+      <h2>ギャラリー</h2>
+      <p class="instagraminformation"></p>
+      明和祭の様子は公式Instagramからご覧ください！
+      <a
+        href="https://www.instagram.com/meiwasai_2025_official/?l=1"
+        target="_blank"
+        class="common-btn common-btn-arrow"
+        style="margin: 30px auto; background-color: #f0dec7"
+      >
+        <span>明和祭公式Instagram</span>
+      </a>
+    </section>
+
+    <!-- 結果 -->
+    <section id="results">
+      <h2>結果</h2>
+      <p class="results-table">体育祭は終了しました！<br />放送されなかった競技もこちらから確認可能です。</p>
+      <p>　</p>
+      <!-- <div>
+        <table></table>
+      </div> -->
+
+      <div
+        class="common-flex-card common-flex-container"
+        style="
+          --minWidth: 150px;
+          --maxWidth: 200px;
+          --itemNum: 4;
+          --itemPCNum: 3;
+          --gap: 10px;
+          --minPCWidth: 400px;
+          --maxPCWidth: 500px;
+        "
+      >
+        <!-- 競技カード -->
+        <div class="common-flex-element">
+          <div class="common-flex-icon common-flex-icon-square"></div>
+          <div class="common-flex-main">
+            <strong>台風の目</strong>
+            <ul id="eye_of_typhoon"></ul>
+          </div>
+        </div>
+
+        <div class="common-flex-element">
+          <div class="common-flex-icon common-flex-icon-square"></div>
+          <div class="common-flex-main">
+            <strong>ブロックリレー</strong>
+            <ul id="block_relay"></ul>
+          </div>
+        </div>
+
+        <div class="common-flex-element">
+          <div class="common-flex-icon common-flex-icon-square"></div>
+          <div class="common-flex-main">
+            <strong>大玉転がし</strong>
+            <ul id="giant_ball_roll"></ul>
+          </div>
+        </div>
+
+        <div class="common-flex-element">
+          <div class="common-flex-icon common-flex-icon-square"></div>
+          <div class="common-flex-main">
+            <strong>大繩</strong>
+            <ul id="long_jump_rope"></ul>
+          </div>
+        </div>
+
+        <div class="common-flex-element">
+          <div class="common-flex-icon common-flex-icon-square"></div>
+          <div class="common-flex-main">
+            <strong>玉入れ</strong>
+            <ul id="ball_toss"></ul>
+          </div>
+        </div>
+
+        <div class="common-flex-element">
+          <div class="common-flex-icon common-flex-icon-square"></div>
+          <div class="common-flex-main">
+            <strong>綱引き</strong>
+            <ul id="tug_of_war"></ul>
+          </div>
+        </div>
+
+        <div class="common-flex-element">
+          <div class="common-flex-icon common-flex-icon-square"></div>
+          <div class="common-flex-main">
+            <strong>障害物リレー</strong>
+            <ul id="obstacle_relay"></ul>
+          </div>
+        </div>
+
+        <div class="common-flex-element">
+          <div class="common-flex-icon common-flex-icon-square"></div>
+          <div class="common-flex-main">
+            <strong>マスゲーム</strong>
+            <ul id="mass_game"></ul>
+          </div>
+        </div>
+
+        <div class="common-flex-element">
+          <div class="common-flex-icon common-flex-icon-square"></div>
+          <div class="common-flex-main">
+            <strong>横断幕</strong>
+            <ul id="banner_contest"></ul>
+          </div>
+        </div>
+
+        <div class="common-flex-element">
+          <div class="common-flex-icon common-flex-icon-square"></div>
+          <div class="common-flex-main">
+            <strong>総合順位</strong>
+            <ul id="total_result"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <svg
+      style="background-color: #fffbfe"
+      class="wave-svg"
+      viewBox="0 0 1200 100"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+        fill="#fba481"
+      />
+    </svg>
+
+    <!-- フッター -->
+    <common-footer></common-footer>
+
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loading-screen");
+        const bgs = document.querySelectorAll(".loading-bg");
+
+        // 画像をフェードイン
+        bgs.forEach((bg) => bg.classList.add("show"));
+
+        // 文字と背景まとめてフェードアウト
+        loader.classList.add("fade-out");
+      });
+    </script>
+  </body>
+</html>

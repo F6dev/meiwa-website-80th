@@ -1,0 +1,371 @@
+$(document).ready(function () {
+  // ブロック詳細表示（1つだけ開く）
+  const cards = document.querySelectorAll(".block-card");
+
+  cards.forEach((card) => {
+    const header = card.querySelector("h3");
+    header.addEventListener("click", () => {
+      // 他のカードを閉じる
+      cards.forEach((c) => {
+        if (c !== card) {
+          c.classList.remove("active");
+          c.querySelector(".toggle-icon").textContent = "＋";
+        }
+      });
+
+      // 今クリックしたカードをトグル
+      card.classList.toggle("active");
+      const icon = card.querySelector(".toggle-icon");
+      icon.textContent = card.classList.contains("active") ? "×" : "＋";
+    });
+  });
+
+  // スムーズスクロール
+  $("a[href^='#']").on("click", function (event) {
+    event.preventDefault();
+    const target = $(this.hash);
+    if (target.length) {
+      $("html, body").animate(
+        {
+          scrollTop: target.offset().top - 60,
+        },
+        800
+      );
+    }
+  });
+
+  // プログラムモーダル表示
+  $(".program-btn").click(function () {
+    const modal = `
+      <div class="modal-overlay">
+        <div class="modal-content">
+          <span class="modal-close">×</span>
+          <img src="timetable.png" alt="タイムテーブル" style="width:100%">
+        </div>
+      </div>`;
+    $("body").append(modal);
+
+    $(".modal-close, .modal-overlay").click(function (e) {
+      if ($(e.target).is(".modal-close, .modal-overlay")) {
+        $(".modal-overlay").remove();
+      }
+    });
+  });
+
+  // 競技ルールの詳細表示（1つだけ開く）
+  $(".rule-show-more-btn").click(function () {
+    const details = $(this).next(".rule-details");
+    $(".rule-details").not(details).slideUp();
+    $(".rule-show-more-btn").not(this).text("ルールを見る");
+
+    details.slideToggle();
+    $(this).text(details.is(":visible") ? "閉じる" : "ルールを見る");
+  });
+
+  //ハンバーガーメニュー
+  $(document).ready(function () {
+    $(".menu-toggle").click(function () {
+      $(this).toggleClass("active"); // ハンバーガーを×に変化
+      $(".nav-menu").toggleClass("active"); // メニュー展開
+    });
+  });
+
+  // 競技ルール：モーダル表示
+  $(".rule-icon").click(function () {
+    let title = $(this).siblings("h3").text();
+    let ruleText = $(this).data("rule");
+
+    $("#modal-title").text(title);
+    $("#modal-text").text(ruleText);
+
+    // fadeInの時間を100msに短縮
+    $("#rule-modal").fadeIn(100);
+  });
+
+  // モーダルを閉じる
+  $(".close-btn, #rule-modal").click(function (e) {
+    if ($(e.target).is(".close-btn") || $(e.target).is("#rule-modal")) {
+      $("#rule-modal").fadeOut(100); // fadeOutも100ms
+    }
+  });
+
+  let scrollY = 0; // スクロール位置を保持
+
+  // モーダルを開く
+  function openModal() {
+    // 現在のスクロール位置を取得
+    scrollY = window.scrollY;
+
+    // 背景スクロールを固定
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+
+    // スクロールバー幅を取得して横ずれを防ぐ
+    const scrollbarWidth = getScrollbarWidth();
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+
+    // ヘッダー幅も補正
+    const header = document.getElementById("common-header");
+    if (header) {
+      header.style.width = `calc(100% - ${scrollbarWidth}px)`;
+    }
+
+    // モーダルを表示（例：fadeInやCSS classで）
+    const modal = document.getElementById("rule-modal");
+    if (modal) modal.style.display = "flex";
+  }
+
+  // モーダルを閉じる
+  function closeModal() {
+    // モーダルを非表示
+    const modal = document.getElementById("rule-modal");
+    if (modal) modal.style.display = "none";
+
+    // bodyスタイルを元に戻す
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.paddingRight = "";
+
+    // ヘッダー幅を元に戻す
+    const header = document.getElementById("common-header");
+    if (header) header.style.width = "";
+
+    // スクロール位置を復元
+    window.scrollTo(0, scrollY);
+  }
+
+  // スクロールバー幅を取得する関数
+  function getScrollbarWidth() {
+    const div = document.createElement("div");
+    div.style.visibility = "hidden";
+    div.style.overflow = "scroll";
+    div.style.position = "absolute";
+    div.style.width = "100px";
+    document.body.appendChild(div);
+
+    const innerDiv = document.createElement("div");
+    innerDiv.style.width = "100%";
+    div.appendChild(innerDiv);
+
+    const scrollbarWidth = div.offsetWidth - innerDiv.offsetWidth;
+    document.body.removeChild(div);
+    return scrollbarWidth;
+  }
+
+  // クリックイベントでモーダル開閉
+  document.querySelectorAll(".rule-icon").forEach((icon) => {
+    icon.addEventListener("click", () => {
+      // モーダルのタイトルと本文を設定
+      const title = icon.nextElementSibling.textContent;
+      const ruleText = icon.dataset.rule;
+
+      document.getElementById("modal-title").textContent = title;
+      document.getElementById("modal-text").textContent = ruleText;
+
+      // モーダルを開く
+      openModal();
+    });
+  });
+
+  // 閉じるボタンや背景クリックでモーダル閉じる
+  document.querySelectorAll(".close-btn, #rule-modal").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      if (
+        e.target.classList.contains("close-btn") ||
+        e.target.id === "rule-modal"
+      ) {
+        closeModal();
+      }
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelector(".slides");
+    const slideElements = document.querySelectorAll(".slide");
+    const totalSlides = slideElements.length;
+    const dotsContainer = document.querySelector(".dots");
+
+    // クローン追加
+    const firstClone = slideElements[0].cloneNode(true);
+    const lastClone = slideElements[totalSlides - 1].cloneNode(true);
+    slides.appendChild(firstClone);
+    slides.insertBefore(lastClone, slideElements[0]);
+
+    let slideIndex = 1;
+    let isTransitioning = false;
+    let autoSlideInterval;
+    let slideWidth = slideElements[0].clientWidth;
+
+    // 初期位置セット
+    slides.style.transform = `translateX(-${slideWidth * slideIndex}px)`;
+
+    // 高さを最大画像に揃える
+    const slideImgs = document.querySelectorAll(".slide img");
+    Promise.all(
+      Array.from(slideImgs).map((img) => {
+        return new Promise((resolve) => {
+          if (img.complete) resolve();
+          else img.onload = resolve;
+        });
+      })
+    ).then(() => {
+      let maxHeight = 0;
+      slideImgs.forEach((img) => {
+        if (img.height > maxHeight) maxHeight = img.height;
+      });
+      slides.style.height = maxHeight + "px";
+    });
+
+    // リサイズ対応
+    window.addEventListener("resize", () => {
+      slideWidth = slideElements[0].clientWidth;
+      slides.style.transition = "none";
+      slides.style.transform = `translateX(-${slideWidth * slideIndex}px)`;
+    });
+
+    // ドット生成
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => {
+        moveToSlide(i + 1);
+        resetAutoSlide();
+      });
+      dotsContainer.appendChild(dot);
+    }
+    const dots = document.querySelectorAll(".dot");
+
+    function updateDots() {
+      dots.forEach((dot) => dot.classList.remove("active"));
+      dots[(slideIndex - 1 + totalSlides) % totalSlides].classList.add(
+        "active"
+      );
+    }
+
+    function moveToSlide(index) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      slides.style.transition = "transform 0.5s ease-in-out";
+      slides.style.transform = `translateX(-${slideWidth * index}px)`;
+      slideIndex = index;
+    }
+
+    // ボタン操作
+    document.querySelector(".next").addEventListener("click", () => {
+      moveToSlide(slideIndex + 1);
+      resetAutoSlide();
+    });
+
+    document.querySelector(".prev").addEventListener("click", () => {
+      moveToSlide(slideIndex - 1);
+      resetAutoSlide();
+    });
+
+    // トランジション終了処理
+    slides.addEventListener("transitionend", () => {
+      isTransitioning = false;
+      if (slideIndex === 0) {
+        slides.style.transition = "none";
+        slideIndex = totalSlides;
+        slides.style.transform = `translateX(-${slideWidth * slideIndex}px)`;
+      }
+      if (slideIndex === totalSlides + 1) {
+        slides.style.transition = "none";
+        slideIndex = 1;
+        slides.style.transform = `translateX(-${slideWidth * slideIndex}px)`;
+      }
+      updateDots();
+    });
+
+    // スワイプ操作（スマホ）
+    let startX = 0;
+    let endX = 0;
+    slides.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+    slides.addEventListener("touchend", (e) => {
+      endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) {
+        moveToSlide(slideIndex + 1);
+        resetAutoSlide();
+      }
+      if (endX - startX > 50) {
+        moveToSlide(slideIndex - 1);
+        resetAutoSlide();
+      }
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const viewport = document.querySelector(".carousel__viewport");
+    const slides = document.querySelectorAll(".carousel__slide");
+    const navButtons = document.querySelectorAll(
+      ".carousel__navigation-button"
+    );
+
+    let currentIndex = 0;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-img");
+  const captionText = document.getElementById("caption");
+  const closeBtn = document.querySelector(".close");
+
+  // クリックイベント（画像を拡大表示）
+  document.querySelectorAll(".clickable-img").forEach((img) => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      captionText.innerHTML = img.alt;
+    });
+  });
+
+  // 背景クリックで閉じる
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let nowID = 0;
+  const items = document.querySelectorAll(".carousel__slide");
+  const prevBtn = document.getElementById("carousel-button-prev");
+  const nextBtn = document.getElementById("carousel-button-next");
+  const viewport = document.getElementById("carousel__viewport");
+
+  function moveToCarouselItem(id) {
+    viewport.scrollTo({
+      behavior: "smooth",
+      left: items[id].offsetLeft,
+    });
+  }
+
+  // next ボタン
+  nextBtn.addEventListener("click", () => {
+    if (nowID === items.length - 1) {
+      nowID = 0; // 最後のスライドから先頭に戻る
+    } else {
+      nowID += 1;
+    }
+    moveToCarouselItem(nowID);
+  });
+
+  // prev ボタン
+  prevBtn.addEventListener("click", () => {
+    if (nowID === 0) {
+      nowID = items.length - 1; // 最初のスライドから最後へ
+    } else {
+      nowID -= 1;
+    }
+    moveToCarouselItem(nowID);
+  });
+});

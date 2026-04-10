@@ -1,0 +1,61 @@
+{
+  "data": {
+    "competitions": [
+      {
+        "id": 1,
+        "name_ja": "台風の目",
+        "name_en": "eye_of_typhoon",
+        "results": ["1:青", "1:黒", "2:赤", "3:白"]
+      },
+
+      {
+        "id": 2,
+        "name_ja": "ブロックリレー",
+        "name_en": "block_relay",
+        "results": ["", "", ""]
+      },
+      {
+        "id": 3,
+        "name_ja": "大玉転がし",
+        "name_en": "giant_ball_roll",
+        "results": ["", "", ""]
+      },
+      {
+        "id": 4,
+        "name_ja": "大縄",
+        "name_en": "long_jump_rope",
+        "results": ["", "", ""]
+      },
+      {
+        "id": 5,
+        "name_ja": "玉入れ",
+        "name_en": "ball_toss",
+        "results": ["", "", ""]
+      },
+      {
+        "id": 6,
+        "name_ja": "綱引き",
+        "name_en": "tug_of_war",
+        "results": ["", "", ""]
+      },
+      {
+        "id": 7,
+        "name_ja": "障害物リレー",
+        "name_en": "obstacle_relay",
+        "results": ["", "", ""]
+      },
+      {
+        "id": 8,
+        "name_ja": "マスゲーム",
+        "name_en": "mass_game",
+        "results": ["", "", ""]
+      },
+      {
+        "id": 9,
+        "name_ja": "横断幕",
+        "name_en": "banner_contest",
+        "results": ["", "", ""]
+      }
+    ]
+  }
+}

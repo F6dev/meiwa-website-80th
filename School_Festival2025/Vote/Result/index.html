@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 個別設定 -->
+    <title>結果 | 明和祭2025</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- defer属性を付けたらheadでも読み込めます -->
+    <script src="/School_Festival2025/src/common.js" defer></script>
+    <link rel="stylesheet" href="/School_Festival2025/src/common.css" />
+  </head>
+  <body>
+    <style>
+      table {
+        margin: 0 auto;
+        width: 50%;
+        border-collapse: collapse;
+        /* margin: 20px 0; */
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+      td hr {
+        border: none;
+        border-top: 1px dashed #bbb;
+        margin: 4px 0;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      tr {
+        background-color: #ffffff;
+      }
+    </style>
+    <common-header></common-header>
+    <common-modal></common-modal>
+    <main>
+      <!-- メインコンテンツここからスタート -->
+      <section
+        id="meikaryouran"
+        data-title="結果"
+        class="full-bleed"
+        style="--bgcolor: #fff0f5; min-height: 100vh"
+      >
+        <h1 class="common-title">結果</h1>
+        <h2 class="common-subtitle-theme">劇結果</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>順位</th>
+              <th>HR</th>
+              <th>劇名</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1位</td>
+              <td>302</td>
+              <td>NOVA</td>
+            </tr>
+            <tr>
+              <td>2位</td>
+              <td>303</td>
+              <td>斜陽の国</td>
+            </tr>
+            <tr>
+              <td>3位</td>
+              <td>309</td>
+              <td>LES MISÉRABLES</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="common-subtitle-theme">HR結果</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>順位</th>
+              <th>HR</th>
+              <th>HR名</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>総合グランプリ</td>
+              <td>207</td>
+              <td>KAZU STORY MANIA!</td>
+            </tr>
+            <tr>
+              <td>準グランプリ</td>
+              <td>102</td>
+              <td>#明和の真相をお話しします</td>
+            </tr>
+            <tr>
+              <td>来客者票グランプリ</td>
+              <td>106</td>
+              <td>工場を救え　～麺がのびる前に～</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <p class="common-text-basic">今年からは部門賞も設置されました！</p>
+        <table>
+          <thead>
+            <tr>
+              <th>部門</th>
+              <th>HR</th>
+              <th>HR名</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>唯一無二部門</td>
+              <td>
+                105<br />
+                <hr />
+                109
+              </td>
+              <td>
+                月が綺麗ですね　～105が贈る恋愛ゲーム～<br />
+                <hr />
+                美女と野獣の「ジェットコースター」大冒険！
+              </td>
+            </tr>
+            <tr>
+              <td>学べた部門</td>
+              <td>209</td>
+              <td>ムジカの伝説</td>
+            </tr>
+            <tr>
+              <td>装飾部門</td>
+              <td>208</td>
+              <td>くるくる喫茶</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <svg
+        style="background-color: #f5f4f0"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#fba481"
+        />
+      </svg>
+    </main>
+    <common-footer></common-footer>
+  </body>
+</html>

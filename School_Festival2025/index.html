@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 個別設定 -->
+    <title>明和祭2025 明花繚乱</title>
+    <link rel="icon" href="/School_Festival2025/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- defer属性を付けたらheadでも読み込めます -->
+    <script src="/School_Festival2025/src/common.js" defer></script>
+    <script src="./top-a.js" defer></script>
+    <script src="./videoHandler.js" defer></script>
+    <link rel="stylesheet" href="/School_Festival2025/src/common.css" />
+    <link rel="stylesheet" href="./top-a.css" />
+  </head>
+  <body>
+    <common-header></common-header>
+    <common-modal></common-modal>
+    <main>
+      <div id="hero">
+        <div id="video-container"></div>
+      </div>
+      <!-- メインコンテンツここからスタート -->
+      <section
+        id="meikaryouran"
+        data-title="明花繚乱"
+        class="full-bleed"
+        style="--bgcolor: #fff0f5; margin: 0"
+      >
+      <a
+          class="common-btn common-btn-rounded common-btn-arrow taiku-btn"
+          style="
+            margin: 0 auto;
+            height: 4rem;
+            font-size: 1.2rem;
+            background-color: #cdedf4;
+          "
+          href="/School_Festival2025/Sports_Festival"
+        >
+          <span style="margin: 10px">体育祭はこちら</span>
+        </a>
+        <h1 class="common-title">明花繚乱</h1>
+        <p>
+          明和に中学生たちがやってきた。<br />
+          思い出の北館も生まれ変わっている。<br />
+          中高一貫を経て大きな転換期を迎えても、<br />
+        </p>
+        <p style="font-size: 1.1rem">
+          明和生一人一人が個性を咲かせ、<br />
+          自分らしく輝く、<br />
+          明和生の作る最高が
+        </p>
+        <h2 style="font-size: 1.8rem"><strong>今始まる</strong></h2>
+      </section>
+      <svg
+        class="wave-svg"
+        id="access-wave"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+        style="background-color: #fffbfe"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#f6f2ed"
+        />
+      </svg>
+      <section
+        id="changelog"
+        data-title="更新情報"
+        class="full-bleed"
+        style="--bgcolor: #f5f4f0"
+      >
+        <h2 class="common-subtitle-theme">更新情報</h2>
+        <div class="changelog-container" style="width: 80%">
+          <table>
+            <tbody>
+              <tr>
+                <td>9/10</td>
+                <td>HR企画、劇企画、有志・五役企画、体育祭を更新しました</td>
+              </tr>
+              <tr>
+                <td>9/8</td>
+                <td>トップに掲載されているスケジュールを修正しました</td>
+              </tr>
+              <tr>
+                <td>9/7</td>
+                <td>明和祭2025 Webサイト 体育祭、Q&Aを公開しました</td>
+              </tr>
+              <tr>
+                <td>9/6</td>
+                <td>明和祭2025 Webサイト トップページを公開しました</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <svg
+        class="wave-svg"
+        id="access-wave"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#faedf5"
+        />
+      </svg>
+
+      <section class="access">
+        <h2
+          class="common-subtitle-theme"
+          style="margin: 0 auto; margin-bottom: 1rem"
+        >
+          案内
+        </h2>
+
+        <div class="access-information">
+          <div class="event">
+            <tbody>
+              <table border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                  <th colspan="3" style="color: #ec8e4b; text-align: center">
+                    体育祭
+                  </th>
+                </tr>
+                <tr>
+                  <td colspan="3" style="text-align: center">
+                    令和7年 9月11日（木）
+                  </td>
+                </tr>
+
+                <tr>
+                  <th colspan="3" style="color: #6b32e5; text-align: center">
+                    文化祭
+                  </th>
+                </tr>
+                <tr>
+                  <td colspan="3" style="text-align: center">
+                    令和7年 9月13日（土）
+                  </td>
+                </tr>
+                <tr>
+                  <td>オープニング</td>
+                  <td>8:45～9:45</td>
+                  <td style="color: rgb(18, 131, 146)">非公開</td>
+                </tr>
+                <tr>
+                  <td>企画運営</td>
+                  <td>11:00〜16:00</td>
+                  <td style="color: #e10303">一般公開</td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="3" style="text-align: center">
+                    令和7年 9月14日（日）
+                  </td>
+                </tr>
+                <tr>
+                  <td>企画運営</td>
+                  <td>9:00〜16:00</td>
+                  <td style="color: #e10303">一般公開</td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="3" style="text-align: center">
+                    令和7年 9月15日（月）
+                  </td>
+                </tr>
+                <tr>
+                  <td>企画運営</td>
+                  <td>9:00〜11:00</td>
+                  <td style="color: rgb(18, 131, 146)">非公開</td>
+                </tr>
+                <tr>
+                  <td>フィナーレ</td>
+                  <td>13:45〜16:00</td>
+                  <td style="color: rgb(18, 131, 146)">非公開</td>
+                </tr>
+              </table>
+            </tbody>
+          </div>
+
+          <div class="page-access-contents">
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8428.440725330212!2d136.90608561711846!3d35.18428879988104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003712e2b4b39b3%3A0xa1e8df53b0b4fb6a!2z5oSb55-l55yM56uL5piO5ZKM6auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1753450117777!5m2!1sja!2sjp"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+
+              <table class="acsess-content-table">
+                <tr>
+                  <th>名鉄瀬戸線「東大手」駅</th>
+                </tr>
+                <tr>
+                  <td>
+                    名鉄瀬戸線「東大手」駅「県庁・市役所方面出口」から東へ徒歩約1分
+                  </td>
+                </tr>
+                <tr>
+                  <th>名古屋市営地下鉄 名城線「名古屋城(旧: 市役所)」駅</th>
+                </tr>
+                <tr>
+                  <td>「1番出口」から東へ徒歩約8分</td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="2">名古屋市営バス「市役所」 東へ徒歩7分</td>
+                </tr>
+                <tr>
+                  <td colspan="2">名古屋市営バス「清水口」 西へ徒歩8分</td>
+                </tr>
+                <tr>
+                  <td colspan="2">名古屋市営バス「明和高校前」 徒歩1分弱</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <svg
+        style="background-color: #faedf5"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#fff6da"
+        />
+      </svg>
+      <section
+        id="theme"
+        data-title="テーマ"
+        class="full-bleed"
+        style="--bgcolor: #fff6da; width: 100%"
+      >
+        <h2 class="common-subtitle-theme" style="padding-bottom: 0.5rem">
+          キャラクター&テーマソング
+        </h2>
+        <p>下の項目をクリックすると詳細が開けます！</p>
+        <div
+          class="chracter_song"
+          style="justify-items: center; align-items: center"
+        >
+          <div
+            class="common-flex-card common-flex-container container chracter_song"
+            style="--itemNum: 4; --itemPCNum: 3; --gap: 10px"
+          >
+            <div class="chracter_song" style="justify-content: center">
+              <details
+                class="common-accordion detail-chara"
+                style="max-width: 400px"
+              >
+                <summary>
+                  <h2
+                    style="
+                      color: mediumpurple;
+                      grid-column-start: 1;
+                      grid-column-end: 3;
+                    "
+                  >
+                    キャラクター
+                  </h2>
+                  <br />
+                  <img
+                    src="picture\wanko.png"
+                    alt="めいわんこ"
+                    class="character-img"
+                    style="
+                      width: 100%;
+                      height: auto;
+                      border-radius: 8px;
+                      margin-bottom: 5x;
+                      grid-column: 1/3;
+                    "
+                  /><br />
+                  <p style="grid-column: 1/2">めいわんこ</p>
+                  <span class="common-accordion-icon"></span>
+                </summary>
+                <div
+                  class="common-accordion-content details-chara"
+                  style="max-height: 12rem; overflow-y: auto; padding: 10px"
+                >
+                  <p
+                    class="common-text-basic common-text-nomargin"
+                    style="line-height: 2rem"
+                  >
+                    たくさんの人の明和愛を形にしたキャラクター。<br />
+                    明和推しのわんこ。<br />
+                    明和生を見つけるとついてくる。<br />
+                    答えが1(ワン)になる計算が得意。
+                  </p>
+                </div>
+              </details>
+              <details
+                class="common-accordion detail-chara"
+                style="max-width: 400px"
+              >
+                <summary>
+                  <h2 style="color: mediumpurple; grid-column: 1/3">
+                    テーマソング
+                  </h2>
+                  <br />
+                  <img
+                    src="picture/『酒涙雨』.png"
+                    alt="酒涙雨"
+                    class="character-img"
+                    style="
+                      width: 100%;
+                      height: auto;
+                      border-radius: 8px;
+                      margin-bottom: 5x;
+                      grid-column: 1/3;
+                    "
+                  /><br />
+                  <audio
+                    controls
+                    src="picture\酒涙雨.mp3"
+                    id="song"
+                    style="
+                      margin: 0 auto;
+                      border: solid rgb(210, 209, 209) 1px;
+                      border-radius: 20px;
+                      grid-column: 1/3;
+                    "
+                  ></audio
+                  ><br />
+                  <p style="grid-column: 1/2">歌詞</p>
+                  <span class="common-accordion-icon"></span>
+                </summary>
+                <div
+                  class="common-accordion-content details-chara"
+                  style="
+                    max-height: 12rem;
+                    overflow-y: auto; /* ← 内容が超えたらスクロール */
+                    padding: 10px;
+                  "
+                >
+                  <p
+                    class="common-text-basic common-text-nomargin"
+                    style="line-height: 3rem"
+                  >
+                    この雨が止んだなら <br />
+                    あの坂で待ち合わせしようよ<br />
+                    紫陽花の色に <br />
+                    移り変わる目と<br />
+                    追いかけて追いかけて<br />
+                    光る雨だれを <br />
+                    抱きしめて待ってたって <br />
+                    笑って欲しいから <br />
+                    特別な事なんて無くていい <br />
+                    ただ日常を切り取ったような <br />
+                    やさしい夢を見させて <br />
+                    追想の狭間で <br />
+                    映る影は長く伸びて <br />
+                    まだまだ君の隣で眠らせて <br />
+                    夕暮れのチャイムで <br />
+                    ディレイする僕の目は <br />
+                    この街にも慣れてきたみたいだなって <br />
+                    問いかけて問いかけて <br />
+                    さぐり合う答えを <br />
+                    僕は知らないんだ <br />
+                    秘密を抱えているんでしょ？ <br />
+                    そばにはいられないや <br />
+                    言わなきゃわかんないんだろう <br />
+                    なにもが痛くて眩しくて <br />
+                    嘘を隠すために火をつけて <br />
+                    おさらばかな <br />
+                    もう戻れやしないんだよ <br />
+                    思い出が輝くときに <br />
+                    君の声が響くんだろうななんて <br />
+                    三日月みたいな瞳も <br />
+                    やわらかな日差しも <br />
+                    縋ってばかりの頼りない僕を許して
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+      <svg
+        style="background-color: #fff6da"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#f8f4f2"
+        />
+      </svg>
+      <section
+        id="theme"
+        data-title="テーマ"
+        class="full-bleed"
+        style="--bgcolor: #f8f4f2"
+      >
+        <h2 class="common-subtitle-theme">パンフレット</h2>
+        <p>
+          生徒会誌編集委員会が作成した明和祭パンフレットが、受付で配布されます！
+        </p>
+        <p>今年度は諸事情によりWeb上での公開は行いません。<br />当日受付でお楽しみください！</p>
+      </section>
+      <svg
+        style="background-color: #f8f4f2"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#fba481"
+        />
+      </svg>
+    </main>
+    <common-footer></common-footer>
+  </body>
+</html>

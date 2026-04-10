@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 個別設定 -->
+    <title>劇</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Shippori+Mincho&family=Shippori+Mincho+B1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- defer属性を付けたらheadでも読み込めます -->
+    <script src="/School_Festival2025/src/common.js" defer></script>
+    <link rel="stylesheet" href="/School_Festival2025/src/common.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <!--<script src="common.js" defer></script>-->
+  </head>
+  <body>
+    <common-header></common-header>
+    <common-modal></common-modal>
+    <main>
+      <!-- メインコンテンツここからスタート -->
+      <section
+        id="meikaryouran"
+        data-title="明花繚乱"
+        class="full-bleed"
+        style="--bgcolor: #efefff"
+      >
+        <h1 class="common-title">劇企画</h1>
+        <div class="p" style="text-align: center">
+          <p
+            class="common-text-basic"
+            style="
+              font-size: 20px;
+              display: inline-block;
+              text-align: left;
+              max-width: 480px;
+              width: 90%;
+            "
+          >
+            明和高校で伝統的に行われる3年生による劇をご覧いただけます<br />体育館で行われ、チケットや入場制限はありません
+          </p>
+        </div>
+      </section>
+      <svg
+        style="background-color: #efefff"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#ffefff"
+        />
+      </svg>
+
+      <section
+        id="modal"
+        data-title="モーダル"
+        class="full-bleed"
+        style="--bgcolor: #ffefff"
+      >
+        <h2 class="common-subtitle-theme">演目</h2>
+
+        <div
+          class="common-flex-card common-flex-growcard common-flex-container"
+          style="
+            --minWidth: 150px;
+            --maxWidth: 200px;
+            --itemNum: 2;
+            --itemPCNum: 3;
+            --gap: 10px;
+            --minPCWidth: 400px;
+            --maxPCWidth: 500px;
+          "
+        >
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/301.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/301.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong style="margin-bottom: 0px; margin-top: 2px">Elpis</strong>
+              <p class="common-text-basic" style="margin-bottom: 0px">301HR</p>
+              <p style="font-size: 12px; margin-bottom: 5px">
+                14日(日) 9:30~10:15
+              </p>
+              <div class="common-flex-onlypc">
+                <p class="common-introduction">
+                  舞台はヨーロッパの小国、ユルピシア。外の世界を夢見る王女スティアは、城を抜け出し、街で青年アトラスと出会う。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!-- 部活動展開モーダル -->
+
+            <div class="common-modal-wrapper" id="common-modal">
+              <div class="common-modal-flex2">
+                <!-- 左側に表示されるやつ -->
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    border-bottom: 5px solid green;
+                    padding-bottom: 10px;
+                    width: 100%;
+                  "
+                >
+                  <h2>301HR</h2>
+                  <h2 class="subject">Elpis</h2>
+                </div>
+                <div style="align-items: center">
+                  <figure style="text-align: center">
+                    <picture>
+                      <source
+                        srcset="
+                          /School_Festival2025/src/img/event_icons/301.webp
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/School_Festival2025/src/img/event_icons/301.png"
+                        alt="代替画像"
+                      />
+                    </picture>
+                    <p class="place">14日(日) 9:30~10:15＠体育館</p>
+                  </figure>
+                </div>
+              </div>
+
+              <div
+                id="common-modal-mainContent common-modal-flex"
+                style="justify-content: center"
+              >
+                <!-- 右側に表示されるやつ -->
+                <p class="common-text-basic" style="font-size: 18px">
+                  ＃紹介
+                  <span class="br-space"></span>
+                  舞台はヨーロッパの小国、エルピシア。外の世界を夢見る王女スティアは、城を抜け出し、街で青年アトラスと出会う。
+                  <span class="br-space"></span>
+                  訪れた酒場で国民の生活の苦しさを目の当たりにし、衝撃を受ける一方で、アトラスの仲間達とも少しずつ心を通わせていく。
+                  <span class="br-space"></span>
+                  そんなとき、王族を倒そうと革命が起こり…。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/302.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/302.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong style="margin-bottom: 0px; margin-top: 2px">NOVA</strong>
+              <p class="common-text-basic" style="margin-bottom: 0px">302HR</p>
+              <p style="font-size: 12px; margin-bottom: 5px">
+                13日(土) 12:30~13:15
+              </p>
+              <div class="common-flex-onlypc">
+                <p class="common-introduction">
+                  双子の姉を亡くし生きる意味を見失っていた少年リゲル。彼の止まっていた時間は、突如現れた不思議な転校生の少女エレナと超巨大隕石によって再び動き始める。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!-- 部活動展開モーダル -->
+
+            <div class="common-modal-wrapper" id="common-modal">
+              <div class="common-modal-flex2">
+                <!-- 左側に表示されるやつ -->
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    border-bottom: 5px solid rgb(222, 213, 41);
+                    padding-bottom: 10px;
+                  "
+                >
+                  <h2>302HR</h2>
+                  <h2 class="subject">NOVA</h2>
+                </div>
+                <div style="align-items: center">
+                  <figure style="text-align: center">
+                    <picture>
+                      <source
+                        srcset="
+                          /School_Festival2025/src/img/event_icons/302.webp
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/School_Festival2025/src/img/event_icons/302.png"
+                        alt="代替画像"
+                      />
+                    </picture>
+                    <p class="place">13日(土) 12:30~13:15＠体育館</p>
+                  </figure>
+                </div>
+              </div>
+
+              <div id="common-modal-mainContent common-modal-flex">
+                <!-- 右側に表示されるやつ -->
+                <p class="common-text-basic" style="font-size: 18px">
+                  ＃紹介
+                  <span class="br-space"></span>
+                  双子の姉を亡くし生きる意味を見失っていた少年リゲル。
+                  <span class="br-space"></span>
+                  彼の止まっていた時間は、突如現れた不思議な転校生の少女エレナと超巨大隕石によって再び動き始める。
+                  <span class="br-space"></span>
+                  果たして隕石の正体とは＿。そして光は受け継がれる。
+                  <span class="br-space"></span>
+                  想いが紡いだ奇跡のオリジナルストーリー。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/303.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/303.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong style="margin-bottom: 0px; margin-top: 2px"
+                >斜陽の国</strong
+              >
+              <p class="common-text-basic" style="margin-bottom: 0px">303HR</p>
+              <p style="font-size: 12px; margin-bottom: 5px">
+                14日(日) 13:30~14:15
+              </p>
+              <div class="common-flex-onlypc">
+                <p class="common-introduction">
+                  舞台は中世後期、ジョージア王国。記憶を失くした少年・ディミトリはジョージアの女王ルスダンと恋に落ちる。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!-- 部活動展開モーダル -->
+            <div class="common-modal-wrapper" id="common-modal">
+              <div class="common-modal-flex2">
+                <!-- 左側に表示されるやつ -->
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    border-bottom: 5px solid red;
+                    padding-bottom: 10px;
+                  "
+                >
+                  <h2>303HR</h2>
+                  <h2 class="subject">斜陽の国</h2>
+                </div>
+                <div style="align-items: center">
+                  <figure style="text-align: center">
+                    <picture src="1アイコン">
+                      <source
+                        srcset="
+                          /School_Festival2025/src/img/event_icons/303.webp
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/School_Festival2025/src/img/event_icons/303.png"
+                        alt="代替画像"
+                      />
+                    </picture>
+                    <p class="place">14日(日) 13:30~14:15＠体育館</p>
+                  </figure>
+                </div>
+              </div>
+
+              <div id="common-modal-mainContent common-modal-flex">
+                <!-- 右側に表示されるやつ -->
+                <p
+                  class="common-text-basic modal-description-br"
+                  style="font-size: 18px"
+                >
+                  ＃紹介
+                  <span class="br-space"></span>
+                  舞台は中世後期、ジョージア王国。
+                  <span class="br-space"></span>
+                  記憶を失くした少年・ディミトリはジョージアの女王ルスダンと恋に落ちる。
+                  <span class="br-space"></span>
+                  小説「斜陽の国のルスダン」を原案とした愛の物語。
+                  <span class="br-space"></span>
+                  ２人はまた出会う、あの思い出のリラの木の下で。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/304.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/304.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong style="margin-bottom: 0px; margin-top: 2px"
+                >宝玉記</strong
+              >
+              <p class="common-text-basic" style="margin-bottom: 0px">304HR</p>
+              <p style="font-size: 12px; margin-bottom: 5px">
+                14日(日) 10:30~11:15
+              </p>
+              <div class="common-flex-onlypc">
+                <p class="common-introduction">
+                  かつて同じ村に住んでいた剣の一族と勾玉の一族が決裂して早１５年。"失われた勾玉"、そして剣をめぐり両者は再び交わることとなる。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!-- 部活動展開モーダル -->
+
+            <div class="common-modal-wrapper" id="common-modal">
+              <div class="common-modal-flex2">
+                <!-- 左側に表示されるやつ -->
+                <div
+                  class="t"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    padding-bottom: 10px;
+                  "
+                >
+                  <h2>304HR</h2>
+                  <h2 class="subject">宝玉記</h2>
+                </div>
+                <div style="align-items: center">
+                  <figure style="text-align: center">
+                    <picture src="1アイコン">
+                      <source
+                        srcset="
+                          /School_Festival2025/src/img/event_icons/304.webp
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/School_Festival2025/src/img/event_icons/304.png"
+                        alt="代替画像"
+                      />
+                    </picture>
+                    <p class="place">14日(日) 10:30~11:15＠体育館</p>
+                  </figure>
+                </div>
+              </div>
+
+              <div id="common-modal-mainContent common-modal-flex">
+                <!-- 右側に表示されるやつ -->
+                <p class="common-text-basic" style="font-size: 18px">
+                  ＃紹介
+                  <span class="br-space"></span>
+                  かつて同じ村に住んでいた剣の一族と勾玉の一族が決裂して早１５年。
+                  <span class="br-space"></span>
+                  "失われた勾玉"、そして剣をめぐり両者は再び交わることとなる。
+                  <span class="br-space"></span>
+                  宝玉の行方と対立の真相は如何に…。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture height="150px" width="150px" src="1アイコン">
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/305.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/305.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong style="margin-bottom: 0px; margin-top: 2px"
+                >アルジャーノンに花束を</strong
+              >
+              <p class="common-text-basic" style="margin-bottom: 0px">305HR</p>
+              <p style="font-size: 12px; margin-bottom: 5px">
+                13日(土) 14:30~15:15
+              </p>
+              <div class="common-flex-onlypc">
+                <p class="common-introduction">
+                  幼児並みの知能しかないチャーリイ・ゴードン。そんな彼は、ある日、知能が高くなるという手術を受ける。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!-- 部活動展開モーダル -->
+
+            <div class="common-modal-wrapper" id="common-modal">
+              <div class="common-modal-flex2">
+                <!-- 左側に表示されるやつ -->
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    border-bottom: 5px solid orange;
+                    padding-bottom: 10px;
+                  "
+                >
+                  <h2 style="font-size: 25px">305HR</h2>
+                  <h2 class="subject" style="font-size: 25px; margin-left: 0px">
+                    アルジャーノンに花束を
+                  </h2>
+                </div>
+                <div style="align-items: center">
+                  <figure style="text-align: center">
+                    <picture src="1アイコン">
+                      <source
+                        srcset="
+                          /School_Festival2025/src/img/event_icons/305.webp
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/School_Festival2025/src/img/event_icons/305.png"
+                        alt="代替画像"
+                      />
+                    </picture>
+                    <p class="place">13日(土) 14:30~15:15＠体育館</p>
+                  </figure>
+                </div>
+              </div>
+
+              <div id="common-modal-mainContent common-modal-flex">
+                <!-- 右側に表示されるやつ -->
+                <p class="common-text-basic" style="font-size: 18px">
+                  ＃紹介
+                  <span class="br-space"></span>
+                  幼児並みの知能しかないチャーリイ・ゴードン。
+                  <span class="br-space"></span>
+                  そんな彼は、ある日、知能が高くなるという手術を受ける。
+                  <span class="br-space"></span>
+                  やがて天才に変貌した彼が、愛や憎しみ、喜びや孤独を通して知る、人の心の真実とは…。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture height="150px" width="150px" src="1アイコン">
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/306.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/306.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong style="margin-bottom: 0px; margin-top: 2px"
+                >月下楼</strong
+              >
+              <p class="common-text-basic" style="margin-bottom: 0px">306HR</p>
+              <p style="font-size: 12px; margin-bottom: 5px">
+                14日(日) 11:30~12:15
+              </p>
+              <div class="common-flex-onlypc">
+                <p class="common-introduction">
+                  時は江戸。八重は遊女として月町遊郭で働いていた。玉梓花魁にずっと虐げられてきた彼女は、ある日銀之丞という男に身請けされることが決まる。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!-- 部活動展開モーダル -->
+
+            <div class="common-modal-wrapper" id="common-modal">
+              <div class="common-modal-flex2">
+                <!-- 左側に表示されるやつ -->
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    border-bottom: 5px solid pink;
+                    padding-bottom: 10px;
+                  "
+                >
+                  <h2>306HR</h2>
+                  <h2 class="subject">月下楼</h2>
+                </div>
+                <div style="align-items: center">
+                  <figure style="text-align: center">
+                    <picture src="1アイコン">
+                      <source
+                        srcset="
+                          /School_Festival2025/src/img/event_icons/306.webp
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/School_Festival2025/src/img/event_icons/306.png"
+                        alt="代替画像"
+                      />
+                    </picture>
+                    <p class="place">14日(日) 11:30~12:15＠体育館</p>
+                  </figure>
+                </div>
+              </div>
+
+              <div id="common-modal-mainContent common-modal-flex">
+                <!-- 右側に表示されるやつ -->
+                <p class="common-text-basic" style="font-size: 18px">
+                  ＃紹介
+                  <span class="br-space"></span>
+                  時は江戸。
+                  <span class="br-space"></span>
+                  八重は遊女として月町遊郭で働いていた。
+                  <span class="br-space"></span>
+                  玉梓花魁にずっと虐げられてきた彼女は、ある日銀之丞という男に身請けされることが決まる。
+                  <span class="br-space"></span>
+                  それを聞いた花魁はー？心優しい少女の物語が今、幕を開ける。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture height="150px" width="150px" src="1アイコン">
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/307.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/307.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong style="margin-bottom: 0px; margin-top: 2px"
+                >図書館戦争</strong
+              >
+              <p class="common-text-basic" style="margin-bottom: 0px">307HR</p>
+              <p style="font-size: 12px; margin-bottom: 5px">
+                13日(土) 11:30~12:15
+              </p>
+              <div class="common-flex-onlypc">
+                <p class="common-introduction">
+                  過激な表現の本を強制的に取り締まる「メディア良化法」が施行された日本では、表現の自由を守るため図書隊が結成された。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!-- 部活動展開モーダル -->
+
+            <div class="common-modal-wrapper" id="common-modal">
+              <div class="common-modal-flex2">
+                <!-- 左側に表示されるやつ -->
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    border-bottom: 5px solid black;
+                    padding-bottom: 10px;
+                  "
+                >
+                  <h2>307HR</h2>
+                  <h2 class="subject">図書館戦争</h2>
+                </div>
+                <div style="align-items: center">
+                  <figure style="text-align: center">
+                    <picture src="1アイコン">
+                      <source
+                        srcset="
+                          /School_Festival2025/src/img/event_icons/307.webp
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/School_Festival2025/src/img/event_icons/307.png"
+                        alt="代替画像"
+                      />
+                    </picture>
+                    <p class="place">13日(土) 11:30~12:15＠体育館</p>
+                  </figure>
+                </div>
+              </div>
+
+              <div id="common-modal-mainContent common-modal-flex">
+                <!-- 右側に表示されるやつ -->
+                <p class="common-text-basic" style="font-size: 18px">
+                  ＃紹介
+                  <span class="br-space"></span>
+                  過激な表現の本を強制的に取り締まる「メディア良化法」が施行された日本では、表現の自由を守るため図書隊が結成された。
+                  <span class="br-space"></span>
+                  過激な表現から人々を守る良化隊と、人々の表現の自由を守る図書隊。
+                  <span class="br-space"></span>
+                  それぞれの"正義"が今、ぶつかり合う。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture height="150px" width="150px" src="1アイコン">
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/308.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/308.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong style="margin-bottom: 0px; margin-top: 2px"
+                >帝一の國</strong
+              >
+              <p class="common-text-basic" style="margin-bottom: 0px">308HR</p>
+              <p style="font-size: 12px; margin-bottom: 5px">
+                13日(土) 13:30~14:15
+              </p>
+              <div class="common-flex-onlypc">
+                <p class="common-introduction">
+                  「僕の夢は、総理大臣になること。」その実現の糸口は、海帝高校の生徒会長になること。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!-- 部活動展開モーダル -->
+
+            <div class="common-modal-wrapper" id="common-modal">
+              <div class="common-modal-flex2">
+                <!-- 左側に表示されるやつ -->
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    border-bottom: 5px solid blue;
+                    padding-bottom: 10px;
+                  "
+                >
+                  <h2>308HR</h2>
+                  <h2 class="subject">帝一の國</h2>
+                </div>
+                <div style="align-items: center">
+                  <figure style="text-align: center">
+                    <picture src="1アイコン">
+                      <source
+                        srcset="
+                          /School_Festival2025/src/img/event_icons/308.webp
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/School_Festival2025/src/img/event_icons/308.png"
+                        alt="代替画像"
+                      />
+                    </picture>
+                    <p class="place">13日(土) 13:30~14:15＠体育館</p>
+                  </figure>
+                </div>
+              </div>
+
+              <div id="common-modal-mainContent common-modal-flex">
+                <!-- 右側に表示されるやつ -->
+                <p class="common-text-basic" style="font-size: 18px">
+                  ＃紹介
+                  <span class="br-space"></span>
+                  「僕の夢は、総理大臣になること。」
+                  <span class="br-space"></span>
+                  その実現の糸口は、海帝高校の生徒会長になること。
+                  <span class="br-space"></span>
+                  会長の座を巡って、全力でぶつかり合う男たちの戦いが、今幕を開けるー。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture height="150px" width="150px" src="1アイコン">
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/309.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/309.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong style="margin-bottom: 0px; margin-top: 2px"
+                >Les Misérable</strong
+              >
+              <p class="common-text-basic" style="margin-bottom: 0px">309HR</p>
+              <p style="font-size: 12px; margin-bottom: 5px">
+                14日(日) 12:30~13:15
+              </p>
+              <div class="common-flex-onlypc">
+                <p class="common-introduction">
+                  パンを盗んだ男バルジャンは司教に救われ改心し、病に倒れたファンテーヌの願いを引き継ぎ孤児コゼットに深い愛を注ぎ育てる。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!-- 部活動展開モーダル -->
+
+            <div class="common-modal-wrapper" id="common-modal">
+              <div class="common-modal-flex2">
+                <!-- 左側に表示されるやつ -->
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    border-bottom: 5px solid purple;
+                    padding-bottom: 10px;
+                  "
+                >
+                  <h2>309HR</h2>
+                  <h2 class="subject">Les Misérable</h2>
+                </div>
+                <div style="align-items: center">
+                  <figure style="text-align: center">
+                    <picture src="1アイコン">
+                      <source
+                        srcset="
+                          /School_Festival2025/src/img/event_icons/309.webp
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/School_Festival2025/src/img/event_icons/309.png"
+                        alt="代替画像"
+                      />
+                    </picture>
+                    <p class="place">14日(日) 12:30~13:15＠体育館</p>
+                  </figure>
+                </div>
+              </div>
+
+              <div id="common-modal-mainContent common-modal-flex">
+                <!-- 右側に表示されるやつ -->
+                <div class="right">
+                  <p class="common-text-basic" style="font-size: 18px">
+                    ＃紹介
+                    <span class="br-space"></span>
+                    パンを盗んだ男バルジャンは司教に救われ改心し、病に倒れたファンテーヌの願いを引き継ぎ孤児コゼットに深い愛を注ぎ育てる。
+                    <span class="br-space"></span>
+                    コゼットは青年マリウスと運命的に恋をし、革命の嵐が若者達の命を激しく試す中、バルジャンは愛と赦しに満ちた静かな最期に人生の意味を悟った。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <svg
+        style="background-color: #ffefff"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#fba481"
+        />
+      </svg>
+    </main>
+    <common-footer></common-footer>
+  </body>
+</html>

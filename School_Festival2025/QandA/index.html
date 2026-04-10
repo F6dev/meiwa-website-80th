@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Q&A | 明和祭2025</title>
+    <link rel="icon" href="/School_Festival2025/favicon.ico">
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- defer属性を付けたらheadでも読み込めます -->
+    <script src="/School_Festival2025/src/common.js" defer></script>
+    <link rel="stylesheet" href="/School_Festival2025/src/common.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <common-header></common-header>
+    <common-modal></common-modal>
+    <main>
+      <div class="background-overlay"></div>
+
+      <section
+        id="q-and-a"
+        data-title="Q&A"
+        class="full-bleed"
+        style="--bgcolor: #f5efe3; padding-bottom: 100px"
+      >
+        <h1 class="common-subtitle-theme">よくある質問</h1>
+        <!-- Q&A items will be inserted here by JavaScript -->
+
+        <!-- Template for Q&A items -->
+        <template id="qa-template">
+          <details
+            class="common-accordion"
+            style="
+              --accordion-margin: 10px;
+              --accordion-border-thickness: 2px;
+              --accordion-border-radius: 20px;
+              --accordion-border-color: #ddd2c2;
+            "
+          >
+            <summary>
+              <span class="undefined-title"></span>
+              <span class="common-accordion-icon"></span>
+            </summary>
+            <div class="common-accordion-content">
+              <p
+                class="common-text-basic common-text-nomargin undefined-answer"
+              ></p>
+            </div>
+          </details>
+        </template>
+      </section>
+
+      <script>
+        const flowerImages = ["./images/petal1.png", "./images/petal2.png"];
+
+        // 花びらを複数作り、風の揺れを付ける
+        function createFlyingFlowers(count = 3) {
+          for (let i = 0; i < count; i++) {
+            const flower = document.createElement("div");
+            flower.classList.add("flower-fly");
+
+            const randomImage =
+              flowerImages[Math.floor(Math.random() * flowerImages.length)];
+            flower.style.backgroundImage = `url(${randomImage})`;
+
+            // スタート位置（画面外の左右）
+            const startX =
+              Math.random() < 0.5
+                ? -10 + Math.random() * 5 // 左外側（近く）
+                : 105 + Math.random() * 5; // 右外側（近く）
+            const startY = Math.random() * 110 - 5; // -5vh〜105vh
+
+            // 終点は画面中心近辺のランダム位置
+            const endX = 35 + Math.random() * 40;
+            const endY = 35 + Math.random() * 40;
+
+            flower.style.setProperty("--start-x", `${startX}vw`);
+            flower.style.setProperty("--start-y", `${startY}vh`);
+            flower.style.setProperty("--end-x", `${endX}vw`);
+            flower.style.setProperty("--end-y", `${endY}vh`);
+
+            flower.style.left = `${startX}vw`;
+            flower.style.top = `${startY}vh`;
+
+            // 拡大率1.5〜3でバラツキつける
+            const scale = 1.5 + Math.random() * 1.5;
+            flower.style.setProperty("--scale", scale);
+
+            // ===== ここから変更：移動時間とフェード時間を別々に管理 =====
+            // 移動時間（1.0秒〜3.0秒のランダム）
+            const movementMin = 1.0;
+            const movementMax = 3.0;
+            const movementDuration =
+              movementMin + Math.random() * (movementMax - movementMin);
+            flower.style.animationDuration = `${movementDuration}s`;
+
+            // フェード時間（0.1秒〜0.4秒のランダム）
+            const fadeMin = 0.1;
+            const fadeMax = 0.4;
+            const fadeDuration = fadeMin + Math.random() * (fadeMax - fadeMin);
+            flower.style.setProperty("--fade-duration", `${fadeDuration}s`);
+            // ===== ここまで変更 =====
+
+            // 風による揺れの振幅（左右に揺れる幅）
+            const swayAmplitude = 15 + Math.random() * 10;
+            flower.style.setProperty("--sway-amplitude", `${swayAmplitude}px`);
+
+            // 風揺れの周期（速さ）
+            const swayDuration = 0.8 + Math.random() * 0.7;
+            flower.style.setProperty("--sway-duration", `${swayDuration}s`);
+
+            document.getElementsByTagName("main")[0].appendChild(flower);
+
+            // ===== ここを変更：移動時間 + フェード時間 で削除タイミングを計算 =====
+            setTimeout(
+              () => flower.remove(),
+              (movementDuration + fadeDuration) * 1000
+            );
+          }
+        }
+        // Load Q&A data from JSON and generate items using template
+        document.addEventListener("DOMContentLoaded", () => {
+          fetch("qa.json")
+            .then((response) => {
+              if (!response.ok)
+                throw new Error(`HTTP error! status: ${response.status}`);
+              return response.json();
+            })
+            .then((data) => {
+              const container = document.getElementById("q-and-a");
+              const template = document.getElementById("qa-template");
+
+              data.forEach((item) => {
+                const clone = document.importNode(template.content, true);
+                const questionText = clone.querySelector(".undefined-title");
+                const answerP = clone.querySelector(".undefined-answer");
+
+                clone
+                  .querySelector(".common-accordion > summary")
+                  .addEventListener("click", function (e) {
+                    console.log("Clicked");
+                    createFlyingFlowers();
+                  });
+
+                questionText.textContent = `Q.${item.question}`;
+                answerP.innerHTML = `${item.answer}`; // Use innerHTML to allow HTML tags
+
+                // Correctly append the cloned template content
+                container.appendChild(clone);
+              });
+            })
+            .catch((error) => console.error("Error loading Q&A data:", error));
+        });
+      </script>
+    </main>
+
+    <svg
+      style="background-color: #f5efe3"
+      class="wave-svg"
+      viewBox="0 0 1200 100"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+        fill="#fba481"
+      />
+    </svg>
+    <common-footer></common-footer>
+  </body>
+</html>

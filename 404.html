@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ページが見つかりません - 404</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+                   "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+      background: #f8f8f8;
+      color: #222;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 1.8;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .container {
+      text-align: center;
+      max-width: 700px;
+      padding: 0 3.5rem;
+      /* background: #fff; */
+      border-radius: 16px;
+      /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); */
+      margin: 2rem;
+    }
+    
+    h1 {
+      font-size: 8.5rem;
+      font-weight: 800;
+      margin: 1.5rem 0;
+      line-height: 1;
+      color: #D84315; /* 高コントラストのオレンジ */
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      letter-spacing: -2px;
+    }
+    
+    .description {
+      font-size: 1.55rem;
+      color: #333;
+      margin: 2rem 0;
+      padding: 0 1.5rem;
+      font-weight: bolder;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 1.1rem 2.5rem;
+      background: #D84315;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 3px solid #D84315;
+      margin: 1.8rem 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    }
+    
+    .button:hover,
+    .button:focus {
+      background: #BF360C;
+      /* transform: translateY(-2px); */
+      box-shadow: 0 8px 20px rgba(216, 67, 21, 0.3);
+    }
+    
+    .button:focus {
+      outline: 4px solid #FFD54F;
+      outline-offset: 3px;
+    }
+    
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    .accessibility-controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0 0;
+      flex-wrap: wrap;
+    }
+    
+    .accessibility-btn {
+      padding: 0.7rem 1.4rem;
+      background: #f0f0f0;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .accessibility-btn:hover {
+      background: #e0e0e0;
+    }
+    
+    .high-contrast {
+      background: #000 !important;
+      color: #FFF !important;
+    }
+    
+    .high-contrast .container {
+      background: #000;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    }
+    
+    .high-contrast h1 {
+      color: #FF7043;
+    }
+    
+    .high-contrast .description {
+      color: #FFF;
+    }
+    
+    .high-contrast .button {
+      background: #FF7043;
+      border-color: #FF7043;
+      color: #000;
+    }
+    
+    .large-text {
+      font-size: 1.1rem;
+    }
+    
+    .large-text .description {
+      font-size: 1.8rem;
+    }
+    
+    .large-text .button {
+      font-size: 1.4rem;
+      padding: 1.3rem 3rem;
+    }
+    
+    .visually-impaired-friendly {
+      position: relative;
+      padding: 0 1.5rem;
+      display: inline-block;
+    }
+    
+    .visually-impaired-friendly::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.8rem;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #D84315, #FFA000);
+      border-radius: 2px;
+    }
+    
+    .error-code-info {
+      background: #f5f2f2;
+      border-radius: 12px;
+      border: rgba(128, 128, 128, 0.5) 1px solid;
+      padding: 1.2rem;
+      margin: 2rem 0;
+      text-align: left;
+    }
+    
+    .error-code-info p {
+      font-size: 1.05rem;
+      color: #555;
+      margin: 0.8rem 0;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+      }
+      .button:hover,
+      .button:focus {
+        transform: none;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      body {
+        padding: 1.2rem;
+      }
+      .container {
+        padding: 2.2rem 1.8rem;
+        margin: 1rem;
+      }
+      h1 {
+        font-size: 6rem;
+        margin: 1rem 0;
+      }
+      .description {
+        font-size: 1.35rem;
+        padding: 0;
+      }
+      .button {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+      }
+      .accessibility-controls {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 aria-label="エラーコード 404">404</h1>
+    <p class="description visually-impaired-friendly">お探しのページが見つかりませんでした</p>
+    
+    <a href="/" class="button" aria-label="トップページに戻る">
+      ポータルに戻る
+    </a>
+    
+    <div class="error-code-info">
+      <p>要求されたページは存在しません。以下の理由が考えられます：</p>
+      <p>• URLが変更または削除された可能性があります</p>
+      <p>• 入力したURLに誤りがある可能性があります</p>
+      <p>• 一時的にアクセスできない状態になっています</p>
+    </div>
+    <p class="sr-only">
+      要求されたページは存在しません。URLが正しいかご確認ください。
+      サイトマップから目的のページをお探しになるか、トップページから再度お探しください。
+    </p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+# safe .htaccess (root 配置を想定)
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# 共通ヘッダーを使用するために
+Options +Includes
+AddHandler server-parsed .htm html
+
+# HTTP -> HTTPS (一般的な書き方)
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# 個別リダイレクト（. をエスケープ）
+RewriteRule ^Student_Council/about\.html$     /Student_Council/about       [R=301,L]
+RewriteRule ^Student_Council/club\.html$      /Student_Council/club        [R=301,L]
+RewriteRule ^Student_Council/council\.html$   /Student_Council/council     [R=301,L]
+RewriteRule ^Student_Council/dictionary\.html$ /Student_Council/dictionary [R=301,L]
+RewriteRule ^Student_Council/history\.html$   /Student_Council/history     [R=301,L]
+RewriteRule ^Student_Council/music\.html$     /Student_Council/music-class [R=301,L]
+RewriteRule ^Student_Council/life\.html$      /Student_Council/school-life [R=301,L]
+RewriteRule ^Student_Council/site-map\.html$  /Student_Council/sitemap     [R=301,L]
+RewriteRule ^Student_Council/site-policy\.html$ /Student_Council/site-policy [R=301,L]
+
+ErrorDocument 404 /404.html
+
+RewriteRule ^(School_Festival2019|School_Festival2020|School_Festival2021|School_Festival2022|School_Festival2023)/ - [F,L]
+
+Redirect 301 /School_Festival2025/Redirect/Survey https://docs.google.com/forms/d/1lrj8445pz0yLm5WP8L8zv_Lt0TZ-V6DE812c5h4KNDE
+Redirect 301 /school_festival2025 /School_Festival2025/

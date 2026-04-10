@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 個別設定 -->
+    <title>テンプレート</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- defer属性を付けたらheadでも読み込めます -->
+    <script src="/common.js" defer></script>
+    <link rel="stylesheet" href="/common.css" />
+  </head>
+  <body>
+    <common-header></common-header>
+    <common-modal></common-modal>
+    <main>
+      <!-- メインコンテンツここからスタート -->
+      <section
+        id="meikaryouran"
+        data-title="明花繚乱"
+        class="full-bleed"
+        style="--bgcolor: #fff0f5"
+      >
+        <h1 class="common-title">.common-title</h1>
+        <a
+          class="common-btn"
+          style="margin: 30px auto; background-color: #f0dec7"
+        >
+          <span>.common-btn</span>
+        </a>
+        <a
+          class="common-btn common-btn-rounded"
+          style="margin: 30px auto; background-color: #f0dec7"
+        >
+          <span>.common-btn & .common-btn-rounded</span>
+        </a>
+        <a
+          class="common-btn common-btn-arrow"
+          style="margin: 30px auto; background-color: #f0dec7"
+        >
+          <span>.common-btn & .common-btn-arrow</span>
+        </a>
+        <a
+          class="common-btn common-btn-rounded common-wide"
+          style="margin: 30px auto; background-color: #f0dec7"
+        >
+          <span>.common-btn & .common-btn-rounded & .common-wide</span>
+        </a>
+
+        <h2 class="common-subtitle-theme">.common-subtitle-theme</h2>
+        <p class="common-text-basic">
+          .common-text-basic<br />
+          .common-text-basic
+        </p>
+        <a
+          class="common-btn common-modal-trigger"
+          style="margin: 30px auto; background-color: #f0dec7"
+        >
+          <span>.common-modal-trigger</span>
+        </a>
+        <div class="common-modal-content">
+          <img src="https://placehold.jp/200x200.png" />
+          <p class="common-text-basic">
+            中身はなんとか自分で作ってください。<br />
+            .common-modal-triggerが割り当てられた要素の下(中ではない)に、.common-modal-content要素を作ります。<br />
+            その中に書いたものは直接モーダルに反映されます。
+          </p>
+        </div>
+
+        <details class="common-accordion">
+          <summary>
+            .common-accordion(厳密には違う)
+            <span class="common-accordion-icon"></span>
+          </summary>
+          <div class="common-accordion-content">
+            <p class="common-text-basic common-text-nomargin">
+              .common-text-basic<br />
+              .common-text-nomargin
+            </p>
+          </div>
+        </details>
+
+        <details class="common-accordion">
+          <summary>
+            .common-accordion(厳密には違う)
+            <span class="common-accordion-icon"></span>
+          </summary>
+          <div class="common-accordion-content">
+            <p class="common-text-basic common-text-nomargin">
+              .common-text-basic<br />
+              .common-text-nomargin
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <svg
+        style="background-color: #fff0f5"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#f5f4f0"
+        />
+      </svg>
+
+      <section
+        id="modal"
+        data-title="モーダル"
+        class="full-bleed"
+        style="--bgcolor: #f5f4f0"
+      >
+        <h2 class="common-subtitle-theme">.common-flex-card</h2>
+        <div
+          class="common-flex-card common-flex-container"
+          style="
+            --minWidth: 150px;
+            --maxWidth: 200px;
+            --itemNum: 4;
+            --itemPCNum: 3;
+            --gap: 10px;
+            --minPCWidth: 400px;
+            --maxPCWidth: 500px;
+          "
+        >
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="https://placehold.jp/150x150.png"
+                height="150"
+                width="150"
+                src="1アイコン"
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>タイトル</strong>
+              <p>紹介文</p>
+              <div class="common-flex-onlypc">
+                <p>PCのみの表示</p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>モーダルテスト</p>
+            <p>a</p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="https://placehold.jp/150x150.png"
+                height="150"
+                width="150"
+                src="1アイコン"
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>タイトル</strong>
+              <p>紹介文</p>
+              <div class="common-flex-onlypc">
+                <p>PCのみの表示</p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>モーダルテスト</p>
+            <p>a</p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="https://placehold.jp/150x150.png"
+                height="150"
+                width="150"
+                src="1アイコン"
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>タイトル</strong>
+              <p>紹介文</p>
+              <div class="common-flex-onlypc">
+                <p>PCのみの表示</p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>モーダルテスト</p>
+            <p>a</p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="https://placehold.jp/150x150.png"
+                height="150"
+                width="150"
+                src="1アイコン"
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>タイトル</strong>
+              <p>紹介文</p>
+              <div class="common-flex-onlypc">
+                <p>PCのみの表示</p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>モーダルテスト</p>
+            <p>a</p>
+          </div>
+        </div>
+
+        <div style="margin: 20px 0"></div>
+
+        <!-- 別タイプ -->
+        <h2 class="common-subtitle-theme" style="margin-top: 50px">
+          .common-flex-card & .common-flex-growcard
+        </h2>
+        <div
+          class="common-flex-card common-flex-growcard common-flex-container"
+          style="
+            --minWidth: 150px;
+            --maxWidth: 200px;
+            --itemNum: 2;
+            --itemPCNum: 3;
+            --gap: 10px;
+            --minPCWidth: 400px;
+            --maxPCWidth: 500px;
+          "
+        >
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="https://placehold.jp/150x150.png"
+                height="150"
+                width="150"
+                src="1アイコン"
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>モーダル1</strong>
+              <p>紹介文</p>
+              <div class="common-flex-onlypc">
+                <p>PCのみの表示</p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>モーダルテスト</p>
+            <p>a</p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="https://placehold.jp/150x150.png"
+                height="150"
+                width="150"
+                src="1アイコン"
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>タイトル</strong>
+              <p>紹介文</p>
+              <div class="common-flex-onlypc">
+                <p>PCのみの表示</p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>モーダルテスト</p>
+            <p>a</p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="https://placehold.jp/150x150.png"
+                height="150"
+                width="150"
+                src="1アイコン"
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>タイトル</strong>
+              <p>紹介文</p>
+              <div class="common-flex-onlypc">
+                <p>PCのみの表示</p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>モーダルテスト</p>
+            <p>a</p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="https://placehold.jp/150x150.png"
+                height="150"
+                width="150"
+                src="1アイコン"
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>タイトル</strong>
+              <p>紹介文</p>
+              <div class="common-flex-onlypc">
+                <p>PCのみの表示</p>
+              </div>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>モーダルテスト</p>
+            <p>a</p>
+          </div>
+        </div>
+      </section>
+      <svg
+        style="background-color: #f5f4f0"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#fba481"
+        />
+      </svg>
+    </main>
+    <common-footer></common-footer>
+  </body>
+</html>

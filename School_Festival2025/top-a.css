@@ -1,0 +1,362 @@
+/* === 共通スタイル === */
+body {
+  margin: 0;
+  padding: 0;
+  background: #fffbfe;
+  color: #555;
+}
+.hr-container-text * {
+  margin: 0;
+  padding: 0;
+  /* 日本語を適切な位置で改行する, iPhone以外なら動作する */
+  word-break: auto-phrase;
+}
+h1,
+h2,
+h3 {
+  font-family: "Kosugi Maru", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.taiku-btn {
+  font-family: "Kosugi Maru", sans-serif;
+}
+
+.taiku-btn:hover {
+  outline: rgb(68, 156, 214) 2px solid !important;
+}
+
+/* === ヘッダー === */
+.header {
+  background: linear-gradient(#ffe9e8);
+  text-align: center;
+  position: relative;
+  margin: 0;
+}
+
+.school-name {
+  margin: 0;
+  width: 100%;
+}
+
+/* すべての動画に適用 */
+#hero {
+  text-align: center;
+  width: 100%;
+  /* height: 100%; */
+  height: calc(100dvh + 20px);
+  /* height: 100vh; 画面いっぱいに表示 */
+  background-color: #fab889;
+  /* object-fit: cover; */
+  /* padding-bottom: 100px; */
+}
+
+.rv {
+  width: 100%;
+  height: 100svh; /* 画面いっぱいに表示 */
+  object-fit: cover; /* トリミングして全面表示 */
+  display: none; /* 初期は非表示（ブレ防止） */
+}
+.btn-gym {
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 0.8rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.button-back {
+  background-color: #fff0f5;
+}
+
+#meikaryouran {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background: linear-gradient(to bottom, #fff0f5, #fffbfe);
+}
+
+#meikaryouran h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+#meikaryouran p {
+  margin-top: 0.6rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+#title-saikou {
+  font-size: 1.3rem;
+}
+/* 上部の波 */
+
+/* === 更新情報 === */
+
+.changelog-container {
+  height: 100px;
+  width: 80%;
+  max-width: min(500px, 80vw);
+  margin: 0 auto;
+  overflow-y: scroll;
+  border: gray 1px solid;
+  border-radius: 12px;
+  background-color: #f6f2ed;
+}
+
+/* WebKit系ブラウザ (Chrome, Safari, Edge) 用のスクロールバー styling */
+.changelog-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.changelog-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.changelog-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+.changelog-container table td:nth-child(1) {
+  font-weight: bold;
+  color: #e57373;
+}
+
+/* === アクセス情報 === */
+#access-wave {
+  background: #f5f4f0;
+}
+.access {
+  background: #faedf5;
+  padding: 1rem 1rem;
+}
+
+.event {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+.event table {
+  border-collapse: collapse;
+  border: none;
+}
+.access-information {
+  display: grid;
+}
+
+.event strong {
+  font-size: 1.1rem;
+  color: #333;
+}
+.page-access-contents {
+  flex: 1 1 100%; /* デフォルトは1列（スマホ想定） */
+}
+/* PC表示時に2列に */
+@media (min-width: 768px) {
+  .access-information {
+    display: flex;
+    justify-content: center; /* 横方向を中央に配置 */
+    align-items: flex-start; /* 縦方向の揃え方（上揃え） */
+    gap: 2rem; /* 2カラムの間に余白を入れる */
+  }
+
+  .event,
+  .page-access-contents {
+    flex: 0 0 50%; /* 幅を50%に固定 */
+    max-width: 50%; /* はみ出さないように制御 */
+    box-sizing: border-box;
+  }
+}
+.map iframe {
+  max-width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  border-radius: 16px;
+}
+.event table {
+  border-collapse: collapse;
+  max-width: 350px;
+  border: none;
+  font-size: 1.2rem;
+}
+.event th {
+  text-align: left;
+  padding: 10px 0;
+  font-size: 1.4em;
+}
+.event td {
+  padding: 8px 0;
+}
+.event td {
+  width: 40%; /* 左列の幅を固定するとそろいやすい */
+  text-align: left;
+}
+.event td:last-child {
+  text-align: left;
+}
+.event table td:nth-child(3) {
+  font-weight: bold;
+}
+
+.map table {
+  border-collapse: collapse;
+  max-width: min(350px, 90vw);
+  border: none;
+  font-size: 1.2rem;
+  text-align: left;
+  margin: min(30px, 10vw);
+}
+.map th {
+  text-align: left;
+  padding: 10px 0;
+  font-size: 1em;
+}
+.map td {
+  padding: 8px 0;
+}
+.map td {
+  width: 40%; /* 左列の幅を固定するとそろいやすい */
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+  .event {
+    margin: 0 auto;
+  }
+}
+
+.acsess-content-text {
+  line-height: 1.7;
+  list-style: none;
+}
+
+/* === レスポンシブ対応 === */
+@media (min-width: 768px) {
+  body {
+    font-size: 1.15rem;
+  }
+
+  .updates {
+    display: flex;
+    justify-content: center; /* 横中央 */
+  }
+
+  .theme {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  .access {
+    padding: 0 10%;
+  }
+  .theme-img {
+    height: 100px;
+    width: auto;
+  }
+
+  .event {
+    font-size: 1.1rem;
+    text-align: right;
+  }
+}
+/* PC表示時に2列に */
+@media (min-width: 768px) {
+  .access-information {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .access-information > * {
+    direction: ltr; /* 子要素のテキストは左からに戻す */
+  }
+}
+
+/* レイアウトのコンテナ */
+.chracter_song {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .chracter_song {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+/* タブレットより大きい画面で横並び */
+@media (min-width: 768px) {
+  /* 両要素を直接子に持つ親をフレックスに */
+  *:has(> .day):has(> .page-access-contents) {
+    display: flex;
+    gap: 24px; /* お好みで間隔調整 */
+    align-items: flex-start; /* 高さ揃えの基準 */
+  }
+
+  .day,
+  .page-access-contents {
+    flex: 1 1 0; /* 横に均等配置 */
+    width: auto; /* フレックスに任せる */
+  }
+}
+
+/* 開いたとき（スマホやタブレット） */
+.details-chara {
+  max-height: 12rem;
+  overflow-y: auto; /* ← 内容が超えたらスクロール */
+  padding: 10px;
+}
+.character-song summary {
+  max-height: 550px;
+  line-height: 0;
+}
+.character-song::-webkit-scrollbar-thumb {
+  background-color: rgba(183, 178, 178, 0.3); /* つまみの色 */
+  border-radius: 18px;
+}
+
+.character-song::-webkit-scrollbar {
+  background: transparent; /* トラックの背景透明 */
+  width: 8px;
+}
+
+/* 画面幅768px以上なら常に開いた状態にする */
+@media screen and (min-width: 768px) {
+  .common-accordion-icon {
+    display: none;
+  }
+}
+
+.play-icon {
+  font-size: 1.1rem;
+}
+
+/* PC表示時に2列に */
+@media (min-width: 768px) {
+  .chracter_song {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.panflet {
+  background-color: rgb(249, 243, 217);
+}
+.box-panflet {
+  height: 193px;
+  width: 193px;
+  background-color: gray;
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 3px 3px;
+}

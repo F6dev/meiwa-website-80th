@@ -1,0 +1,3088 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 個別設定 -->
+    <title>部活・有志企画_明和祭2025</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- defer属性を付けたらheadでも読み込めます -->
+    <script src="/School_Festival2025/src/common.js" defer></script>
+    <link rel="stylesheet" href="/School_Festival2025/src/common.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <common-header></common-header>
+    <common-modal></common-modal>
+    <main>
+      <!-- メインコンテンツここからスタート -->
+      <section
+        id="introduce"
+        data-title="紹介"
+        class="full-bleed"
+        style="--bgcolor: #baea9a"
+      >
+        <h1 class="common-title">部活・有志企画</h1>
+        <!--スライダー作る-->
+
+        <p class="common-text-basic">
+          有志企画は各HRが企画するものとは別に部活、委員会などが
+          主催する企画のことです！
+        </p>
+      </section>
+      <svg
+        style="background-color: #baea9a"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#fbf8c6"
+        />
+      </svg>
+      <section
+        id="modal"
+        data-title="有志モーダル"
+        class="full-bleed"
+        style="--bgcolor: #fbf8c6"
+      >
+        <!--OP-->
+        <h2 class="common-subtitle-theme">オープニング</h2>
+        <p class="common-text-basic">
+          オープニングは外部非公開、生徒全員参加です。<br />
+          明和館（体育館）で行われ、<br />
+          毎年素晴らしい盛り上がりを見せます！！<br />
+          さあ、文化祭の開幕だ！！！
+        </p>
+        <div
+          class="common-flex-card common-flex-growcard common-flex-container"
+          style="
+            --minWidth: 150px;
+            --maxWidth: 200px;
+            --itemNum: 4;
+            --itemPCNum: 3;
+            --gap: 10px;
+            --minPCWidth: 400px;
+            --maxPCWidth: 500px;
+          "
+        >
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture src="1アイコン">
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/concert band stage(吹奏楽).webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/concert band stage(吹奏楽).png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>Opening Stage</strong>
+              <p>吹奏楽部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">Opening Stage</h2>
+                    <h2>吹奏楽部</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture src="1アイコン">
+                        <source
+                          srcset="/School_Festival2025/src/img/event_icons/concert band stage(吹奏楽).webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/concert band stage(吹奏楽).png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(土) 体育館（明和館）</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      こんにちは!私たち吹奏楽部が明和祭の開幕を素献な音楽で彩ります！
+                      最高の3日間をスタートさせるため、全力で盛り上がっていきましょう！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/THEDANCE.jpeg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/THEDANCE.jpeg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>The Dance</strong>
+              <p>The Dance</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">The Dance</h2>
+                    <h2>[The Dance]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/THEDANCE.jpeg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/THEDANCE.jpeg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(土) 体育館（明和館）</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      私たちThe Dance は今年もOPのステージで踊ります!
+                      掛け声、応援大歓迎です。
+                      全力で一緒に盛り上がっていきましょう♪
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/書道部.jpeg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/書道部.jpeg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>It's show time</strong>
+              <p>書道部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">It's show time <br />～異突書隊武～</h2>
+                    <h2>[書道部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/書道部.jpeg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/書道部.jpeg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(土) 体育館（明和館）</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      書道部? 文化部? 立派な体育系だわ<br />
+                      書道部の心が衝動するパフォーマンスでみんなを奨導させます。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/ヲタ芸部.jpeg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/ヲタ芸部.jpeg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>明和高校ヲタ芸部</strong>
+              <p>剣道部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">明和高校ヲタ芸部</h2>
+                    <h2>[剣道部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/ヲタ芸部.jpeg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/ヲタ芸部.jpeg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(土) 体育館（明和館）</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      今年の明和祭もヲタ芸部が出演。<br />
+                      (自称)プロフェッショナルによる迫力あるパフォーマンスを
+                      とくとご覧あれ。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/PMOP.jpg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/PMOP.jpg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>PM Live at OPENING </strong>
+              <p>PM部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2>PM Live at OPENING</h2>
+                    <h2 class="subject">[PM部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/PMOP.jpg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/PMOP.jpg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(土) 体育館（明和館）</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      明和祭オープニングにふさわしい 最高のライブを届けます!<br />
+                      盛り上がる準備はできていますか??
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin: 60px 0"></div>
+
+        <!--特設ステージ-->
+        <h2 class="common-subtitle-theme">特設ステージ</h2>
+        <p class="common-text-basic">
+          特設ステージでは部活・有志企画、チケットプレゼントクイズ(TPQ)、<br />
+          明和生クイズ、マスファッションショーなどが行われます！<br />
+          さあ、多目的広場にLet's Go!!
+        </p>
+        <div
+          class="common-flex-card common-flex-growcard common-flex-container"
+          style="
+            --minWidth: 150px;
+            --maxWidth: 200px;
+            --itemNum: 4;
+            --itemPCNum: 3;
+            --gap: 10px;
+            --minPCWidth: 400px;
+            --maxPCWidth: 500px;
+          "
+        >
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/emsembles stage(吹奏楽).webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/emsembles stage(吹奏楽).png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>Ensemble Stage♪</strong>
+              <p>吹奏楽部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">Ensemble Stage♪</h2>
+                    <h2>[吹奏楽部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="/School_Festival2025/src/img/event_icons/emsembles stage(吹奏楽).webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/emsembles stage(吹奏楽).png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(土),9/14(日) 多目的広場</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      部内の有志によるアンサンブルを披露します。人気の"あの曲"が聴けるかも…!?いつもとは一味違う吹奏楽部をぜひご覧ください!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/コバチーズ.jpg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/コバチーズ.jpg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>マンザイ！！</strong>
+              <p>コバチーズ</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">マンザイ！！</h2>
+                    <h2>[コバチーズ]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/コバチーズ.jpg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/コバチーズ.jpg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(土) 多目的広場</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      コバルトこと小林とチートーこと小島、
+                      合わせてコバチーズです！<br />
+                      M-1 3回戦くらいの面白さを目指します!!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/合唱部.jpeg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/合唱部.jpeg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>歌馬鹿world!</strong>
+              <p>合唱部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">歌馬鹿world!</h2>
+                    <h2>[合唱部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/合唱部.jpeg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/合唱部.jpeg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(土) 多目的広場</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      出張！歌馬鹿WORLD!
+                      合唱曲からJ-POPまで青空の下で美しく楽しく響き渡るハーモニーをぜひ聴きに来てください！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/THEDANCE.jpeg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/THEDANCE.jpeg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>The Dance</strong>
+              <p>The Dance</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">The Dance</h2>
+                    <h2>[The Dance]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/THEDANCE.jpeg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/THEDANCE.jpeg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/14(日) 多目的広場</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      私たちThe Danceは文化祭2日目、特設ステージにも出演します！
+                      K-POP好きな方、ダンス好きな方、皆大歓迎です♡ぜひご覧ください！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/書道部.jpeg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/書道部.jpeg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>It's 書 time!</strong>
+              <p>書道部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">It's 書 time!</h2>
+                    <h2>[書道部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/書道部.jpeg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/書道部.jpeg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/14(日),9/15(月) 多目的広場</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      皆さんの心が躍るような書道パフォーマンスを披露します。
+                      一緒に文化祭を盛り上げYO！ 特設ステージに来てね～
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/書道部3年.png.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/書道部3年.png.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>書道部FINAL~Nirareba~</strong>
+              <p>書道部3年</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">書道部FINAL～Nirareba～</h2>
+                    <h2>[書道部3年]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/書道部3年.png.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/書道部3年.png.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/15(月) 多目的広場</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      ニラレバこと、書道部3年です!今回は1人1曲、選曲から振りつけまでプロデュースしました!他にも、過去に披露した曲や、5人の思いがつまった曲を使っています!私たちの2年半の集大成、ぜひご覧ください!!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/luMENa.jpeg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/luMENa.jpeg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>luMENa</strong>
+              <p>luMENa</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">luMENa</h2>
+                    <h2>[luMENa]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/luMENa.jpeg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/luMENa.jpeg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/14(日),9/15(月) 多目的広場</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      受験生にも関わらずダンスをやめられなかった男子高校生のダンスパフォーマンスはいかに!?!?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/LUMINA.jpeg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/LUMINA.jpeg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>LUMINA</strong>
+              <p>LUMINA</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">LUMINA</h2>
+                    <h2>[LUMINA]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/LUMINA.jpeg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/LUMINA.jpeg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/14(日),9/15(月) 多目的広場</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      「光」を意味する「LUMINA」の名前の通り、私たち12人が輝くステージをお届けします!!
+                      The
+                      Dance出身の3年生12人のダンスの集大成、ぜひ見に来てください!!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin: 60px 0"></div>
+
+        <!--体育館企画-->
+        <h2 class="common-subtitle-theme">体育館企画</h2>
+        <p class="common-text-basic">
+          体育館企画では、明和高校きっての音楽系部活の生演奏が聴けます！<br />
+          さあ、盛り上がっていくぞ！
+        </p>
+        <div
+          class="common-flex-card common-flex-growcard common-flex-container"
+          style="
+            --minWidth: 150px;
+            --maxWidth: 200px;
+            --itemNum: 4;
+            --itemPCNum: 3;
+            --gap: 10px;
+            --minPCWidth: 400px;
+            --maxPCWidth: 500px;
+          "
+        >
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/合唱部.jpeg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/合唱部.jpeg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>歌馬鹿WORLD</strong>
+              <p>合唱部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">歌馬鹿WORLD</h2>
+                    <h2>[合唱部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/合唱部.jpeg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/合唱部.jpeg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/14(日) 体育館(明和館)</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      毎年恒例歌馬鹿WORLD!歌が大大大好きな私達が歌が大大大好きな皆さんに強くやさしい歌を届けます♪
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/concert band stage(吹奏楽).webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/concert band stage(吹奏楽).png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>Concert Band Stage</strong>
+              <p>吹奏楽部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">Concert Band Stage</h2>
+                    <h2>[吹奏楽部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="/School_Festival2025/src/img/event_icons/concert band stage(吹奏楽).webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/concert band stage(吹奏楽).png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/14(日) 体育館(明和館)</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      吹奏楽の定番曲や誰もが耳にしたことのあるあの曲など、計7曲を披露します!私たちと一緒に吹奏楽を楽しみませんか?明和館で待っています♪
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin: 60px 0"></div>
+
+        <!--模擬店企画-->
+        <h2 class="common-subtitle-theme">模擬店企画</h2>
+        <div
+          class="center"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <p class="common-text-basic left">
+            生徒たちが食品やその他の商品を提供する「模擬店」を運営・企画します。
+          </p>
+          <p class="left">
+            ☆模擬店企画は完全チケット制です。<br />
+            プレハブ部室棟前(職員駐車場付近)の販売場所にてチケットをお求めください。<br />
+            現金での購入は不可です。
+            <br />
+            ☆模擬店チケット販売時間 <br />
+            13日(土) 11:30~/13:00~ <br />
+            14日(日) 9:30~/13:00~
+          </p>
+          <p class="left">
+            ※購入できるチケットは1人2枚までです。 <br />
+            ※チケット数には限りがございます。売り切れの際はご了承ください。
+            <br />
+            ※明和生は当日券を購入することはできません。
+          </p>
+        </div>
+
+        <div
+          class="common-flex-card common-flex-growcard common-flex-container"
+          style="
+            --minWidth: 150px;
+            --maxWidth: 200px;
+            --itemNum: 4;
+            --itemPCNum: 3;
+            --gap: 10px;
+            --minPCWidth: 400px;
+            --maxPCWidth: 500px;
+          "
+        >
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <img
+                  src="https://placehold.jp/150x150.png?text=S"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>Sweet Sweet Waffles </strong>
+              <p>保健常任委員会</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">Sweet Sweet Waffles</h2>
+                    <h2>[保健常任委員会]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <p class="place">13日・14日＠理科講義室1</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic goyaku">料金：100円</p>
+                    <table>
+                      <tr>
+                        <th>商品</th>
+                        <th>使用食材</th>
+                        <th>アレルギー28品目</th>
+                      </tr>
+                      <tr>
+                        <td>ワッフル</td>
+                        <td>
+                          ワッフル<br />チョコレートソース<br />キャラメルソース
+                        </td>
+                        <td>
+                          小麦、卵、乳成分、大豆<br />
+                          <br />乳成分、大豆
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/料理部.jpg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/料理部.jpg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>バーバパパキッチン</strong>
+              <p>料理部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">バーバパパキッチン</h2>
+                    <h2>料理部</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/料理部.jpg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/料理部.jpg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">13日・14日＠本館1F 調理室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic goyaku">料金：300円</p>
+                    <table>
+                      <tr>
+                        <th>商品</th>
+                        <th>使用食材</th>
+                        <th>アレルギー28品目</th>
+                      </tr>
+                      <tr>
+                        <td>ホットドッグ</td>
+                        <td>
+                          <br />パン <br />
+                          ポークソーセージ <br />
+                          カレールウ <br />
+                          <br />
+                          たまねぎ <br />
+                          ホールトマト缶 <br />
+                          オリーブオイル <br />
+                          ニンニク、塩、コショウ
+                        </td>
+                        <td>
+                          小麦、卵、乳成分、大豆 <br />
+                          豚肉 <br />
+                          小麦、乳成分、落花生、<br />
+                          牛肉、大豆、豚肉、りんご<br /><br /><br /><br />
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/sakado.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/sakado.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>お茶会</strong>
+              <p>茶華道部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">お茶会</h2>
+                    <h2>[茶華道部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/sakado.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/sakado.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">13日・14日＠本館3階 茶室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic goyaku">料金：300円</p>
+                    <table>
+                      <tr>
+                        <th>商品</th>
+                        <th>アレルギー28品目</th>
+                      </tr>
+                      <tr>
+                        <td>百千万(ももちま)</td>
+                        <td>卵・乳成分</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--五役企画-->
+        <h2 class="common-subtitle-theme">五役企画</h2>
+        <p class="common-text-basic">生徒会五役による文化祭特別企画です！</p>
+        <div
+          class="common-flex-card common-flex-growcard common-flex-container"
+          style="
+            --minWidth: 150px;
+            --maxWidth: 200px;
+            --itemNum: 4;
+            --itemPCNum: 3;
+            --gap: 10px;
+            --minPCWidth: 400px;
+            --maxPCWidth: 500px;
+          "
+        >
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="/School_Festival2025/src/img/event_icons/東北物産展.png"
+                alt="代替画像"
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>東北物産展</strong>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">東北物産展</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <img
+                        src="/School_Festival2025/src/img/event_icons/東北物産展.png"
+                        alt="代替画像"
+                      />
+
+                      <p class="place">
+                        ＠プレハブ部室棟前 <br />
+                        13日(土) 11:30~/13:30~ <br />
+                        14日(日) 9:30~/11:30~/13:30~ <br />
+                        15日(月) 9:30~ ※在庫次第
+                      </p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic goyaku">
+                      販売終了は16:00です <br />
+                      売り切れ次第終了になります <br />
+                      現金のみの販売です
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="/School_Festival2025/src/img/event_icons/募金.png"
+                alt="代替画像"
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>能登半島への支援</strong>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">能登半島への支援</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <img
+                        src="/School_Festival2025/src/img/event_icons/募金.png"
+                        alt="代替画像"
+                      />
+
+                      <p class="place">＠プレハブ部室棟前</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      東北物産展と同じ場所に募金箱を設置しています。能登半島では震災からの復旧・復興が進められており、今なお支援を必要としている方がたくさんいます。この支援で集められたお金は日本赤十字社の「令和6年度能登半島地震義援金」へ寄付されます。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin: 60px 0"></div>
+
+        <!--その他の企画-->
+        <h2 class="common-subtitle-theme">その他の企画</h2>
+        <p class="common-text-basic">
+          明和高校の誇るSSH部の発表や、<br />
+          藝術の万華鏡等の展示＆発表が行われます！<br />
+          それだけでなく、ここでしか味わえない<br />
+          さまざまな団体による特別企画が開催されます！！！<br />
+          Don't miss it!!
+        </p>
+        <div
+          class="common-flex-card common-flex-growcard common-flex-container"
+          style="
+            --minWidth: 150px;
+            --maxWidth: 200px;
+            --itemNum: 4;
+            --itemPCNum: 3;
+            --gap: 10px;
+            --minPCWidth: 400px;
+            --maxPCWidth: 500px;
+          "
+        >
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/美術部.png.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/美術部.png.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>藝術の万華鏡</strong>
+              <p>美術部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">藝術の万華鏡</h2>
+                    <h2>[美術部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/美術部.png.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/美術部.png.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日),9/15(月) 美術室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      部員一同、心を込めて真剣に製作しました！
+                      立体から色々な大きさのキャンパスまで様々あるのでぜひ美術室へ！！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/文藝部.png.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/文藝部.png.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>藝術の万華鏡</strong>
+              <p>文藝部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">藝術の万華鏡</h2>
+                    <h2>[文藝部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/文藝部.png.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/文藝部.png.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日),9/15(月) 美術室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      「るねっさんス」と「白い壁」の二種類の部誌を用意して、美術室にてお待ちしております！
+                      ぜひお楽しみください。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/漫画研究部.png.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/漫画研究部.png.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>藝術の万華鏡</strong>
+              <p>漫画研究部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">藝術の万華鏡</h2>
+                    <h2>[漫画研究部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/漫画研究部.png.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/漫画研究部.png.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日),9/15(月) 美術室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      こんにちは！漫画研究部です！！漫研では部誌の無料配布をします
+                      本館3階、美術室にてお待ちしております✨
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/tosyo.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/tosyo.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>藝術の万華鏡</strong>
+              <p>図書部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">藝術の万華鏡</h2>
+                    <h2>[図書部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/tosyo.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/tosyo.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日),9/15(月) 美術室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      美術部、文藝部、写真部、漫画研究部と合同で企画を行います。
+                      図書部はおすすめの本のポップをつくって展示します！！ぜひお越しください！！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/書道部.jpeg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/書道部.jpeg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>藝術の万華鏡</strong>
+              <p>書道部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">藝術の万華鏡</h2>
+                    <h2>[書道部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/書道部.jpeg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/書道部.jpeg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日),9/15(月) 美術室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      個々の作品を展示しています。書道パフォーマンスでは、
+                      見ることのできない私たちの麗筆をじっくりご覧ください!!お待ちしています
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/万華鏡(写真部).png.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/万華鏡(写真部).png.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>藝術の万華鏡</strong>
+              <p>写真部展</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">藝術の万華鏡</h2>
+                    <h2>[写真部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/万華鏡(写真部).png.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/万華鏡(写真部).png.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日),9/15(月) 美術室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      今回のテーマは「Golden
+                      hour」です！日の出や日没を中心に、私たちが切り取る様々な世界をお届けします。
+                      北館3階 美術室でお待ちしています！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/好き展＿漫画研究部.jpg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/好き展＿漫画研究部.jpg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>#「好き」展</strong>
+              <p>美術部、漫画研究部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2>#「好き」展</h2>
+                    <h2 class="subject">[美術部、漫画研究部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/好き展＿漫画研究部.jpg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/好き展＿漫画研究部.jpg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日),9/15(月) 美術室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      アニメ、ゲーム、本などのファンアートを展示しています。
+                      「好き」の詰まった作品をぜひ見に来てください！！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/SSH化学.png.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/SSH化学.png.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>何やってるんですか？酸化してください！</strong>
+              <p>SSH部化学班</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">
+                      何やってるんですか？酸化してください！<br />[SSH化学班]
+                    </h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/SSH化学.png.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/SSH化学.png.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日),9/15(月) 化学講義室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      この紹介文には前置きがありません。今これを読んでいる方々にいいことを教えます。
+                      化学の実験をしてみたい。化学班の活動を知りたい。それらの願いをかなえる方法があります。
+                      それはそう…参加することです！何やってるんですか？参加してください！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/SSH数学.png.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/SSH数学.png.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>Meiwa Mathmatics</strong>
+              <p>SSH部数学班</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">Meiwa Mathmatics</h2>
+                    <h2>[SSH部数学班]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/SSH数学.png.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/SSH数学.png.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">
+                        9/13(日),9/14(日),9/15(月) 理科講義室2
+                      </p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      こんにちは。SSH部数学班です。私たちはプレハブ2階で日頃の研究成果を発表します。
+                      また、数学にまつわるゲームも用意しています。だれでも楽しめるので、ぜひ来てください！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/SSH物理.png.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/SSH物理.png.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>知っておこう 輝く日本のブッチ！</strong>
+              <p>SSH部物理・地学班</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">知っておこう 輝く日本のブッチ！</h2>
+                    <h2>[SSH部物理・地学班]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/SSH物理.png.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/SSH物理.png.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">
+                        9/13(日),9/14(日),9/15(月) 理科講義室2
+                      </p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      今日は輝く日本のブッチ班について知っておこう。実際に来たらわかるね。じゃ！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/SSH生物.jpeg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/SSH生物.jpeg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>おもしろ生物講座</strong>
+              <p>SSH部生物班</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">
+                      おもしろ <br />
+                      生物講座
+                    </h2>
+                    <h2>[SSH部生物班]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/SSH生物.jpeg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/SSH生物.jpeg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">
+                        9/13(日),9/14(日),9/15(月) 理科講義室2
+                      </p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      世界に1つだけのDNAストラップを作ってみませんか？生物のクイズも行っているのでぜひ来てね！
+                      ウーパールーパーがあなたを待っています！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/将棋部.png.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/将棋部.png.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>将棋の間</strong>
+              <p>将棋部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">将棋の間</h2>
+                    <h2>[将棋部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/将棋部.png.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/将棋部.png.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日),9/15(月) 多目的2</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      部員と将棋指せます。初心者から県一位までさまざまいます。見学でも大丈夫です
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/seihen.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/seihen.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>大生徒会誌博覧会</strong>
+              <p>生徒会誌編集委員会</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">
+                      大生徒会誌博覧会 <br />
+                      [生徒会誌編集委員会]
+                    </h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/seihen.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/seihen.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日),9/15(月) 併用教室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      普段は見られない過去の生徒会誌を特別大公開！！休憩できるイス・机完備です！
+                      知られざる明和の生態をのぞいてみませんか？まってま～す！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/弓道部.jpeg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/弓道部.jpeg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>試射会</strong>
+              <p>弓道部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">試射会</h2>
+                    <h2>[弓道部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/弓道部.jpeg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/弓道部.jpeg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日),9/15(月) 弓道場</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      弓道場では試射会を行っています！実際に弓を引けます！絶対に楽しいです！
+                      ぜひお越しください！！！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/PMSchoolFes.jpg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/PMSchoolFes.jpg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>PM LIVE IN SCHOOL FES</strong>
+              <p>PM部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">PM LIVE IN SCHOOL FES</h2>
+                    <h2>[PM部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/PMSchoolFes.jpg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/PMSchoolFes.jpg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日) 視聴覚室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      PM部(軽音楽部)のバンドがライブをします!休憩がてらぜひ見に来てください!視聴覚室で待ってます!!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/sakado.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/sakado.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>お茶会</strong>
+              <p>茶華道部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">お茶会</h2>
+                    <h2>[茶華道部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/sakado.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/sakado.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日), 和室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      お茶会を行います!作法を知らなくても大丈夫!!いっしょにお茶とお菓子を楽しみませんか?本館3F和室で待っています!!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/料理部.jpg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/料理部.jpg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>バーバパパキッチン</strong>
+              <p>料理部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">
+                      バーバパパキッチン <br />
+                      [料理部]
+                    </h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/料理部.jpg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/料理部.jpg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(日),9/14(日), 調理室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      バーバパパキッチンではホットドッグの販売を行います。各国にちなんだ様々なソースをお楽しみください!調理室でお待ちしております!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/女子バレーボール部.jpeg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/女子バレーボール部.jpeg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>AED(アラジン・エマージェンシー・デバイス)</strong>
+              <p>女子バレーボール部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">
+                      AED(アラジン・エマージェンシー・デバイス) <br />
+                      [女子バレーボール部]
+                    </h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/女子バレーボール部.jpeg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/女子バレーボール部.jpeg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/13(土) 書道室</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      いざという時の人命救助に必要なAEDの正しい使い方を明和女子バレーボール部と一緒に楽しく学びましょう！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin: 60px 0"></div>
+
+        <!--フィナーレ-->
+        <h2 class="common-subtitle-theme">フィナーレ</h2>
+        <p class="common-text-basic">
+          フィナーレは外部非公開・生徒自由参加で行われます! !<br />
+          明和祭を最後まで見逃すな ! !
+        </p>
+        <div
+          class="common-flex-card common-flex-growcard common-flex-container"
+          style="
+            --minWidth: 150px;
+            --maxWidth: 200px;
+            --itemNum: 4;
+            --itemPCNum: 3;
+            --gap: 10px;
+            --minPCWidth: 400px;
+            --maxPCWidth: 500px;
+          "
+        >
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="/School_Festival2025/src/img/event_icons/Finale.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/Finale.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong> FINELE STAGE </strong>
+              <p>吹奏楽部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">FINALE STAGE</h2>
+                    <h2>[吹奏楽部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/Finale.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/Finale.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/15(月) 体育館(明和館)</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      皆さんの青春を私たちの演奏で色どります✨文化祭最終日、みんなで盛り上げていきましょう！！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="https://placehold.jp/150x150.png"
+                height="150"
+                width="150"
+                src="1アイコン"
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>ソロ出演界隈!!</strong>
+              <p>志賀優惺</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">ソロ出演界隈!!</h2>
+                    <h2>[志賀優惺]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <img src="https://placehold.jp/150x150.png" />
+                      <p class="place">9/15(月) 体育館(明和館)</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      ピアノを弾きます！長い明和祭で疲れた人もいるでしょう。BGM代わりとしてお聴き下さい!!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <picture>
+                <source
+                  srcset="
+                    /School_Festival2025/src/img/event_icons/PMED.jpg.webp
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="/School_Festival2025/src/img/event_icons/PMED.jpg.png"
+                  alt="代替画像"
+                />
+              </picture>
+            </div>
+            <div class="common-flex-main">
+              <strong>PMLIVE at FINALE</strong>
+              <p>PM部</p>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <!--部活動展開モーダル-->
+            <div
+              id="common-modal-bg"
+              class="common-modal common-modal-hidden"
+            ></div>
+            <div id="common-modal" class="common-modal-bg common-modal-hidden">
+              <div class="common-modal-wrapper">
+                <div>
+                  <!--左側に表示されるやつ-->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1rem;
+                      border-bottom: 2px solid green;
+                    "
+                  >
+                    <h2 class="subject">PMLIVE at FINALE</h2>
+                    <h2>[PM部]</h2>
+                  </div>
+                  <div style="align-items: center">
+                    <figure style="text-align: center">
+                      <picture>
+                        <source
+                          srcset="
+                            /School_Festival2025/src/img/event_icons/PMED.jpg.webp
+                          "
+                          type="image/webp"
+                        />
+                        <img
+                          src="/School_Festival2025/src/img/event_icons/PMED.jpg.png"
+                          alt="代替画像"
+                        />
+                      </picture>
+                      <p class="place">9/15(月) 体育館(明和館)</p>
+                    </figure>
+                  </div>
+                  <!--できれば、画面上のように、ピル型ボタンを配置してposition stickyしたい-->
+                  <div id="common-modal-mainContent">
+                    <!--右側に表示されるやつ-->
+                    <p class="common-text-basic">
+                      明和祭のラストを飾る熱いライブです！
+                      PM部の演奏で最後まで全員で盛り上がりましょう！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin: 60px 0"></div>
+      </section>
+      <svg
+        style="background-color: #fbf8c6"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#fba481"
+        />
+      </svg>
+    </main>
+  </body>
+  <common-footer></common-footer>
+</html>

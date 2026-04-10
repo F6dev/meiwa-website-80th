@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 個別設定 -->
+    <title>タイムテーブル | 明和祭2025</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- defer属性を付けたらheadでも読み込めます -->
+    <script src="/School_Festival2025/src/common.js" defer></script>
+    <link rel="stylesheet" href="/School_Festival2025/src/common.css" />
+  </head>
+  <body>
+    <common-header></common-header>
+    <common-modal></common-modal>
+    <main>
+      <!-- メインコンテンツここからスタート -->
+      <section
+        id="meikaryouran"
+        data-title="タイムテーブル"
+        class="full-bleed"
+        style="--bgcolor: #fff0f5; padding: 10px; /* min-height: 100vh */"
+      >
+        <h1 class="common-title">タイムテーブル</h1>
+        <p class="common-text-basic">
+          こちらで明和祭の企画スケジュールを確認できます！
+        </p>
+      </section>
+      <svg
+        style="background-color: #fff0f5"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#f5f4f0"
+        />
+      </svg>
+      <section
+        id="meikaryouran"
+        data-title="タイムテーブル"
+        class="full-bleed"
+        style="--bgcolor: #f5f4f0; /* min-height: 100vh */"
+      >
+        <p style="margin-bottom: 0;">それぞれの画像をクリックすると新規タブで開きます。</p>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+          "
+        >
+          <div
+            id="meikaryouran"
+            data-title="1日目"
+            class="full-bleed"
+            style="
+              text-align: center;
+              width: 300px;
+              margin: 20px;
+              padding: 10px;
+            "
+          >
+            <h1>1日目</h1>
+            <a href="/School_Festival2025/src/img/timetable/day1kojo.jpg" target="_blank">
+              <img
+                src="/School_Festival2025/src/img/timetable/day1kojo.jpg"
+                style="width: 100%; max-width: 300px"
+              />
+            </a>
+          </div>
+          <div
+            id="meikaryouran"
+            data-title="2日目"
+            class="full-bleed"
+            style="
+              text-align: center;
+              width: 300px;
+              margin: 20px;
+              padding: 10px;
+            "
+          >
+            <h1>2日目</h1>
+            <a href="/School_Festival2025/src/img/timetable/day2kojo.jpg" target="_blank">
+              <img
+                src="/School_Festival2025/src/img/timetable/day2kojo.jpg"
+                style="width: 100%; max-width: 300px"
+              />
+            </a>
+          </div>
+          <div
+            id="meikaryouran"
+            data-title="3日目"
+            class="full-bleed"
+            style="
+              text-align: center;
+              width: 300px;
+              margin: 20px;
+              margin-bottom: 120px;
+              padding: 10px;
+            "
+          >
+            <h1>3日目</h1>
+            <a href="/School_Festival2025/src/img/timetable/day3kojo.jpg" target="_blank">
+              <img
+                src="/School_Festival2025/src/img/timetable/day3kojo.jpg"
+                style="width: 100%; max-width: 300px"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+      <svg
+        style="background-color: #f5f4f0"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#fba481"
+        />
+      </svg>
+    </main>
+    <common-footer></common-footer>
+  </body>
+</html>
