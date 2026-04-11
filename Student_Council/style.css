@@ -1,3 +1,5 @@
+/* トップページのスタイル */
+/* heroセクションのスタイル */
 .top-hero {
     background-color: #f0f0f0;
     position: relative;
@@ -7,18 +9,47 @@
     text-align: center;
     overflow: hidden;
     padding-top: 40px;
-}
+}/* 
 
 .hero-bg {
-    /* ヘッダーの高さ分背景画像と背景色をヘッダーの高さ分下げる */
-    margin-top: 50px;
-}
+    /* ヘッダーの高さ分背景画像と背景色をヘッダーの高さ分下げる
+    margin-top: 45px;
+} */
 
 .hero-bg img {
     display: block;
     width: 100%;
     position: relative;
     bottom: 0;
+}
+
+.hero-plane {
+    padding-bottom: 20px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.hero-plane-box {
+    display: flex;
+    animation: marquee 60s linear infinite;
+}
+
+.hero-plane-box img {
+    width: 4vw;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100vw);
+    }
+
+    /* 右端から */
+    to {
+        transform: translateX(-100%);
+    }
+
+    /* 自分自身の幅分だけ左へ */
 }
 
 .hero-title {
@@ -40,8 +71,10 @@
 
 .hero-title-ja {
     font-size: 3vw;
+    letter-spacing: 0.4vw;
 }
 
 .hero-title-en {
     font-size: 1.5vw;
+    letter-spacing: 0.2vw;
 }
