@@ -1,7 +1,6 @@
 /* トップページのスタイル */
 /* heroセクションのスタイル */
 .top-hero {
-    background-color: #f0f0f0;
     position: relative;
     left: 0;
     width: 100%;
@@ -9,7 +8,22 @@
     text-align: center;
     overflow: hidden;
     padding-top: 40px;
-}/* 
+}
+
+/* indexBg.jsで指定した */
+.top-hero.daytime {
+    background: linear-gradient(to bottom, #3cadff, #fff);
+}
+
+.top-hero.sunset {
+    background: linear-gradient(to bottom, #ff6853, #fff493);
+}
+
+.top-hero.night {
+    background: linear-gradient(to bottom, #2e3577, #74bcff);
+}
+
+/* 
 
 .hero-bg {
     /* ヘッダーの高さ分背景画像と背景色をヘッダーの高さ分下げる
@@ -62,7 +76,18 @@
     max-width: 80%;
     word-break: keep-all;
     padding: 1em;
-    color: #0f0f0f;
+}
+
+.hero-title.daytime {
+  color: #353535;
+}
+
+.hero-title.sunset {
+  color: #353535;
+}
+
+.hero-title.night {
+  color: #f0f0f0;
 }
 
 .hero-title-content {
