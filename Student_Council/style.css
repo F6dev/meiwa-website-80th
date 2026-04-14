@@ -23,12 +23,10 @@
     background: linear-gradient(to bottom, #2e3577, #74bcff);
 }
 
-/* 
 
 .hero-bg {
-    /* ヘッダーの高さ分背景画像と背景色をヘッダーの高さ分下げる
-    margin-top: 45px;
-} */
+    margin-top: 5px;
+}
 
 .hero-bg img {
     display: block;
@@ -38,7 +36,7 @@
 }
 
 .hero-plane {
-    padding-bottom: 20px;
+    margin-top: 50px;
     overflow: hidden;
     width: 100%;
     position: relative;
