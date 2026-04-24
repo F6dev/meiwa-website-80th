@@ -76,16 +76,28 @@
     padding: 1em;
 }
 
-.hero-title.daytime {
-  color: #353535;
+.top-hero.daytime .hero-title-ja {
+    color: #353535;
 }
 
-.hero-title.sunset {
-  color: #353535;
+.top-hero.daytime .hero-title-en {
+    color: #353535;
 }
 
-.hero-title.night {
-  color: #f0f0f0;
+.top-hero.sunset .hero-title-ja {
+    color: #353535;
+}
+
+.top-hero.sunset .hero-title-en {
+    color: #353535;
+}
+
+.top-hero.night .hero-title-ja {
+    color: #f0f0f0;
+}
+
+.top-hero.night .hero-title-en {
+    color: #f0f0f0;
 }
 
 .hero-title-content {
