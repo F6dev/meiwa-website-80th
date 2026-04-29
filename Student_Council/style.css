@@ -66,7 +66,7 @@
 .news-item {
     list-style: none;
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
     gap: 20px;
     padding: 16px 24px;
     border-bottom: 1px solid #e8e8e8;
@@ -87,4 +87,6 @@
     font-size: 16px;
     margin: 0;
     padding: 4px;
+    flex: 1;
+    min-width: 0;
 }
