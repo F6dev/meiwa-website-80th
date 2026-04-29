@@ -3,10 +3,11 @@ class Header extends HTMLElement {
         this.innerHTML = `
             <style>
                 header {
-                    width: 100%;
+                    width: 99%;
+                    left: 0.5%;
                     position: fixed;
                     display: flex;
-                    border-radius: 0 0 15px 15px;
+                    border-radius: 5px 5px 15px 15px;
                     z-index: 1000;
                     background-color: rgba(255, 253, 252, 0.9);
                     height: 70px;
@@ -18,6 +19,7 @@ class Header extends HTMLElement {
                     padding: 5px;
                     margin: 0 5px;
                     cursor: pointer;
+                    margin-left: 10px;
                 }
 
                 .logo a {
@@ -72,12 +74,12 @@ class Header extends HTMLElement {
                     background-image: linear-gradient(var(--underline-color), var(--underline-color)); /* あとから指定する色の背景、つまり線にする */
                     background-repeat: no-repeat;
                     background-position: left 75%;
-                    background-size: 0% 1.75px; /* ホバーした瞬間の線の太さ */
+                    background-size: 0% 2px; /* ホバーした瞬間の線の太さ */
                     transition: background-size 0.3s cubic-bezier(0.8, 0.05, 0.05, 0.8); /* https://easingwizard.com/ */
                 }
 
                 .nav-links a:hover {
-                    background-size: 100% 1.75px; /* アニメーション終了時の線の太さ */
+                    background-size: 100% 2px; /* アニメーション終了時の線の太さ */
                 }
 
                 /* それぞれのリンクの色の指定 */

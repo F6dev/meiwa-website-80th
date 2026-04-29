@@ -1,0 +1,100 @@
+/* トップページのスタイル */
+/* heroセクションのスタイル */
+.top-hero {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+/* indexBg.jsで指定した */
+.top-hero.daytime {
+    background: linear-gradient(to bottom, #3cadff, #fff);
+}
+
+.top-hero.sunset {
+    background: linear-gradient(to bottom, #ff6853, #fff493);
+}
+
+.top-hero.night {
+    background: linear-gradient(to bottom, #2e3577, #74bcff);
+}
+
+.hero-plane {
+    margin-top: 75px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.plane-box {
+    display: flex;
+    animation: marquee 60s linear infinite;
+}
+
+.plane-box img {
+    width: 4vw;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100vw);
+    }
+
+    /* 右端から */
+    to {
+        transform: translateX(-100%);
+    }
+
+    /* 自分自身の幅分だけ左へ */
+}
+
+.hero-bg {
+    margin-top: 5px;
+}
+
+.hero-bg img {
+    display: block;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.hero-title {
+    /* この4行で要素の大きさが変化しても要素が中心にあるようにする。 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 80%;
+    word-break: keep-all;
+    padding: 1em;
+}
+
+.title-ja {
+    margin: 1em 0;
+    font-size: 3vw;
+    letter-spacing: 0.4vw;
+}
+
+.title-en {
+    margin: 1em 0;
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+}
+
+.top-hero.daytime .title-ja,
+.top-hero.daytime .title-en,
+.top-hero.sunset .title-ja,
+.top-hero.sunset .title-en {
+    color: #353535;
+}
+
+.top-hero.night .title-ja,
+.top-hero.night .title-en {
+    color: #f0f0f0;
+}
