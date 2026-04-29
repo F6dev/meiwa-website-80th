@@ -116,7 +116,7 @@ class Header extends HTMLElement {
                         <a href="/Student_Council/club/" class="nav-link-club">部活動</a>
                         <a href="/Student_Council/music-class/" class="nav-link-music-class">音楽科</a>
                         <a href="/Student_Council/dictionary/" class="nav-link-dictionary">明和語辞典</a>
-                        <a href="">その他</a>
+                        <a href="https://github.com/F6dev/meiwa-website-80th">その他</a>
                     </nav>
                 </div>
             </header>
