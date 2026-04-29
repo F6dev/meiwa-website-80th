@@ -36,12 +36,12 @@
 }
 
 .plane-box img {
-    width: 4vw;
+    width: 50px;
 }
 
 @keyframes marquee {
     from {
-        transform: translateX(100vw);
+        transform: translateX(100%);
     }
 
     /* 右端から */
@@ -77,14 +77,14 @@
 
 .title-ja {
     margin: 1em 0;
-    font-size: 3vw;
-    letter-spacing: 0.4vw;
+    font-size: 40px;
+    letter-spacing: 0.5rem;
 }
 
 .title-en {
     margin: 1em 0;
-    font-size: 1.5vw;
-    letter-spacing: 0.2vw;
+    font-size: 20px;
+    letter-spacing: 0.2rem;
 }
 
 .top-hero.daytime .title-ja,
