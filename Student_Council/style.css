@@ -25,7 +25,7 @@
 
 .news-link {
     color: #000;
-    text-decoration: underline dashed;
+    text-decoration: underline dashed 0.75px;
     text-underline-offset: 4px;
     font-size: 14px;
 }
@@ -140,7 +140,7 @@
 
 .jumplist-section-link {
     color: #000;
-    text-decoration: underline dashed;
+    text-decoration: underline dashed 0.75px;
     text-underline-offset: 4px;
     font-size: 1rem;
     width: fit-content;
