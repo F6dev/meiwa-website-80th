@@ -25,18 +25,13 @@
 
 .news-link {
     color: #000;
-    text-decoration: none;
+    text-decoration: underline dashed;
+    text-underline-offset: 4px;
     font-size: 14px;
-    padding-bottom: 4px;
-    background-image: linear-gradient(#000, #000);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 0% 1.5px;
-    transition: background-size 0.3s cubic-bezier(0.8, 0.05, 0.05, 0.8);
 }
 
 .news-link:hover {
-    background-size: 100% 1.5px;
+    text-decoration: underline 1.5px;
 }
 
 .news-list {
@@ -146,9 +141,11 @@
 .jumplist-section-link {
     color: #000;
     text-decoration: underline dashed;
+    text-underline-offset: 4px;
     font-size: 1rem;
     width: fit-content;
 }
 
 .jumplist-section-link:hover {
+    text-decoration: underline 1.5px;
 }
