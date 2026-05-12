@@ -196,14 +196,15 @@ class Footer extends HTMLElement {
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 16px;
+            gap: 32px;
         }
 
         .footer-links a {
-            font-size: 12px;
+            font-size: 14px;
             color: #000;
             text-decoration: underline dashed 1px;
             text-underline-offset: 4px;
+            font-weight: 900;
         }
 
         .footer-links a:hover {
