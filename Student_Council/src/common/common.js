@@ -125,3 +125,136 @@ class Header extends HTMLElement {
 }
 
 customElements.define('common-header', Header)
+class Footer extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+    <style>
+        footer {
+            margin-top: 50px;
+            width: 100%; 
+        }
+
+        .footer-wave {
+            width: 100%;
+            height: auto;
+        }
+
+        .footer-wave img {
+            width: 100%;
+            height: auto;
+            position: relative;
+            bottom: -3px;
+        }
+
+        .footer-contents {
+            background-color: #FFC069;
+            width: 100%;
+            margin: 0 auto;
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+
+        .footer-main{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .footer-logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        .footer-logo a {
+            cursor: default;
+        }
+
+        .footer-info {
+            line-height: 1.5;
+            align-items: center;
+        }
+
+        .footer-info p {
+            margin: 0;
+            font-weight: 200;
+        }
+
+        .footer-info-contact p {
+            font-size: 14px;
+        }
+
+        .footer-divider {
+            width: 90%;
+            margin: 0 auto;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.2);
+            margin-bottom: 40px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            color: #000;
+            text-decoration: underline dashed 1px;
+            text-underline-offset: 4px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline 1px;
+        }
+
+        .footer-copyright {
+            text-align: center;
+            margin-top: 48px;
+            margin-bottom: 36px;
+        }
+    </style>
+
+    <footer>
+        <div class="footer-wave">
+            <img src="/Student_Council/src/images/footer/footer-wave.png" alt="">
+        </div>
+        <div class="footer-contents">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <a href="/Student_Council/">
+                        <img src="/Student_Council/src/images/footer/footer-logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-info-title">
+                        <p>
+                            愛知県立明和高等学校生徒会
+                        </p>
+                    </div>
+                    <div class="footer-info-contact">
+                        <p>
+                            TEL:052-961-2551 / FAX:052-953-6348<br>〒461-0011 名古屋市東区白壁二丁目32番6号
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="/School_Festival2025/">明和祭2026 ホームページ</a>
+                <a href="https://guest.meiwa.website">明和祭2026 学校説明会席予約システム</a>
+                <a href="https://meiwa-h.aichi-c.ed.jp/cms/">明和高等学校公式ホームページ</a>
+                <a href="/Student_Council/sitemap/">サイトマップ</a>
+                <a href="/Student_Council/site-policy/">サイトポリシー</a>
+            </div>
+            <div class="footer-copyright">
+                <p>Copyright© Student Council of Meiwa High School All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    `;
+    }
+}
+customElements.define("common-footer", Footer);
