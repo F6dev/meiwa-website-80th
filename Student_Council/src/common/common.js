@@ -58,7 +58,7 @@ class Header extends HTMLElement {
                     display: flex;
                     justify-content: flex-end;
                     align-items: center;
-                    margin-right: 2em;
+                    margin-right: 20px;
                     border-radius: 8px;
                 }
 
@@ -96,6 +96,20 @@ class Header extends HTMLElement {
                 .nav-link-music-class {--underline-color: #9696e5;}
 
                 .nav-link-dictionary {--underline-color: #1D77C7;}
+
+                .mode-toggle {
+                    text-align: center;
+                    align-items: center;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-left: 16px;
+                }
+
+                .mode-toggle img {
+                    text-align: center;
+                    align-items: center;
+                    margin: 0 auto;
+                }
             </style>
 
             <header>
@@ -118,6 +132,9 @@ class Header extends HTMLElement {
                         <a href="/Student_Council/dictionary/" class="nav-link-dictionary">明和語辞典</a>
                         <a href="https://github.com/F6dev/meiwa-website-80th">その他</a>
                     </nav>
+                    <div class="mode-toggle">
+                        <img src="/Student_Council/src/images/header/dark-mode.svg">
+                    </div>
                 </div>
             </header>
         `
@@ -125,6 +142,7 @@ class Header extends HTMLElement {
 }
 
 customElements.define('common-header', Header)
+
 class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
