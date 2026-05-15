@@ -1228,8 +1228,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeBtn = document.getElementById("close-mobile-menu");
   const nav = document.getElementById("mobile-menu-nav");
   const headerNavItems = [
-    { text: "プログラム", href: "#program/" },
-    { text: "会場案内", href: "#venue" },
+    { text: "プログラム", href: "#program" },
+    { text: "保護者の方へ", href: "#venue" },
     { text: "ギャラリー", href: "#gallery" },
     { text: "ブロック紹介", href: "#blocks" },
     { text: "競技ルール", href: "#modal" },
@@ -1242,6 +1242,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const a = document.createElement("a");
       a.href = item.href;
       a.className = "mobile-menu-link-flex";
+      // ▼ 追加：リンククリック時にモーダルを閉じる
+      a.addEventListener("click", () => {
+        hideModal();
+      });
       const span = document.createElement("span");
       span.textContent = item.text;
       span.className = "mobile-menu-link-title";
