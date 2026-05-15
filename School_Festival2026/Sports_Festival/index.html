@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Slick CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico?v=2" />
+    <script src="./script.js" defer></script>
+    <script src="./update.js" defer></script>
+    <script src="./common.js" defer></script>
+
+    <title>体育祭</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      }
+
+      body {
+        background: #f3f3f3;
+        color: #333;
+      }
+
+      /*メインビジュアル*/
+
+      .hero-title {
+        /*position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);*/
+        font-size: 70px;
+        letter-spacing: 8px;
+        color: #f4b400;
+        font-weight: bold;
+        margin: 50px 0;
+      }
+
+      /*セクション*/
+
+      section {
+        padding: 60px 8%;
+        text-align: center;
+        background: #f7f7f7;
+      }
+
+      .section-title {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      /*プログラム*/
+
+      .program-grid {
+        display: flex;
+        justify-content: center;
+        gap: 110px;
+        flex-wrap: wrap;
+      }
+
+      .program-grid img {
+        width: 150px;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      /*保護者*/
+
+      .parent-text {
+        max-width: 600px;
+        margin: auto;
+        font-size: 15px;
+      }
+
+      /*PC調整 */
+
+      @media (min-width: 900px) {
+        .hero img {
+          height: 75vh;
+        }
+
+        .hero-title {
+          font-size: 90px;
+        }
+
+        .program-grid img {
+          width: 220px;
+          height: 300px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <common-header></common-header>
+    <common-modal></common-modal>
+    <main>
+      <!-----メインコンテンツここからスタート----->
+
+      <!-- メインビジュアル,スライダー -->
+      <div style="padding-top: 70px; background-color: #f7f7f7"></div>
+      <section>
+        <h3 class="main-title" style="padding-bottom: 80px">体育祭</h3>
+        <div id="slider-wrapper">
+          <div class="slider">
+            <div class="slide-item">
+              <img src="/School_Festival2026/images/slide-image1.webp" />
+            </div>
+            <div class="slide-item">
+              <img src="/School_Festival2026/images/slide-image2.webp" />
+            </div>
+            <div class="slide-item">
+              <img src="/School_Festival2026/images/slide-image3.webp" />
+            </div>
+            <div class="slide-item">
+              <img src="/School_Festival2026/images/slide-image4.webp" />
+            </div>
+            <div class="slide-item">
+              <img src="/School_Festival2026/images/slide-image5.webp" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--注釈-->
+      <section id="note" style="padding: 40px 0">
+        <p class="common-text-basic">
+          体育祭は、保護者のみ限定公開しています。
+        </p>
+      </section>
+
+      <!-- プログラム -->
+
+      <section id="program">
+        <h2 class="section-title">体育祭プログラム</h2>
+        <div class="program-image">
+          <img
+            src="/School_Festival2026/images/program.webp"
+            alt="体育祭プログラム表"
+            class="clickable-img"
+          />
+          <img
+            src="/School_Festival2026/images/Venue-map.png"
+            alt="会場内地図"
+            class="clickable-img"
+          />
+        </div>
+      </section>
+
+      <!-- モーダル -->
+      <div id="image-modal" class="modal">
+        <img class="modal-content" id="modal-img" />
+        <div id="caption"></div>
+      </div>
+      <!-- 保護者 -->
+
+      <section id="venue">
+        <h2 class="section-title">保護者の方へ</h2>
+        <div class="line"></div>
+
+        <p class="parent-text">
+          開場時間は09時00分です。<br />それ以前に入場することはできないので注意してください。<br />
+          室内履きは不要です。<br />
+          土足のままご覧いただけます。<br />
+          また今年度は、マスゲームは体育祭では行われません
+        </p>
+      </section>
+
+      <!-- ギャラリー -->
+      <section id="gallery">
+        <h2 class="section-title">ギャラリー</h2>
+        <p class="instagraminformation">
+          明和祭の様子は公式Instagramからご覧ください！
+        </p>
+        <!--488行-->
+        <a
+          href="https://www.instagram.com/meiwasai2026/"
+          target="_blank"
+          class="insta-btn common-btn-arrow"
+          style="margin: 30px auto; background-color: #f7f7f7"
+        >
+          <span>明和祭公式Instagram</span>
+        </a>
+      </section>
+      <!-- ブロック紹介 -->
+
+      <section id="blocks">
+        <h2 class="section-title">ブロック紹介</h2>
+        <br />
+        <div class="line"></div>
+        <p>クリックで詳細を見ることができます。</p>
+        <br />
+
+        <!-- 赤 -->
+        <details class="common-accordion">
+          <summary style="background-color: #e6c6c6">
+            赤ブロック 108 204 305
+            <span class="common-accordion-icon"></span>
+          </summary>
+          <div class="common-accordion-content">
+            <p class="common-text-basic common-text-nomargin">
+              <strong>108HR 204HR 305HR</strong><br /><br />
+              <strong>嗚呼 勝ツハ我等也</strong><br />
+            </p>
+          </div>
+        </details>
+
+        <!-- 橙 -->
+
+        <details class="common-accordion">
+          <summary style="background-color: #e5d1b2">
+            橙ブロック 109 205 302
+            <span class="common-accordion-icon"></span>
+          </summary>
+          <div class="common-accordion-content">
+            <p class="common-text-basic common-text-nomargin">
+              <strong>109HR 205HR 302HR</strong><br /><br />
+              <strong>オ レ達課題大体終わってるカ ソ ジ</strong><br />
+            </p>
+          </div>
+        </details>
+
+        <!-- 黄 -->
+
+        <details class="common-accordion">
+          <summary style="background-color: #ece7c7">
+            黄ブロック 104 206 307
+            <span class="common-accordion-icon"></span>
+          </summary>
+          <div class="common-accordion-content">
+            <p class="common-text-basic common-text-nomargin">
+              <strong>104HR 206HR 307HR</strong><br /><br />
+              <strong
+                >君のハートを 射貫いちゃうぞ♥<br />
+                ロックオン</strong
+              ><br />
+            </p>
+          </div>
+        </details>
+
+        <!-- 緑 -->
+
+        <details class="common-accordion">
+          <summary style="background-color: #cfe3cf">
+            緑ブロック 106 202 303
+            <span class="common-accordion-icon"></span>
+          </summary>
+          <div class="common-accordion-content">
+            <p class="common-text-basic common-text-nomargin">
+              <strong>106HR 202HR 303HR</strong><br /><br />
+              <strong>みんなが ドラマチック リーダー</strong><br />
+            </p>
+          </div>
+        </details>
+        <!-- 青 -->
+
+        <details class="common-accordion">
+          <summary style="background-color: #cddbe6">
+            青ブロック 102 203 304
+            <span class="common-accordion-icon"></span>
+          </summary>
+          <div class="common-accordion-content">
+            <p class="common-text-basic common-text-nomargin">
+              <strong>102HR 203HR 304HR</strong><br /><br />
+              <strong>アメイジング オーシャンブルー</strong><br />
+            </p>
+          </div>
+        </details>
+
+        <!-- 紫 -->
+
+        <details class="common-accordion">
+          <summary style="background-color: #d9d7ea">
+            紫ブロック 105 208 309
+            <span class="common-accordion-icon"></span>
+          </summary>
+          <div class="common-accordion-content">
+            <p class="common-text-basic common-text-nomargin">
+              <strong>105HR 208HR 309HR</strong><br /><br />
+              <strong>ムーン ライト サバイバル キッズ</strong><br />
+            </p>
+          </div>
+        </details>
+
+        <!-- 桃 -->
+
+        <details class="common-accordion">
+          <summary style="background-color: #e7d2e4">
+            桃ブロック 107 201 308
+            <span class="common-accordion-icon"></span>
+          </summary>
+          <div class="common-accordion-content">
+            <p class="common-text-basic common-text-nomargin">
+              <strong>107HR 201HR 308HR</strong><br /><br />
+              <strong>ピュアな気持ちで ん?って思うほど クールだぜ!</strong
+              ><br />
+            </p>
+          </div>
+        </details>
+
+        <!-- 黒 -->
+
+        <details class="common-accordion">
+          <summary style="background-color: #cfcfcf">
+            黒ブロック 103 207 301
+            <span class="common-accordion-icon"></span>
+          </summary>
+          <div class="common-accordion-content">
+            <p class="common-text-basic common-text-nomargin">
+              <strong>103HR 207HR 301HR</strong><br /><br />
+              <strong
+                >くいなく ろくでもない日でも前向きに<br />
+                今ここに集う絆で<br />
+                ろーどを切り拓け!</strong
+              ><br />
+            </p>
+          </div>
+        </details>
+
+        <!-- 白 -->
+
+        <details class="common-accordion">
+          <summary style="background-color: #f9f9f9">
+            白ブロック 101 209 306
+            <span class="common-accordion-icon"></span>
+          </summary>
+          <div class="common-accordion-content">
+            <p class="common-text-basic common-text-nomargin">
+              <strong>101HR 209HR 306HR</strong><br /><br />
+              <strong>勝利を ロックオン!</strong><br />
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <svg
+        style="background-color: #f7f7f7"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#F5F4F0"
+        />
+        <!--fffbfe-->
+      </svg>
+
+      <!-- 競技カード -->
+      <section
+        id="modal"
+        data-title="モーダル"
+        class="full-bleed"
+        style="--bgcolor: #f5f4f0"
+      >
+        <h2>競技ルール</h2>
+        <p class="rules-caption">
+          各競技アイコンをクリックすると、詳細ルールを見ることができます。
+        </p>
+        <div
+          class="common-flex-card common-flex-container"
+          style="
+            --minWidth: 150px;
+            --maxWidth: 200px;
+            --itemNum: 4;
+            --itemPCNum: 3;
+            --gap: 10px;
+            --minPCWidth: 400px;
+            --maxPCWidth: 500px;
+          "
+        >
+          <!-- 競技カード -->
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="/School_Festival2026/images/rule-jump.webp"
+                height="150"
+                width="150"
+                alt=""
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>1年大縄跳び</strong>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>
+              <strong>１年学年種目（大繩）</strong><br /><br />
+              <strong>概要</strong><br />
+              クラス全員で八の字形式で行う（前後半それぞれ22人＋2人）。<br />
+              前後半それぞれ4分内に連続して飛べた最高回数を競う。<br />
+              前後半行い、各最高記録を足した合計を点数とする。<br /><br />
+              <strong>流れ</strong><br />
+              各HRに分かれブザーの合図で競技をはじめ、2度目のブザーで競技を止める。<br /><br />
+              <strong>注意点</strong><br />
+              縄を回す人もどちらかで飛ぶ人として出場する。<br />
+              連続記録が継続しているときに時間終了となった場合は、すぐに飛ぶのをやめる
+            </p>
+
+            <p></p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="/School_Festival2026/images/rule-typhoon.webp"
+                height="150"
+                width="150"
+                alt=""
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>2年台風の目</strong>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>
+              <strong>２年学年種目（台風の目）</strong><br /><br />
+              <strong>概要</strong><br />
+              4人1組で棒を持って走るリレー形式（4×11）。<br />
+              前半5HR（青、黄、紫、緑、橙）、後半4HR（白、赤、桃、黒）。<br />
+              スタートからゴールまでのタイムで順位を決める。<br /><br />
+              <strong>流れ</strong><br />
+              4人で棒を持ち、コーンを順に回って戻ってくる。<br />
+              （1つ目：時計回り、2つ目：反時計回り）<br />
+              帰ってきたら棒を足元→頭上と通してバトンタッチ。<br />
+              アンカーがゴール後、全員が座った瞬間がゴール。<br /><br />
+              <strong>注意点</strong><br />
+              コーンを倒してしまったらすぐ立て直す。<br />
+              棒は目印の部分を必ず持つ。
+            </p>
+
+            <p></p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="/School_Festival2026/images/rule-shougai.webp"
+                height="150"
+                width="150"
+                alt=""
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>3年障害物リレー</strong>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>
+              <strong>3年学年種目（障害物リレー）</strong><br /><br />
+              <strong>概要</strong><br />
+              Aブロック（緑、紫、青）、Bブロック（黒、赤、黄）、Cブロック（桃、白、橙）に分かれ3レース行う。<br />
+              計43人で行い、障害物は「袋競争」、「空飛ぶ絨毯」、「ボール運び」、「二人三脚」の4種。<br />
+              スタートからゴールまでのタイムで順位を決める。<br /><br />
+              <strong>流れ</strong><br />
+              袋競争:1人が麻袋に両足を入れた状態で半分まで進み、ペアの人が残りの半分を同様に進む。<br />
+              空飛ぶ絨毯：ブルーシートの上に1人を座らせ、4隅を持ちゴールまで運ぶ。<br />
+              ボール運び：二人で背中の間にボールを挟み運ぶ。<br />
+              二人三脚：2人の足を紐で結んだ状態で走る。<br /><br />
+              <strong>注意点</strong><br />
+              第一走者からオープンコースで行うが、バトンパスするレーンは固定。<br />
+              ブルーシートを腰より上に持ち上げるのは危ないため禁止。<br />
+              同じ種目の人が全員そろってからバトンタッチ可能。<br />
+              二人三脚で紐が解けたら、その場ですぐに直す。
+            </p>
+
+            <p></p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="/School_Festival2026/images/rule-relay.webp"
+                height="150"
+                width="150"
+                alt=""
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>ブロック対抗<br />リレー</strong>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>
+              <strong>ブロック対抗リレー</strong><br /><br />
+              <strong>概要</strong><br />
+              オーソドックスなリレー形式（1ブロック18名）。<br />
+              1回戦目（紫、黄、緑）、2回戦目（赤、橙、白）、3回戦目（青、黒、桃）。<br />
+              スタートからゴールまでのタイムで順位を決める。<br /><br />
+              <strong>流れ</strong><br />
+              奇数走者と偶数走者に分かれ走順に並んで待機しておく。<br />
+              一人トラック半周を走る。<br /><br />
+              <strong>注意点</strong><br />
+              第一走者はスタンディングスタートで最初からオープンコースで行う。<br />
+              テイクオーバーゾーンは8mで、超えてしまったらペナルティ。<br />
+            </p>
+
+            <p></p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="/School_Festival2026/images/rule-ball.webp"
+                height="150"
+                width="150"
+                alt=""
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>ブロック対抗<br />大玉転がし</strong>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>
+              <strong>ブロック対抗大玉転がし</strong><br /><br />
+              <strong>概要</strong><br />
+              二人一組で玉を転がしていくリレー形式（2×7）。<br />
+              1回戦目（赤、緑、紫）、2回戦目（黒、橙、白）、3回戦目（青、黄、桃）。<br />
+              スタートからゴールまでのタイムで順位を決める。<br /><br />
+              <strong>流れ</strong><br />
+              2人一組で大玉を転がし、コーンを時計回りに回ってUターンし戻ってくる。<br />
+              戻ってきたら先頭の待機者の間に球を流し、最後尾へ急ぐ。<br />
+              待機している人はボールを後ろに送り、最後尾の人は大玉を頭上に持ち上げ前へ送る。<br /><br />
+              <strong>注意点</strong><br />
+              玉を降ろす前に線を越えてしまった場合は線までもどしてやり直し＆2秒ペナルティ。<br />
+              アンカーが玉を運び終わって、頭上に挙げて前にもどしてから全員座ったらゴール。<br />
+              もし10分を超えてしまった場合はその時点で終了とする。
+            </p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="/School_Festival2026/images/rule-smallball.webp"
+                height="150"
+                width="150"
+                alt=""
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>ブロック対抗<br />玉入れ</strong>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>
+              <strong>ブロック対抗玉入れ</strong><br /><br />
+              <strong>概要</strong><br />
+              9HR同時に行い、各学年男女で全6試合行う。<br />
+              1チームあたり12名で各試合2分行う。<br />
+              8×8の範囲内で、それぞれ玉を投げ入れる。。
+              <br /><br />
+              <strong>流れ</strong><br />
+              投げ入れる人は枠の外で待機し、枠には入らず外から籠に投げ入れる。<br />
+              枠の中に落ちたボールを拾うときは枠に入ってもいいが、すぐに外に出ること。<br />
+              <br />
+              <strong>注意点</strong><br />
+              体常が籠を持つので、当てないように気をつける。
+            </p>
+
+            <p></p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img src="/School_Festival2026/images/rule-tug.webp" height="150" width="150" alt="" />
+            </div>
+            <div class="common-flex-main">
+              <strong>ブロック対抗<br />綱引き</strong>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>
+              <strong>ブロック対抗綱引き</strong><br /><br />
+              <strong>概要</strong><br />
+              男女それぞれトーナメントで行い、3決まで行うが5位以下の順位は決定しない。<br />
+              人数は各学年8人ずつの1チーム計24人で行う。<br />
+              試合時間は1試合30秒で行い、試合終了時点で自陣側に引き込んだチームが勝利。<br /><br />
+              <strong>流れ</strong><br />
+              全ブロック待機場所で競技を行う順番に並んでおく。<br />
+              スタート合図の後の電子ホイッスルの音で開始する。<br />
+              試合が終了した後は待機場所にもどる（連戦の場合はその場に残る）。<br /><br />
+              <strong>注意点</strong><br />
+              30秒以内に1m以上引き込んだ場合はその時点で勝敗を決定する。
+            </p>
+
+            <p></p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="/School_Festival2026/images/rule-club.webp"
+                height="150"
+                width="150"
+                alt=""
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>部活動リレー</strong>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>
+              <strong>部活動パフォーマンス走</strong> <br /><br />
+              <strong>概要</strong><br />
+              28部活が出場し10レース行う（3人×8+2人×2）<br />
+              1走〜4走は半周、5走は1周の計3周を走る。
+              <br /><br />
+              <strong>流れ</strong><br />
+              「更衣、準備」の時間に必要な人は更衣をし、道具があるなら準備する<br />
+              自分のレースが終わり次第速やかに退場する <br /><br />
+              <strong>注意点</strong><br />
+              順位は付けるが各ブロックには加点しない<br />
+              更衣をする際は男子：第1控え室<br />
+              　　　　　　　女子：第2控え室
+            </p>
+            <p></p>
+          </div>
+          <div class="common-flex-element common-modal-trigger">
+            <div class="common-flex-icon common-flex-icon-square">
+              <img
+                src="/School_Festival2026/images/scavenger-hunt-race.webp"
+                height="150"
+                width="150"
+                alt=""
+              />
+            </div>
+            <div class="common-flex-main">
+              <strong>借人競技</strong>
+            </div>
+          </div>
+          <div class="common-modal-content">
+            <p>
+              <strong>マスゲーム</strong><br /><br />
+              <strong>概要</strong><br />
+              前半5ブロック、後半4ブロックの2試合行う。<br />
+              お題をもらい、お題に合う人を連れてくることをリレー形式で繰り返しかかった時間を競う。<br />
+              <br />
+              <strong>流れ</strong><br />
+              スタートと同時にお題の入った箱へと走り、お題にあった人を借りる。その後その人と２人で１周の残りを走り、次の人にバトンタッチする。<br />
+              選手はお題を見て人を借りる際、各ブロックの待機場所から入り、入った場所から出る。
+              <br />
+              どうしてもお題が見つからない場合は、引き直し可。<br />
+              選手はお題を見て人を借りる際、各ブロックの待機場所から入り、入った場所から出る。<br />
+              走者以外は、ブロックごとにまとまって、トラック内で待機する。<br /><br />
+              <strong>注意点</strong><br />
+              ・借りられる人は同ブロックの生徒に限る。<br />
+              ・順位はつけるが、各ブロックには加点されない。<br />
+            </p>
+
+            <p></p>
+          </div>
+        </div>
+      </section>
+
+      <svg
+        style="background-color: #f5f4f0"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#f7f7f7"
+        />
+        <!--fffbfe-->
+      </svg>
+
+      <!-- 結果 -->
+      <section id="results">
+        <h2>結果</h2>
+        <p class="results-table">
+          体育祭は終了しました！<br />放送されなかった競技もこちらから確認可能です。
+        </p>
+        <p>　</p>
+
+        <div
+          class="common-flex-card common-flex-container"
+          style="
+            --minWidth: 150px;
+            --maxWidth: 200px;
+            --itemNum: 4;
+            --itemPCNum: 3;
+            --gap: 10px;
+            --minPCWidth: 400px;
+            --maxPCWidth: 500px;
+          "
+        >
+          <!-- 台風の目 -->
+          <div class="common-flex-element">
+            <div class="common-flex-icon common-flex-icon-square"></div>
+            <div class="common-flex-main">
+              <strong>台風の目</strong>
+              <ul class="competition-results">
+                <li class="gold"><span class="rank gold-label">1</span></li>
+                <li class="silver"><span class="rank silver-label">2</span></li>
+                <li class="bronze"><span class="rank bronze-label">3</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 台風の目 -->
+          <div class="common-flex-element">
+            <div class="common-flex-icon common-flex-icon-square"></div>
+            <div class="common-flex-main">
+              <strong>台風の目</strong>
+              <ul class="competition-results">
+                <li class="gold"><span class="rank gold-label">1</span></li>
+                <li class="silver"><span class="rank silver-label">2</span></li>
+                <li class="bronze"><span class="rank bronze-label">3</span></li>
+              </ul>
+            </div>
+          </div>
+          <!-- 台風の目 -->
+          <div class="common-flex-element">
+            <div class="common-flex-icon common-flex-icon-square"></div>
+            <div class="common-flex-main">
+              <strong>台風の目</strong>
+              <ul class="competition-results">
+                <li class="gold"><span class="rank gold-label">1</span></li>
+                <li class="silver"><span class="rank silver-label">2</span></li>
+                <li class="bronze"><span class="rank bronze-label">3</span></li>
+              </ul>
+            </div>
+          </div>
+          <!-- 台風の目 -->
+          <div class="common-flex-element">
+            <div class="common-flex-icon common-flex-icon-square"></div>
+            <div class="common-flex-main">
+              <strong>台風の目</strong>
+              <ul class="competition-results">
+                <li class="gold"><span class="rank gold-label">1</span></li>
+                <li class="silver"><span class="rank silver-label">2</span></li>
+                <li class="bronze"><span class="rank bronze-label">3</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="common-flex-element">
+            <div class="common-flex-icon common-flex-icon-square"></div>
+            <div class="common-flex-main">
+              <strong>台風の目</strong>
+              <ul class="competition-results">
+                <li class="gold"><span class="rank gold-label">1</span></li>
+                <li class="silver"><span class="rank silver-label">2</span></li>
+                <li class="bronze"><span class="rank bronze-label">3</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="common-flex-element">
+            <div class="common-flex-icon common-flex-icon-square"></div>
+            <div class="common-flex-main">
+              <strong>台風の目</strong>
+              <ul class="competition-results">
+                <li class="gold"><span class="rank gold-label">1</span></li>
+                <li class="silver"><span class="rank silver-label">2</span></li>
+                <li class="bronze"><span class="rank bronze-label">3</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="common-flex-element">
+            <div class="common-flex-icon common-flex-icon-square"></div>
+            <div class="common-flex-main">
+              <strong>台風の目</strong>
+              <ul class="competition-results">
+                <li class="gold"><span class="rank gold-label">1</span></li>
+                <li class="silver"><span class="rank silver-label">2</span></li>
+                <li class="bronze"><span class="rank bronze-label">3</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="common-flex-element">
+            <div class="common-flex-icon common-flex-icon-square"></div>
+            <div class="common-flex-main">
+              <strong>台風の目</strong>
+              <ul class="competition-results">
+                <li class="gold"><span class="rank gold-label">1</span></li>
+                <li class="silver"><span class="rank silver-label">2</span></li>
+                <li class="bronze"><span class="rank bronze-label">3</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <svg
+        style="background-color: #f7f7f7"
+        class="wave-svg"
+        viewBox="0 0 1200 100"
+        preserveAspectRatio="none"
+      >
+        <!--#fba481-->
+        <path
+          d="M0 50 Q 100 0, 200 50 T 400 50 T 600 50 T 800 50 T 1000 50 T 1200 50 V100 H0 Z"
+          fill="#bce0e6"
+        />
+      </svg>
+    </main>
+    <!-- フッター -->
+    <common-footer></common-footer>
+
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loading-screen");
+        const bgs = document.querySelectorAll(".loading-bg");
+
+        // 画像をフェードイン
+        bgs.forEach((bg) => bg.classList.add("show"));
+
+        // 文字と背景まとめてフェードアウト
+        loader.classList.add("fade-out");
+      });
+    </script>
+
+    <!--スライダー用-->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Slick -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+      $(function () {
+        $(".slider").slick({
+          autoplay: false, //自動的に動き出すか。初期値はfalse。
+          infinite: true, //スライドをループさせるかどうか。初期値はtrue。
+          speed: 500, //スライドのスピード。初期値は300。
+          slidesToShow: 3, //スライドを画面に3枚見せる
+          slidesToScroll: 1, //1回のスクロールで1枚の写真を移動して見せる
+          arrows: true,
+          cssEase: "ease" /*スライドの動き方*/,
+          centerMode: true, //要素を中央ぞろえにする
+          variableWidth: true, //幅の違う画像の高さを揃えて表示
+          dots: true, //下部ドットナビゲーションの表示
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+      });
+
+      /*
+        prevArrow: '<div class="slick-prev"></div>', 矢印部分PreviewのHTMLを変更
+        nextArrow: '<div class="slick-next"></div>', 矢印部分NextのHTMLを変更
+        */
+      /*レスポンシブ*/
+      function updateScale() {
+        const baseWidth = 20; // デザイン基準幅
+        const baseHeight = 100; // デザイン基準高さ
+
+        const scaleW = window.innerWidth / baseWidth;
+        const scaleH = window.innerHeight / baseHeight;
+
+        // 小さい方に合わせる（はみ出し防止）
+        const scale = Math.min(scaleW, scaleH, 1);
+
+        const wrapper = document.getElementById("slider-wrapper");
+        wrapper.style.transform = `scale(${scale})`;
+      }
+
+      // 初回
+      updateScale();
+
+      // リサイズ時
+      window.addEventListener("resize", updateScale);
+    </script>
+  </body>
+</html>
+
+<!--これらの画像は来年度の体育祭HPのデザインで、HPをスマホで開いたときに表示される想定で作ってあるものです。この画像のようにコードを作成してほしいです。また、パソコンでも全画面に表示されるように適切にレスポンシブ対応を行ってください-->
+<!--いくつか改善してほしい点を挙げます。1.PCで表示する際左右に余白ができないようなレスポンシブ対応をしてほしいです。2.体育祭プログラムの写真、メインビジュアル部分の背景は画像に差し替える予定なので<img>タグで適当な写真に差し替えて下さい。3.ブロックテーマは開閉可能なアコーディオンにする予定なのでそのように変更してください。✓マークではなく^の逆向きの図形のイメージでそこを押すとアコーディオンが開閉するシステムを作ろうと思っています。-->
+<!--^の逆側のような矢印アイコンをcssで作ってほしい-->
+<!--ctrl+Shift+Fで検索-->
