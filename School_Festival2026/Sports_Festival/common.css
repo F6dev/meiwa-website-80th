@@ -877,7 +877,7 @@ details {
   background-color: #f5f4f0;
   border-radius: var(--accordion-border-radius);
   transition: border-radius 0.4s;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
 }
 
 .common-accordion[open] summary {

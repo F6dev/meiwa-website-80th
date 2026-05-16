@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--safariで電話番号と勘違いされない用-->
+    <meta name="format-detection" content="telephone-no" />
 
     <!-- Slick CSS -->
 
@@ -21,9 +23,8 @@
     <link rel="icon" type="image/x-icon" href="./favicon.ico?v=2" />
     <script src="./script.js" defer></script>
     <script src="./common.js" defer></script>
-  
+
     <script src="./update.js" defer></script>
-    
 
     <title>体育祭</title>
 
@@ -35,6 +36,11 @@
         font-family: "Hiragino Kaku Gothic ProN", sans-serif;
       }
 
+      /*サファリが勝手にリンクにした場合キャンセルする*/
+      a[x-apple-date-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
       body {
         background: #f3f3f3;
         color: #333;
@@ -176,7 +182,7 @@
         <div class="line"></div>
 
         <p class="parent-text">
-          開場時間は09時00分です。<br />それ以前に入場することはできないので注意してください。<br />
+          開場時間は09時30分です。<br />それ以前に入場することはできないので注意してください。<br />
           室内履きは不要です。<br />
           土足のままご覧いただけます。<br />
           また今年度は、マスゲームは体育祭では行われません
@@ -681,9 +687,7 @@
       <!-- 結果 -->
       <section id="results">
         <h2>結果</h2>
-        <p class="results-table">
-          体育祭の結果をこちらから見ることができます！
-        </p>
+
         <p>　</p>
 
         <div
@@ -698,11 +702,11 @@
             --maxPCWidth: 500px;
           "
         >
-          <!-- 台風の目 -->
+          <!-- 結果 -->
           <div class="common-flex-element">
             <div class="common-flex-icon common-flex-icon-square"></div>
             <div class="common-flex-main">
-              <strong>台風の目</strong>
+              <strong>玉入れ</strong>
               <ul class="competition-results">
                 <li class="gold"><span class="rank gold-label">1</span></li>
                 <li class="silver"><span class="rank silver-label">2</span></li>
@@ -714,7 +718,7 @@
           <div class="common-flex-element">
             <div class="common-flex-icon common-flex-icon-square"></div>
             <div class="common-flex-main">
-              <strong>ブロックリレー</strong>
+              <strong>障害物リレー</strong>
               <ul class="competition-results">
                 <li class="gold"><span class="rank gold-label">1</span></li>
                 <li class="silver"><span class="rank silver-label">2</span></li>
@@ -726,7 +730,7 @@
           <div class="common-flex-element">
             <div class="common-flex-icon common-flex-icon-square"></div>
             <div class="common-flex-main">
-              <strong>大玉転がし</strong>
+              <strong>綱引き</strong>
               <ul class="competition-results">
                 <li class="gold"><span class="rank gold-label">1</span></li>
                 <li class="silver"><span class="rank silver-label">2</span></li>
@@ -734,7 +738,18 @@
               </ul>
             </div>
           </div>
-          <!-- 台風の目 -->
+          <!--昼-->
+          <div class="common-flex-element">
+            <div class="common-flex-icon common-flex-icon-square"></div>
+            <div class="common-flex-main">
+              <strong>部活動リレー</strong>
+              <ul class="competition-results">
+                <li class="gold"><span class="rank gold-label">1</span></li>
+                <li class="silver"><span class="rank silver-label">2</span></li>
+                <li class="bronze"><span class="rank bronze-label">3</span></li>
+              </ul>
+            </div>
+          </div>
           <div class="common-flex-element">
             <div class="common-flex-icon common-flex-icon-square"></div>
             <div class="common-flex-main">
@@ -749,7 +764,7 @@
           <div class="common-flex-element">
             <div class="common-flex-icon common-flex-icon-square"></div>
             <div class="common-flex-main">
-              <strong>玉入れ</strong>
+              <strong>大玉転がし</strong>
               <ul class="competition-results">
                 <li class="gold"><span class="rank gold-label">1</span></li>
                 <li class="silver"><span class="rank silver-label">2</span></li>
@@ -760,7 +775,7 @@
           <div class="common-flex-element">
             <div class="common-flex-icon common-flex-icon-square"></div>
             <div class="common-flex-main">
-              <strong>綱引き</strong>
+              <strong>台風の目</strong>
               <ul class="competition-results">
                 <li class="gold"><span class="rank gold-label">1</span></li>
                 <li class="silver"><span class="rank silver-label">2</span></li>
@@ -771,7 +786,7 @@
           <div class="common-flex-element">
             <div class="common-flex-icon common-flex-icon-square"></div>
             <div class="common-flex-main">
-              <strong>障害物リレー</strong>
+              <strong>ブロックリレー</strong>
               <ul class="competition-results">
                 <li class="gold"><span class="rank gold-label">1</span></li>
                 <li class="silver"><span class="rank silver-label">2</span></li>
@@ -793,18 +808,7 @@
           <div class="common-flex-element">
             <div class="common-flex-icon common-flex-icon-square"></div>
             <div class="common-flex-main">
-              <strong>部活動リレー</strong>
-              <ul class="competition-results">
-                <li class="gold"><span class="rank gold-label">1</span></li>
-                <li class="silver"><span class="rank silver-label">2</span></li>
-                <li class="bronze"><span class="rank bronze-label">3</span></li>
-              </ul>
-            </div>
-          </div>
-          <div class="common-flex-element">
-            <div class="common-flex-icon common-flex-icon-square"></div>
-            <div class="common-flex-main">
-              <strong>総合順位</strong>
+              <strong>競技順位</strong>
               <ul class="competition-results">
                 <li class="gold"><span class="rank gold-label">1</span></li>
                 <li class="silver"><span class="rank silver-label">2</span></li>
