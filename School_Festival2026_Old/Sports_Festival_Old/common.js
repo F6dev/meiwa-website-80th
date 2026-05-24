@@ -760,7 +760,7 @@ class Header extends HTMLElement {
       <header id="common-header">
         <a class="logo" href="/School_Festival2026/Sports_Festival/">
 
-        <img src="images/School-aikon.png" alt="2026年度 体育祭" style="width:40px; height:auto;">
+        <img src="/School_Festival2026/images/School-aikon.png" alt="2026年度 体育祭" style="width:40px; height:auto;">
         </a>
         <div class="nav-actions">
           <nav>
@@ -777,7 +777,7 @@ class Header extends HTMLElement {
           </div> -->
           <!-- メニューボタン -->
           <div class="icon menu-toggle">
-            <img src="images/menu.png" alt="Menu" class="mobile-only">
+            <img src="/School_Festival2026/images/menu.png" alt="Menu" class="mobile-only">
           </div>
         </div>
       </header>
@@ -1203,7 +1203,7 @@ class Footer extends HTMLElement {
       <div class="footer-content">
         <div class="footer-main">
           <a class="logo-wrapper" href="/School_Festival2026/Sports_Festival/">
-            <img src="images/School-aikon.png" alt="明和校章" class="footer-logo">
+            <img src="/School_Festival2026/images/School-aikon.png" alt="明和校章" class="footer-logo">
           </a>
           <h4>愛知県立明和高等学校生徒会<br>TEL:052-961-2551<br>FAX:052-953-6348<br>〒461-0011 名古屋市東区白壁二丁目32番6号</h4>
         </div>

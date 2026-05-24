@@ -169,26 +169,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-// 画像拡大モーダル
-const imageModal = document.getElementById("image-modal");
-const modalImg = document.getElementById("modal-img");
-const caption = document.getElementById("caption");
-
-document.querySelectorAll(".clickable-img").forEach((img) => {
-    img.addEventListener("click", function () {
-        imageModal.style.display = "block";
-        modalImg.src = this.src;
-        caption.textContent = this.alt;
-        document.body.style.overflow = "hidden"; // 追加
-    });
-});
-
-imageModal?.addEventListener("click", (e) => {
-    if (e.target === imageModal) {
-        imageModal.style.display = "none";
-        document.body.style.overflow = ""; // 追加
-    }
-});
+  // 画像拡大モーダル
+  const imageModal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-img");
+  const caption = document.getElementById("caption");
 
   document.querySelectorAll(".clickable-img").forEach((img) => {
     img.addEventListener("click", function () {

@@ -728,11 +728,14 @@ section.full-bleed {
 #common-modal-container {
   position: fixed;
   z-index: 999;
-  width: 85vw;
+  width: 100vw;
+  /*width: 85vw;*/
   height: 65vh;
   /* height: 70dvh; */
-  max-width: 750px;
-  max-height: 450px;
+  max-width: 800px;
+  max-height: 540px;
+  /*max-width: 750px;
+  max-height: 450px;*/
   /* 画面中央配置のための設定 */
   top: 50%;
   left: 50%;
@@ -777,6 +780,15 @@ section.full-bleed {
 .common-modal-content {
   display: none;
 }
+/*マーカー風*/
+
+.content-title {
+  background: linear-gradient(transparent 72%, #93dcf4  72%);
+}
+/*.content-title {
+  background: linear-gradient(transparent 72%, #ffa8d3d4  72%);
+}*/
+
 
 @media (max-width: 767px) {
   #common-modal-container {
@@ -871,13 +883,13 @@ details {
   align-items: center;
   padding: 18px 24px;
   border: var(--accordion-border-color) solid var(--accordion-border-thickness);
-  font-weight: bold;
+  font-weight: 500;
   color: #333;
   cursor: pointer;
   background-color: #f5f4f0;
   border-radius: var(--accordion-border-radius);
   transition: border-radius 0.4s;
-  font-size: 1.0rem;
+  font-size: 1rem;
 }
 
 .common-accordion[open] summary {
@@ -949,7 +961,7 @@ details {
   display: grid;
   grid-template-columns: 1fr 24px;
   border: none; /*下線消去*/
-  border-bottom: 2.5px solid var(--accordion-border-color); /*要検討*/
+  border-bottom: 0.5px solid var(--accordion-border-color); /*要検討*/
   border-radius: 0; /* ←角丸リセット(どっちでも) */
 }
 .common-accordion-content {
