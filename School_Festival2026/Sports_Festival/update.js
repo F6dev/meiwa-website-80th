@@ -2,9 +2,9 @@
 (() => {
   // === 設定 ===
   const API_URL = "https://student.meiwa.website/api/hp_sfdata";
-  const POLL_INTERVAL_MS = 60000;
+  const POLL_INTERVAL_MS = 30000;
   const CONTAINER_ID = "results-dynamic-container"; // index.html の容器ID
-  const MAX_DISPLAY_RANK = 3; // 表示順位上限（変数で制御）
+  const MAX_DISPLAY_RANK = 9; // 表示順位上限（変数で制御）
 
   // 表示順リスト（JSONの name_en と完全一致）
   const DISPLAY_ORDER = [
