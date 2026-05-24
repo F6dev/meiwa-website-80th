@@ -1,10 +1,62 @@
 // update.js
 (() => {
   // === 設定 ===
-  const API_URL = "https://student.meiwa.website/api/hp_sfdata";
+  const API_URL = "https://example.com/api/hp_sfdata";
   const POLL_INTERVAL_MS = 30000;
   const CONTAINER_ID = "results-dynamic-container"; // index.html の容器ID
   const MAX_DISPLAY_RANK = 9; // 表示順位上限（変数で制御）
+
+  // === [新規追加] 表示スタイル設定 ===
+  // 選択肢: 'highlight' | 'border' | 'gradient' | 'minimal'
+  // 各スタイルの詳細は後述の STYLE_CONFIG を参照
+  const DISPLAY_STYLE = "highlight";
+
+  // === [新規追加] カラーパレット（指定色を基調）===
+  // 競技ブロックの色付けに使用。key は競技の識別子やチーム色などに紐付け可能
+  const COLOR_PALETTE = {
+    red:    "#e6c6c6", // 赤
+    orange: "#e5d1b2", // 橙
+    yellow: "#ece7c7", // 黄
+    green:  "#cfe3cf", // 緑
+    blue:   "#cddbe6", // 青
+    purple: "#d9d7ea", // 紫
+    pink:   "#e7d2e4", // 桃
+    black:  "#cfcfcf", // 黒
+    white:  "#f9f9f9", // 白
+  };
+
+  // === [新規追加] スタイル設定マップ ===
+  // 各 DISPLAY_STYLE における見た目の定義
+  // - badgeBg: 順位バッジの背景色（COLOR_PALETTE key or hex）
+  // - itemBg: 結果アイテムの背景
+  // - itemBorder: 境界線スタイル
+  // - highlight: テキスト強調方法（'underline' | 'bold' | 'none'）
+  const STYLE_CONFIG = {
+    highlight: {
+      badgeBg: COLOR_PALETTE.blue,
+      itemBg: `linear-gradient(90deg, ${COLOR_PALETTE.white}, ${COLOR_PALETTE.blue}33)`,
+      itemBorder: `2px solid ${COLOR_PALETTE.blue}`,
+      highlight: "bold",
+    },
+    border: {
+      badgeBg: COLOR_PALETTE.green,
+      itemBg: COLOR_PALETTE.white,
+      itemBorder: `3px solid ${COLOR_PALETTE.green}`,
+      highlight: "underline",
+    },
+    gradient: {
+      badgeBg: COLOR_PALETTE.purple,
+      itemBg: `linear-gradient(135deg, ${COLOR_PALETTE.white}, ${COLOR_PALETTE.purple}44)`,
+      itemBorder: `1px dashed ${COLOR_PALETTE.purple}`,
+      highlight: "bold",
+    },
+    minimal: {
+      badgeBg: COLOR_PALETTE.black,
+      itemBg: "transparent",
+      itemBorder: `1px solid ${COLOR_PALETTE.black}40`,
+      highlight: "none",
+    },
+  };
 
   // 表示順リスト（JSONの name_en と完全一致）
   const DISPLAY_ORDER = [
@@ -20,6 +72,7 @@
     "total_result"        // 競技順位（総合結果）
   ];
 
+  // [変更] RANK_COLORS: 従来の順位色も残しつつ、必要に応じて COLOR_PALETTE と併用可能
   const RANK_COLORS = ["#FFD700", "#C0C0C0", "#CD7F32", "#A0A0A0", "#888888"];
   let lastDataString = null;
   let pollTimerId = null;
@@ -29,12 +82,35 @@
   --------------------------- */
   function injectStyles() {
     if (document.getElementById("dynamic-results-styles")) return;
+    // [変更] STYLE_CONFIG に基づく追加スタイルを注入
+    const styleConfig = STYLE_CONFIG[DISPLAY_STYLE] || STYLE_CONFIG.highlight;
+    const highlightRule = (() => {
+      switch (styleConfig.highlight) {
+        case "underline": return "text-decoration: underline 2px;";
+        case "bold": return "font-weight: 700;";
+        default: return "";
+      }
+    })();
+
     const css = `
       .competition-results { list-style: none; padding: 0; margin: 0.5rem 0 0; }
       .competition-results li {
         list-style: none; padding: 0.4rem 0.6rem; margin: 0.2rem 0;
         border-radius: 8px; font-size: 1rem; background: rgba(255,255,255,0.03);
         word-break: break-word; display: flex; align-items: center;
+      }
+      /* [新規] スタイルモード別ベース装飾 */
+      .competition-results li.style-mode {
+        background: ${styleConfig.itemBg};
+        border: ${styleConfig.itemBorder};
+      }
+      .competition-results li.style-mode .team-name {
+        ${highlightRule}
+      }
+      /* [新規] 順位バッジのモード別カラー */
+      .rank-badge.mode-style {
+        background: ${styleConfig.badgeBg};
+        color: ${contrastColor(styleConfig.badgeBg)};
       }
       #toast-container {
         position: fixed; left: 50%; transform: translateX(-50%);
@@ -142,7 +218,7 @@
   }
 
   /* ---------------------------
-     DOM生成・描画（新ロジック）
+     [変更] DOM生成・描画（新ロジック＋スタイルモード対応）
   --------------------------- */
   function renderResults(competitions) {
     const container = document.getElementById(CONTAINER_ID);
@@ -153,6 +229,9 @@
 
     // 高速検索用Map
     const compMap = new Map(competitions.map(c => [c.name_en, c]));
+
+    // [新規] 現在選択中のスタイル設定を取得
+    const styleConfig = STYLE_CONFIG[DISPLAY_STYLE] || STYLE_CONFIG.highlight;
 
     // 指定順でループ
     DISPLAY_ORDER.forEach(nameEn => {
@@ -173,30 +252,35 @@
       const ul = flexEl.querySelector("ul");
       const results = parseAndSortResults(comp.results);
 
+      // [変更] 競技ごとにカラーパレットから色を割り当て（name_en のハッシュで簡易決定）
+      const paletteKeys = Object.keys(COLOR_PALETTE);
+      const colorIndex = nameEn.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % paletteKeys.length;
+      const blockBaseColor = COLOR_PALETTE[paletteKeys[colorIndex]];
+
       // 結果をliで追加
       results.forEach(({ rank, team }) => {
         const li = document.createElement("li");
-        const colorIdx = Math.min(rank - 1, RANK_COLORS.length - 1);
-        const color = RANK_COLORS[colorIdx];
-        const textColor = contrastColor(color);
-
+        
+        // [変更] スタイルモード用のクラスとインラインスタイルを適用
+        li.classList.add("style-mode");
         li.style.cssText = `
-          background: linear-gradient(90deg, rgba(0,0,0,0.04), rgba(255,255,255,0.02));
-          border: 1px solid ${shadeColor(color, -30)};
-          box-shadow: inset 0 0 0 2px ${hexToRgba(color, 0.06)};
-          color: ${textColor}; font-weight: 600;
+          ${li.style.cssText}
+          border-color: ${shadeColor(blockBaseColor, -20)};
         `;
 
+        // [変更] 順位バッジにモード別スタイルを適用
         const badge = document.createElement("span");
+        badge.className = "rank-badge mode-style"; // [新規] CSSフック用クラス
         badge.textContent = rank;
-        badge.style.cssText = `
-          display: inline-block; min-width: 28px; height: 22px; line-height: 22px;
-          text-align: center; margin-right: 8px; border-radius: 6px; padding: 0 6px;
-          background: ${color}; color: ${textColor}; font-weight: 700;
-        `;
+        // badge の色は injectStyles() 内の .rank-badge.mode-style で一括管理
+
+        // [変更] チーム名要素で強調スタイルを適用
+        const teamSpan = document.createElement("span");
+        teamSpan.className = "team-name";
+        teamSpan.textContent = team;
 
         li.appendChild(badge);
-        li.appendChild(document.createTextNode(team));
+        li.appendChild(teamSpan); // [変更] 直接テキストではなく span 経由でスタイル適用
         ul.appendChild(li);
       });
 
