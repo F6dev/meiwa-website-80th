@@ -1,10 +1,10 @@
 {
     "clubs": [
         {
-            "id": "",
+            "id": "track_and_field",
             "type": "sports",
             "name": "陸上競技部",
-            "englishName": "",
+            "englishName": "track and field",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -13,10 +13,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "swimming",
             "type": "sports",
             "name": "水泳部",
-            "englishName": "",
+            "englishName": "swimming",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -25,10 +25,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "kyudo",
             "type": "sports",
             "name": "弓道部",
-            "englishName": "",
+            "englishName": "kyudo",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -37,10 +37,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "trekking",
             "type": "sports",
             "name": "トレッキング部",
-            "englishName": "",
+            "englishName": "trekking",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -49,10 +49,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "kendo",
             "type": "sports",
             "name": "剣道部",
-            "englishName": "",
+            "englishName": "kendo",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -61,10 +61,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "soccer",
             "type": "sports",
             "name": "サッカー部",
-            "englishName": "",
+            "englishName": "soccer",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -73,10 +73,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "rugby",
             "type": "sports",
             "name": "ラグビー部",
-            "englishName": "",
+            "englishName": "rugby",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -85,10 +85,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "volleyball-M",
             "type": "sports",
             "name": "男子バレーボール部",
-            "englishName": "",
+            "englishName": "volleyball",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -97,10 +97,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "volleyball-F",
             "type": "sports",
             "name": "女子バレーボール部",
-            "englishName": "",
+            "englishName": "volleyball",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -109,10 +109,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "handball-M",
             "type": "sports",
             "name": "男子ハンドボール部",
-            "englishName": "",
+            "englishName": "handball",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -121,10 +121,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "handball-F",
             "type": "sports",
             "name": "女子ハンドボール部",
-            "englishName": "",
+            "englishName": "handball",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -133,10 +133,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "basketball-M",
             "type": "sports",
             "name": "男子バスケットボール部",
-            "englishName": "",
+            "englishName": "basketball",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -145,10 +145,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "basketball-F",
             "type": "sports",
             "name": "女子バスケットボール部",
-            "englishName": "",
+            "englishName": "basketball",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -157,10 +157,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "baseball",
             "type": "sports",
             "name": "野球部",
-            "englishName": "",
+            "englishName": "baseball",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -169,10 +169,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "table_tennis",
             "type": "sports",
             "name": "卓球部",
-            "englishName": "",
+            "englishName": "table tennis",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -181,10 +181,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "badminton-M",
             "type": "sports",
             "name": "男子バトミントン部",
-            "englishName": "",
+            "englishName": "badminton",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -193,10 +193,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "badminton-F",
             "type": "sports",
             "name": "女子バトミントン部",
-            "englishName": "",
+            "englishName": "badminton",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -206,10 +206,10 @@
         },
 
         {
-            "id": "",
+            "id": "hard_tennis-F",
             "type": "sports",
             "name": "男子硬式テニス部",
-            "englishName": "",
+            "englishName": "hard tennis",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -218,10 +218,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "hard_tennis-M",
             "type": "sports",
             "name": "女子硬式テニス部",
-            "englishName": "",
+            "englishName": "hard tennis",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -231,10 +231,10 @@
         },
 
         {
-            "id": "",
+            "id": "soft_tennis-F",
             "type": "sports",
             "name": "男子ソフトテニス部",
-            "englishName": "",
+            "englishName": "soft tennis",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -243,10 +243,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "soft_tennis-M",
             "type": "sports",
             "name": "女子ソフトテニス部",
-            "englishName": "",
+            "englishName": "soft tennis",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -255,10 +255,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "english_conversation",
             "type": "culture",
             "name": "英会話部",
-            "englishName": "",
+            "englishName": "english conversation",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -267,10 +267,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "chorus",
             "type": "culture",
             "name": "合唱部",
-            "englishName": "",
+            "englishName": "chorus",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -279,10 +279,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "SSH_chemistry",
             "type": "culture",
             "name": "SSH部化学班",
-            "englishName": "",
+            "englishName": "SSH chemistry",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -291,10 +291,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "SSH_math",
             "type": "culture",
             "name": "SSH部数学班",
-            "englishName": "",
+            "englishName": "SSH math",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -303,10 +303,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "SSH_biology",
             "type": "culture",
             "name": "SSH部生物班",
-            "englishName": "",
+            "englishName": "SSH biology",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -315,10 +315,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "SSH_physics_earthscience",
             "type": "culture",
             "name": "SSH部物理・地学班",
-            "englishName": "",
+            "englishName": "SSH physics earthscience",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -327,10 +327,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "calligraphy",
             "type": "culture",
             "name": "書道部",
-            "englishName": "",
+            "englishName": "calligraphy",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -339,10 +339,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "sakado",
             "type": "culture",
             "name": "茶華道部",
-            "englishName": "",
+            "englishName": "sakado",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -351,10 +351,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "art",
             "type": "culture",
             "name": "美術部",
-            "englishName": "",
+            "englishName": "art",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -363,10 +363,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "cartoon",
             "type": "culture",
             "name": "漫画研究部",
-            "englishName": "",
+            "englishName": "cartoon",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -375,10 +375,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "bress_band",
             "type": "culture",
             "name": "吹奏楽部",
-            "englishName": "",
+            "englishName": "bress band",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -387,10 +387,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "cooking",
             "type": "culture",
             "name": "料理部",
-            "englishName": "",
+            "englishName": "cooking",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -399,10 +399,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "shogi",
             "type": "culture",
             "name": "将棋部",
-            "englishName": "",
+            "englishName": "shogi",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -411,10 +411,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "literature",
             "type": "culture",
             "name": "文藝部",
-            "englishName": "",
+            "englishName": "literature",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -423,10 +423,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "photo",
             "type": "culture",
             "name": "写真部",
-            "englishName": "",
+            "englishName": "photo",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -435,10 +435,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "pm",
             "type": "culture",
             "name": "PM部",
-            "englishName": "",
+            "englishName": "pm",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -447,10 +447,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "library",
             "type": "special",
             "name": "図書部",
-            "englishName": "",
+            "englishName": "library",
             "intro": "",
             "catchphrase": "",
             "place": "",
@@ -459,10 +459,10 @@
             "records": ""
         },
         {
-            "id": "",
+            "id": "broadcasting",
             "type": "special",
             "name": "放送部",
-            "englishName": "",
+            "englishName": "broadcasting",
             "intro": "",
             "catchphrase": "",
             "place": "",
