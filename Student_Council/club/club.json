@@ -25,7 +25,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "swimming",
@@ -52,7 +57,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "kyudo",
@@ -79,7 +89,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "trekking",
@@ -106,7 +121,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "kendo",
@@ -133,7 +153,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "soccer",
@@ -160,7 +185,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "rugby",
@@ -187,7 +217,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "volleyball-M",
@@ -214,7 +249,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "volleyball-F",
@@ -241,7 +281,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "handball-M",
@@ -268,7 +313,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "handball-F",
@@ -295,7 +345,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "basketball-M",
@@ -322,7 +377,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "basketball-F",
@@ -349,7 +409,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "baseball",
@@ -376,7 +441,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "table_tennis",
@@ -403,7 +473,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "badminton-M",
@@ -430,7 +505,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "badminton-F",
@@ -457,7 +537,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
 
         {
@@ -485,7 +570,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "hard_tennis-M",
@@ -512,7 +602,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
 
         {
@@ -540,7 +635,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "soft_tennis-M",
@@ -567,7 +667,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "english_conversation",
@@ -594,7 +699,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "chorus",
@@ -621,7 +731,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "SSH_chemistry",
@@ -648,7 +763,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "SSH_math",
@@ -675,7 +795,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "SSH_biology",
@@ -702,7 +827,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "SSH_physics_earthscience",
@@ -729,7 +859,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "calligraphy",
@@ -756,7 +891,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "sakado",
@@ -783,7 +923,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "art",
@@ -810,7 +955,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "cartoon",
@@ -837,7 +987,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "bress_band",
@@ -864,7 +1019,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "cooking",
@@ -891,7 +1051,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "shogi",
@@ -918,7 +1083,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "literature",
@@ -945,7 +1115,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "photo",
@@ -972,7 +1147,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "pm",
@@ -999,7 +1179,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "library",
@@ -1026,7 +1211,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         },
         {
             "id": "broadcasting",
@@ -1053,7 +1243,12 @@
                 "otherCost": ""
             },
             "manager": "",
-            "records": ""
+            "records": {
+                "record1": {
+                    "year": "2025年度",
+                    "text": []
+                }
+            }
         }
     ]
 }
