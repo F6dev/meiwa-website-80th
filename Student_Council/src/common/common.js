@@ -132,9 +132,6 @@ class Header extends HTMLElement {
                         <a href="/Student_Council/dictionary/" class="nav-link-dictionary">明和語辞典</a>
                         <a href="https://github.com/F6dev/meiwa-website-80th">その他</a>
                     </nav>
-                    <div class="mode-toggle">
-                        <img src="/Student_Council/src/images/header/dark-mode.svg">
-                    </div>
                 </div>
             </header>
         `
