@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Zen Maru Gothic", sans-serif;
+}
+
 .main-news {
     width: 60%;
     max-height: 340px;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>トップページ｜M高校生徒会</title>
+    <meta name="description" content="こちらは愛知県立明和高等学校生徒会公式ウェブサイトです。明和高校の基本的な情報や行事、生徒会活動や部活動の情報などを掲載しています。" />
+    <!-- ブラウザの電話番号を自動検出し、自動リンク化するのを防ぐ。 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- アイコン設定 -->
+    <link rel="icon" sizes="16x16" href="../src/images/icon/favicon-16x16.png">
+    <link rel="icon" sizes="32x32" href="../src/images/icon/favicon-32x32.png">
+    <!-- Webフォント(事前)読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <!-- グローバルのCSSとJSの読み込み -->
+    <link rel="stylesheet" href="../src/common/normalize.css">
+    <link rel="stylesheet" href="../src/common/common.css">
+    <script src="../src/common/common.js"></script>
+    <!-- ローカルのCSSとJSの読み込み -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <common-header></common-header>
+    <main>
+        <div id="subpage-main">
+            <div id="subpage-sidebar">
+                <nav id="sidebar-box">
+                    <ul></ul>
+                </nav>
+            </div>
+            <div id="subpage-body">
+                <div id="subpage-title"></div>
+                <div id="subpage-contents">
+                    <section
+                        id="information"
+                        class="content"
+                        data-label="学校概要"
+                        data-nav-visible="true"
+                    >
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <common-footer></common-footer>
+</body>
+
+</html>

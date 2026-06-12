@@ -1,6 +1,200 @@
+/* トップページ以外のページの共通スタイルを決定 */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   font-family: "Zen Maru Gothic", sans-serif;
+}
+
+:root {
+  --color-contentBg: #faf8f6;
+  --color-background-light: white;
+  --color-background-neutral: rgb(246, 242, 237);
+  --color-background-dark: #f4f4ef;
+  --color-border-light: black;
+  --color-text-light: rgb(68, 43, 19);
+  --color-text-neutral: #333;
+  --color-text-dark: #000000;
+  --color-border-light: white;
+  --color-border-neutral: rgb(128, 83, 41);
+  --color-border-dark: black;
+  --font-size-base: 16px;
+}
+
+/* ========== サブページ共通レイアウト ========== */
+
+/* サイドバー + コンテンツの横並びラッパー */
+#subpage-main {
+  display: flex;
+  margin: 0 auto;
+  width: 93%;
+  max-width: calc(100% - 30px);
+  padding-top: 110px;
+}
+
+/* ===== サイドバー（PC） ===== */
+#subpage-sidebar {
+  width: 18%;
+  display: flex;
+  align-items: flex-start;
+  padding: 350px 0;
+}
+
+#sidebar-box {
+  width: 77%;
+  max-width: 300px;
+  position: sticky;
+  top: 35vh;
+  background-color: rgb(255, 251, 250);
+  border-radius: 12px;
+  padding: 5px 0;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.05), 3px 3px 8px rgba(0, 0, 0, 0.01);
+}
+
+#sidebar-box li {
+  margin: 18px 0;
+  list-style: circle;
+}
+
+#sidebar-box li a {
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #333;
+  padding: 0.5em;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  border-radius: 6px;
+}
+
+#sidebar-box li a:hover {
+  color: #ffc069;
+}
+
+#sidebar-box li span {
+  transform: translateZ(0);
+  transition: padding 0.2s ease-in-out;
+}
+
+.sidebar-item-active span {
+  color: #b68746;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.sidebar-item-active {
+  list-style-type: disc !important;
+}
+
+/* ===== メインコンテンツエリア ===== */
+#subpage-body {
+  width: 82%;
+}
+
+/* ===== ページタイトルイラスト ===== */
+#subpage-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#subpage-title img {
+  width: 65%;
+  max-height: 150px;
+  object-fit: contain;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* ===== セクション共通 ===== */
+#subpage-contents section {
+  margin-bottom: clamp(50px, 10vh, 100px);
+}
+
+#subpage-contents section li {
+  line-height: 1.7;
+}
+
+/* ===== スマホ・タブレット ===== */
+@media (max-width: 940px) {
+  #subpage-main {
+    display: block;
+    margin-top: 130px;
+  }
+
+  /* サイドバーを上部固定の横スクロール式に */
+  #subpage-sidebar {
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 45px;
+    opacity: 0.98;
+    top: 64px;
+    left: 0;
+    background: linear-gradient(#faf5f3, 80%, #00000000);
+  }
+
+  #sidebar-box {
+    position: absolute;
+    width: 100%;
+    top: -11px;
+    height: 53px;
+    padding: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    min-width: 100vw;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  #sidebar-box::-webkit-scrollbar {
+    height: 0px;
+  }
+
+  #sidebar-box:hover::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  #sidebar-box::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+  }
+
+  #sidebar-box ul {
+    padding: 0;
+    text-align: center;
+  }
+
+  #sidebar-box li {
+    display: inline-block;
+    margin: 0 5px;
+    list-style: none;
+  }
+
+  #sidebar-box li a {
+    font-size: 0.92rem;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: var(--color-background-neutral);
+    display: inline-block;
+  }
+
+  .sidebar-item-active a {
+    background-color: #f1edec !important;
+    outline: 1.5px #c1a37d solid !important;
+    color: #584934 !important;
+  }
+
+  .sidebar-item-active {
+    list-style-type: none !important;
+  }
+
+  #subpage-body {
+    width: 100%;
+  }
+
+  #subpage-title img {
+    margin-right: 0;
+  }
 }

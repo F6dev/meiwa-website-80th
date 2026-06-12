@@ -274,3 +274,114 @@ class Footer extends HTMLElement {
     }
 }
 customElements.define("common-footer", Footer);
+
+// ========== サブページ サイドバー ==========
+
+let lastCheckTime = 0;
+const CHECK_INTERVAL = 500;
+let activeSectionId = null;
+
+function getHeaderHeight() {
+  const menu = document.getElementById("subpage-sidebar");
+  if (window.innerWidth >= 940 || !menu) {
+    const header = document.querySelector("header");
+    return header ? header.offsetHeight + 10 : 0;
+  } else {
+    return menu.getBoundingClientRect().top + menu.offsetHeight + 40;
+  }
+}
+
+function checkActiveSection() {
+  const now = Date.now();
+  if (now - lastCheckTime < CHECK_INTERVAL) {
+    requestAnimationFrame(checkActiveSection);
+    return;
+  }
+  lastCheckTime = now;
+
+  const headerHeight = getHeaderHeight();
+  let topSection = null;
+  let maxTop = -Infinity;
+
+  document.querySelectorAll("section").forEach((section) => {
+    if (section.dataset.navVisible != "true") return;
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= headerHeight && rect.bottom > 0 && rect.top > maxTop) {
+      maxTop = rect.top;
+      topSection = section;
+    }
+  });
+
+  if (topSection && (!activeSectionId || topSection.id !== activeSectionId)) {
+    document.querySelectorAll("#sidebar-box li").forEach((item) => {
+      item.classList.remove("sidebar-item-active");
+    });
+
+    activeSectionId = topSection.id;
+    const targetLink = document.querySelector(
+      `#sidebar-box a[href="#${activeSectionId}"]`
+    );
+
+    if (targetLink) {
+      const sidebarItem = targetLink.parentElement;
+      sidebarItem.classList.add("sidebar-item-active");
+
+      // スマホ時、アクティブ項目が見切れないようにスクロール
+      const container = document.getElementById("sidebar-box");
+      const el = document.querySelector(".sidebar-item-active");
+      const offsetPx = 12;
+
+      if (el && container) {
+        const visibleLeft = container.scrollLeft;
+        const visibleRight = visibleLeft + container.clientWidth;
+        const elLeft = el.offsetLeft;
+        const elRight = elLeft + el.offsetWidth;
+
+        if (elRight > visibleRight) {
+          container.scrollTo({ left: elRight - container.clientWidth + offsetPx, behavior: "smooth" });
+        } else if (elLeft < visibleLeft) {
+          container.scrollTo({ left: elLeft - offsetPx, behavior: "smooth" });
+        }
+      }
+    }
+  }
+
+  requestAnimationFrame(checkActiveSection);
+}
+
+function createSidebarItem(id, label, href) {
+  return `
+    <li id="${id}-nav">
+      <a href="${href}"><span>${label}</span></a>
+    </li>
+  `;
+}
+
+function updateSidebar() {
+  const sidebarUl = document.querySelector("#sidebar-box ul");
+  if (!sidebarUl) return;
+
+  sidebarUl.innerHTML = "";
+
+  document.querySelectorAll("section").forEach((section) => {
+    const id = section.id;
+    const label = section.dataset.label?.trim() || id;
+    const visible = section.dataset.navVisible !== "false";
+    const preferHref = section.dataset.preferHref;
+
+    if (!id || !label || !visible) return;
+
+    const href = preferHref || `#${id}`;
+    sidebarUl.insertAdjacentHTML("beforeend", createSidebarItem(id, label, href));
+  });
+}
+
+window.updateSidebar = updateSidebar;
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateSidebar();
+  // サイドバーがあるページのみアクティブ監視を起動
+  if (document.getElementById("sidebar-box")) {
+    requestAnimationFrame(checkActiveSection);
+  }
+});
